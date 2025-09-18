@@ -1,0 +1,124 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-330,
+				310
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-330,
+				310
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "down sing",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-330,
+				310
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "up sing",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-330,
+				310
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "right sing"
+		},
+		{
+			"offsets": [
+				-330,
+				310
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "left sing"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-331,
+				310
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "G up sing",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-329,
+				310
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "G right sing",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-330,
+				310
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "G left sing",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-330,
+				310
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "G down sing",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": true,
+	"image": "characters/finale_1_kinito",
+	"position": [
+		-800,
+		340
+	],
+	"healthicon": "kinito1",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		166,
+		250
+	],
+	"camera_position": [
+		240,
+		-190
+	],
+	"sing_duration": 4,
+	"scale": 0.9,
+	"_editor_isPlayer": false
+}

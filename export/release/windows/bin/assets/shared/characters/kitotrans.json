@@ -1,0 +1,102 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "kitotrans I0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "1",
+			"fps": 24,
+			"name": "kitotrans 10",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "2",
+			"fps": 24,
+			"name": "kitotrans 20",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "3",
+			"fps": 24,
+			"name": "kitotrans 30",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "4",
+			"fps": 24,
+			"name": "kitotrans 40",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "5",
+			"fps": 24,
+			"name": "kitotrans 50",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "6",
+			"fps": 24,
+			"name": "kitotrans 60",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/kitotrans",
+	"position": [
+		-570,
+		-580
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		-410,
+		250
+	],
+	"sing_duration": 6.99999999999999,
+	"scale": 1.1,
+	"_editor_isPlayer": false
+}

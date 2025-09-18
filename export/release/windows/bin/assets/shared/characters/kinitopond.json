@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				679,
+				120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "kinitopond I"
+		},
+		{
+			"offsets": [
+				679,
+				123
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "kinitopond L"
+		},
+		{
+			"offsets": [
+				679,
+				120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "kinitopond D"
+		},
+		{
+			"offsets": [
+				679,
+				120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "kinitopond U"
+		},
+		{
+			"offsets": [
+				679,
+				120
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "kinitopond R"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/kinitopond",
+	"position": [
+		-140,
+		0
+	],
+	"healthicon": "pond_kinito",
+	"flip_x": false,
+	"healthbar_colors": [
+		166,
+		166,
+		166
+	],
+	"camera_position": [
+		-400,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.7,
+	"_editor_isPlayer": false
+}

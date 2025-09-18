@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				-3,
+				2
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "monsterkito idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-11
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "monsterkito left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				-5
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "monsterkito down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-17,
+				-3
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "monsterkito up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-3,
+				3
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "monsterkito right",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/monsterkito",
+	"position": [
+		-770,
+		-470
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		-100,
+		10
+	],
+	"sing_duration": 9.49999999999998,
+	"scale": 1.2,
+	"_editor_isPlayer": false
+}

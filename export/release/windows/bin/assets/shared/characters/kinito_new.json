@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"offsets": [-5, 0],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "kinito idlle"
+		},
+		{
+			"offsets": [52, -2],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "kinito left"
+		},
+		{
+			"offsets": [-5, 5],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "kinito up"
+		},
+		{
+			"offsets": [-9, -1],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "kinito right"
+		},
+		{
+			"loop": false,
+			"offsets": [-3, 0],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "kinito down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [46, -10],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "kinito hl",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-11, -9],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "kinito hd",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-11, 0],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "kinito hu",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-13, -8],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "kinito hr",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/kinito_new",
+	"position": [-810, -130],
+	"healthicon": "bf",
+	"flip_x": false,
+	"healthbar_colors": [49, 176, 209],
+	"camera_position": [300, 120],
+	"sing_duration": 7,
+	"scale": 0.8,
+	"_editor_isPlayer": false
+}

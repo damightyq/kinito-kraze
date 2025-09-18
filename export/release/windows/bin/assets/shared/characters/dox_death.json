@@ -1,0 +1,58 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				110,
+				90
+			],
+			"indices": [],
+			"fps": 16,
+			"anim": "firstDeath",
+			"loop": false,
+			"name": "firstDeath"
+		},
+		{
+			"offsets": [
+				110,
+				90
+			],
+			"indices": [],
+			"fps": 16,
+			"anim": "deathLoop",
+			"loop": true,
+			"name": "deathLoop"
+		},
+		{
+			"offsets": [
+				110,
+				90
+			],
+			"indices": [],
+			"fps": 16,
+			"anim": "deathConfirm",
+			"loop": false,
+			"name": "deathConfirm"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": true,
+	"image": "characters/dox_death",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "",
+	"flip_x": true,
+	"healthbar_colors": [
+		161,
+		161,
+		161
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 4,
+	"scale": 0.9,
+	"_editor_isPlayer": true
+}

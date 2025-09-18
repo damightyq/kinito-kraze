@@ -1,0 +1,224 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "nbrad idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				67,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "nbrad left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-7,
+				-1
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "nbrad down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				-29
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "nbrad up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-9,
+				3
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "nbrad right",
+			"indices": []
+		},
+		{
+			"offsets": [
+				63,
+				0
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13
+			],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "nbrad ml"
+		},
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13
+			],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"loop": false,
+			"name": "nbrad md"
+		},
+		{
+			"offsets": [
+				6,
+				-28
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13
+			],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"loop": false,
+			"name": "nbrad mu"
+		},
+		{
+			"offsets": [
+				-10,
+				3
+			],
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13,
+				13
+			],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "nbrad mr"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/brad_new",
+	"position": [
+		-800,
+		-120
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		-50,
+		170
+	],
+	"sing_duration": 7,
+	"scale": 0.8,
+	"_editor_isPlayer": true
+}

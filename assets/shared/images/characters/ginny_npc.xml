@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ginny_npc.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="danceLeft0000" x="2298" y="0" width="743" height="908" frameX="-354" frameY="-145" frameWidth="1600" frameHeight="1200"/>
+	<SubTexture name="danceLeft0001" x="2298" y="908" width="665" height="923" frameX="-392" frameY="-130" frameWidth="1600" frameHeight="1200"/>
+	<SubTexture name="danceLeft0002" x="1982" y="1847" width="599" height="933" frameX="-411" frameY="-119" frameWidth="1600" frameHeight="1200"/>
+	<SubTexture name="danceLeft0003" x="3041" y="0" width="597" height="936" frameX="-411" frameY="-116" frameWidth="1600" frameHeight="1200"/>
+	<SubTexture name="danceLeft0004" x="1355" y="1847" width="627" height="943" frameX="-412" frameY="-109" frameWidth="1600" frameHeight="1200"/>
+	<SubTexture name="danceLeft0005" x="695" y="1847" width="660" height="943" frameX="-412" frameY="-109" frameWidth="1600" frameHeight="1200"/>
+	<SubTexture name="danceRight0000" x="0" y="0" width="831" height="916" frameX="-319" frameY="-137" frameWidth="1600" frameHeight="1200"/>
+	<SubTexture name="danceRight0001" x="0" y="916" width="771" height="931" frameX="-370" frameY="-121" frameWidth="1600" frameHeight="1200"/>
+	<SubTexture name="danceRight0002" x="1572" y="0" width="726" height="937" frameX="-411" frameY="-115" frameWidth="1600" frameHeight="1200"/>
+	<SubTexture name="danceRight0003" x="831" y="0" width="741" height="940" frameX="-411" frameY="-112" frameWidth="1600" frameHeight="1200"/>
+	<SubTexture name="danceRight0004" x="0" y="1847" width="695" height="943" frameX="-412" frameY="-109" frameWidth="1600" frameHeight="1200"/>
+	<SubTexture name="danceRight0005" x="695" y="1847" width="660" height="943" frameX="-412" frameY="-109" frameWidth="1600" frameHeight="1200"/>
+</TextureAtlas>

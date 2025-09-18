@@ -1,0 +1,16 @@
+{
+    "bpmMap": [
+      { "name": "virtual-pal", "bpm": 165 },
+      { "name": "uh-oh", "bpm": 155 },
+      { "name": "web-world", "bpm": 170 },
+      { "name": "finale", "bpm": 140 },
+      { "name": "question-game", "bpm": 165 },
+      { "name": "my-world", "bpm": 95 },
+      { "name": "virtual-pal-dox", "bpm": 165 },
+      { "name": "uh-oh-dox", "bpm": 155 },
+      { "name": "web-world-dox", "bpm": 170 },
+      { "name": "kito", "bpm": 184 },
+      { "name": "default", "bpm": 140 }
+    ]
+  }
+  

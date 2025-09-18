@@ -1,0 +1,236 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"health drain",
+						"off",
+						""
+					]
+				]
+			],
+			[
+				68571.4285714286,
+				[
+					[
+						"FadeIn",
+						"",
+						""
+					]
+				]
+			],
+			[
+				72000,
+				[
+					[
+						"Change Scroll Speed",
+						"2",
+						"2.1"
+					]
+				]
+			],
+			[
+				76725,
+				[
+					[
+						"health drain",
+						"on",
+						""
+					]
+				]
+			],
+			[
+				76800,
+				[
+					[
+						"Change Character",
+						"dad",
+						"finale_2_kinito"
+					],
+					[
+						"Change Character",
+						"bf",
+						"invisble_brad2"
+					]
+				]
+			],
+			[
+				78000,
+				[
+					[
+						"FadeOut",
+						"",
+						""
+					]
+				]
+			],
+			[
+				79200,
+				[
+					[
+						"Change Scroll Speed",
+						"2",
+						"2.1"
+					],
+					[
+						"Camera Flash",
+						"0000",
+						"2"
+					]
+				]
+			],
+			[
+				127200,
+				[
+					[
+						"Change Character",
+						"dad",
+						"finale_3_kinito"
+					],
+					[
+						"Change Character",
+						"bf",
+						"invisble_brad3"
+					],
+					[
+						"Camera Flash",
+						"0000",
+						"1"
+					]
+				]
+			],
+			[
+				186000,
+				[
+					[
+						"FadeIn",
+						"",
+						""
+					]
+				]
+			],
+			[
+				190521.428571429,
+				[
+					[
+						"health drain",
+						"off",
+						""
+					]
+				]
+			],
+			[
+				190628.571428571,
+				[
+					[
+						"Dadbattle Spotlight",
+						"0",
+						"2"
+					]
+				]
+			],
+			[
+				192342.857142857,
+				[
+					[
+						"Change Character",
+						"dad",
+						"finale 4 kinito"
+					],
+					[
+						"Change Character",
+						"bf",
+						"invisble_brad4"
+					]
+				]
+			],
+			[
+				196414.285714286,
+				[
+					[
+						"FadeOut",
+						"",
+						""
+					]
+				]
+			],
+			[
+				197485.714285714,
+				[
+					[
+						"Change Scroll Speed",
+						"1.5",
+						"1.5"
+					]
+				]
+			],
+			[
+				253628.571428571,
+				[
+					[
+						"FadeIn",
+						"",
+						""
+					]
+				]
+			],
+			[
+				257485.714285714,
+				[
+					[
+						"Change Character",
+						"dad",
+						"finale 5 kinito"
+					]
+				]
+			],
+			[
+				259092.857142857,
+				[
+					[
+						"health drain",
+						"on",
+						""
+					]
+				]
+			],
+			[
+				260400,
+				[
+					[
+						"Change Scroll Speed",
+						"2.2",
+						"2.2"
+					],
+					[
+						"FadeOut",
+						"",
+						""
+					]
+				]
+			],
+			[
+				261600,
+				[
+					[
+						"Camera Flash",
+						"0000",
+						"1  "
+					]
+				]
+			],
+			[
+				296400,
+				[
+					[
+						"FadeIn",
+						"",
+						""
+					]
+				]
+			]
+		]
+	}
+}

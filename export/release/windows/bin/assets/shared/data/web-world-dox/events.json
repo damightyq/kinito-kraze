@@ -1,0 +1,436 @@
+{
+	"song": {
+		"events": [
+			[
+				11294.1176470588,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.56,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				11647.0588235294,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.58,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				11823.5294117647,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.60,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				12000,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.62,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				12352.9411764706,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.64,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				12705.8823529412,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.66,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				12882.3529411765,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.68,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				13058.8235294118,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.69,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				13147.0588235294,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				13235.2941176471,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.71,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				13411.7647058824,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.60,0.001,expoOut"
+					]
+				]
+			],
+			[
+				24705.8823529412,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.70"
+					]
+				]
+			],
+			[
+				34588.2352941176,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.75"
+					]
+				]
+			],
+			[
+				36000,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.65"
+					]
+				]
+			],
+			[
+				47294.1176470588,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.75"
+					]
+				]
+			],
+			[
+				51882.3529411764,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.85,0.00001,expoOut"
+					],
+					[
+						"Blam_lyrics",
+						"could you help me?",
+						"dad"
+					]
+				]
+			],
+			[
+				52941.1764705882,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.70"
+					]
+				]
+			],
+			[
+				55764.7058823529,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.65"
+					]
+				]
+			],
+			[
+				58588.2352941176,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.75"
+					]
+				]
+			],
+			[
+				63176.4705882352,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.85"
+					]
+				]
+			],
+			[
+				64235.294117647,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.65"
+					]
+				]
+			],
+			[
+				69882.3529411764,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.6"
+					]
+				]
+			],
+			[
+				76941.1764705881,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.68"
+					]
+				]
+			],
+			[
+				78352.9411764705,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.65"
+					]
+				]
+			],
+			[
+				81176.4705882352,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.70"
+					]
+				]
+			],
+			[
+				92117.6470588234,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.85,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				93882.3529411763,
+				[
+					[
+						"Change Character",
+						"dad",
+						"invisible"
+					]
+				]
+			],
+			[
+				93882.3529411763,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				95294.1176470587,
+				[
+					[
+						"Blam_lyrics",
+						"thank you for",
+						"dad"
+					]
+				]
+			],
+			[
+				95999.9999999999,
+				[
+					[
+						"Blam_lyrics",
+						"helping out sam!",
+						"dad"
+					]
+				]
+			],
+			[
+				98117.6470588234,
+				[
+					[
+						"Blam_lyrics",
+						"wasn't that so much fun??",
+						"dad"
+					]
+				]
+			],
+			[
+				100676.470588235,
+				[
+					[
+						"Blam_lyrics",
+						"next i think i should",
+						"dad"
+					]
+				]
+			],
+			[
+				102088.235294117,
+				[
+					[
+						"Blam_lyrics",
+						"introduce you to my",
+						"dad"
+					]
+				]
+			],
+			[
+				103235.294117647,
+				[
+					[
+						"Blam_lyrics",
+						"other friend...",
+						"dad"
+					]
+				]
+			],
+			[
+				104558.823529412,
+				[
+					[
+						"Blam_lyrics",
+						"this is my friend, jade! ",
+						"dad"
+					]
+				]
+			],
+			[
+				106588.235294117,
+				[
+					[
+						"Blam_lyrics",
+						"go on...",
+						"dad"
+					]
+				]
+			],
+			[
+				107470.588235294,
+				[
+					[
+						"Blam_lyrics",
+						"introduce yourself...",
+						"dad"
+					]
+				]
+			],
+			[
+				109411.764705882,
+				[
+					[
+						"Blam_lyrics",
+						"hello!!! :3",
+						"dad"
+					]
+				]
+			],
+			[
+				110117.647058823,
+				[
+					[
+						"Blam_lyrics",
+						"my name is",
+						"dad"
+					]
+				]
+			],
+			[
+				110823.529411765,
+				[
+					[
+						"Blam_lyrics",
+						"jade the JELLYFISH! ^o^",
+						"dad"
+					]
+				]
+			],
+			[
+				112235.294117647,
+				[
+					[
+						"Camera Flash",
+						"ffff",
+						"2"
+					],
+					[
+						"Change Character",
+						"dad",
+						"jade_flip"
+					],
+					[
+						"Change Character",
+						"bf",
+						"brad_flip"
+					],
+					[
+						"Change Character",
+						"gf",
+						"invisible"
+					]
+				]
+			]
+		]
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"Edit Shadow",
+						"dad",
+						"true"
+					],
+					[
+						"Edit Shadow",
+						"boyfriend",
+						"true"
+					]
+				]
+			],
+			[
+				157.894736842105,
+				[
+					[
+						"Edit Shadow Color",
+						"boyfriend",
+						"false"
+					],
+					[
+						"Edit Shadow Color",
+						"dad",
+						"false"
+					]
+				]
+			],
+			[
+				315.789473684211,
+				[
+					[
+						"Edit Shadow Duration",
+						"dad",
+						".50"
+					],
+					[
+						"Edit Shadow Duration",
+						"boyfriend",
+						".50"
+					]
+				]
+			]
+		]
+	}
+}

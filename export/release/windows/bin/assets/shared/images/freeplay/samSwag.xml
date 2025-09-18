@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="samSwag.png">
+<SubTexture name="samSwag I0000" x="843" y="0" width="281" height="457" frameX="-110" frameY="-24" frameWidth="500" frameHeight="500" />
+<SubTexture name="samSwag I0001" x="281" y="0" width="281" height="459" frameX="-110" frameY="-22" frameWidth="500" frameHeight="500" />
+<SubTexture name="samSwag I0002" x="0" y="0" width="281" height="462" frameX="-110" frameY="-19" frameWidth="500" frameHeight="500" />
+<SubTexture name="samSwag I0003" x="562" y="0" width="281" height="459" frameX="-110" frameY="-22" frameWidth="500" frameHeight="500" />
+</TextureAtlas>
