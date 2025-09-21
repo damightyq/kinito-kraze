@@ -2826,6 +2826,7 @@
   </file>
   <file name="src/states/MainMenuState.cpp" >
    <depend name="include/Date.h"/>
+   <depend name="include/EReg.h"/>
    <depend name="include/Std.h"/>
    <depend name="include/StringTools.h"/>
    <depend name="include/backend/Achievements.h"/>
@@ -2876,9 +2877,11 @@
    <depend name="include/lime/app/Application.h"/>
    <depend name="include/lime/app/IModule.h"/>
    <depend name="include/lime/app/Module.h"/>
+   <depend name="include/openfl/Lib.h"/>
    <depend name="include/openfl/events/EventDispatcher.h"/>
    <depend name="include/openfl/events/IEventDispatcher.h"/>
    <depend name="include/openfl/media/Sound.h"/>
+   <depend name="include/openfl/net/URLRequest.h"/>
    <depend name="include/options/OptionsState.h"/>
    <depend name="include/states/AchievementsMenuState.h"/>
    <depend name="include/states/CreditsState.h"/>

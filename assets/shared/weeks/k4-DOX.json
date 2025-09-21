@@ -1,0 +1,50 @@
+{
+	"storyName": "Everlasting Fun!",
+	"difficulties": "dox",
+	"hideFreeplay": false,
+	"weekBackground": "KinitoPET",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"virtual pal dox",
+			"kinito",
+			[
+				255,
+				166,
+				250
+			]
+		],
+		[
+			"uh oh dox",
+			"kinito1",
+			[
+				255,
+				166,
+				250
+			]
+		],
+		[
+			"web world dox",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "KinitoPET"
+}

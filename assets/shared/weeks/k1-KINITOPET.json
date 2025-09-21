@@ -1,0 +1,59 @@
+{
+	"storyName": "Everlasting Fun!",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "KinitoPET",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"virtual pal",
+			"kinito",
+			[
+				255,
+				166,
+				250
+			]
+		],
+		[
+			"uh oh",
+			"kinito1",
+			[
+				255,
+				166,
+				250
+			]
+		],
+		[
+			"web world",
+			"kinito1",
+			[
+				255,
+				166,
+				250
+			]
+		],
+		[
+			"finale",
+			"kinito1",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "KinitoPET"
+}

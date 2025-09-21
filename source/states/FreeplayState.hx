@@ -378,7 +378,7 @@ class FreeplayState extends MusicBeatState
 		sam = new FlxSprite((2261 / 2) - 55, (727 / 2) - 10);
 
 		sam.frames = Paths.getSparrowAtlas('freeplay/samSwag');
-		sam.animation.addByIndices('I', 'samSwag I0', [0,0,1,1,2,2,3,3,3,3,3,3,3,3,3,3], "", 24, false);
+		sam.animation.addByIndices('I', 'samSwag I0', [0,0,1,1,2,2,3,3], "", 3, false);
 		sam.scale.set(0.5, 0.5);
 		sam.updateHitbox();
 		sam.alpha = 1;
@@ -386,7 +386,7 @@ class FreeplayState extends MusicBeatState
 		jade = new FlxSprite((53 / 2) - 65, (878 / 2) - 60);
 
 		jade.frames = Paths.getSparrowAtlas('freeplay/jadeSwag');
-		jade.animation.addByIndices('I', 'jadeSwag I0', [0,0,1,1,2,2,3,3,3,3,3,3,3,3,3,3], "", 24, false);
+		jade.animation.addByIndices('I', 'jadeSwag I0', [0,0,1,1,2,2,3,3], "", 3, false);
 		jade.scale.set(0.5, 0.5);
 		jade.updateHitbox();
 		jade.alpha = 1;
@@ -396,7 +396,7 @@ class FreeplayState extends MusicBeatState
 		kinito = new FlxSprite((737 / 2) - 30, (824 / 2) - 20);
 
 		kinito.frames = Paths.getSparrowAtlas('freeplay/kinitoSwag');
-		kinito.animation.addByIndices('I', 'kinitoSwag I0', [0,0,0,1,1,1,2,2,2,3,3,3], "", 24, true);
+		kinito.animation.addByIndices('I', 'kinitoSwag I0', [0,0,0,1,1,1,2,2,2,3,3,3], "", 3, true);
 		kinito.scale.set(0.5, 0.5);
 		kinito.updateHitbox();
 		kinito.alpha = 1;
@@ -823,6 +823,7 @@ class FreeplayState extends MusicBeatState
 	
 		var first = cds.shift();
 		cds.push(first);
+		trace("shifting left...");
 	
 		for (i in 0...cds.length) {
 			var cd = cds[i];
@@ -840,6 +841,7 @@ class FreeplayState extends MusicBeatState
 	
 		var last = cds.pop();
 		cds.unshift(last);
+		trace("shifting right...");
 	
 		for (i in 0...cds.length) {
 			var cd = cds[i];

@@ -14,13 +14,13 @@
 #include <openfl/text/Font.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_9500d8b3260cdbd5_653_new,"__ASSET__OPENFL__assets_fonts_kongtext_ttf","new",0x05e3197a,"__ASSET__OPENFL__assets_fonts_kongtext_ttf.new","ManifestResources.hx",653,0xf77aa668)
+HX_DEFINE_STACK_FRAME(_hx_pos_9500d8b3260cdbd5_686_new,"__ASSET__OPENFL__assets_fonts_kongtext_ttf","new",0x05e3197a,"__ASSET__OPENFL__assets_fonts_kongtext_ttf.new","ManifestResources.hx",686,0xf77aa668)
 
 void __ASSET__OPENFL__assets_fonts_kongtext_ttf_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_9500d8b3260cdbd5_653_new)
-HXDLIN( 653)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/kongtext.ttf",39,ec,f9,4a));
-HXDLIN( 653)		this->name = HX_("Kongtext Regular",46,22,14,7c);
-HXDLIN( 653)		super::__construct(null());
+            	HX_STACKFRAME(&_hx_pos_9500d8b3260cdbd5_686_new)
+HXDLIN( 686)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/kongtext.ttf",39,ec,f9,4a));
+HXDLIN( 686)		this->name = HX_("Kongtext Regular",46,22,14,7c);
+HXDLIN( 686)		super::__construct(null());
             	}
 
 Dynamic __ASSET__OPENFL__assets_fonts_kongtext_ttf_obj::__CreateEmpty() { return new __ASSET__OPENFL__assets_fonts_kongtext_ttf_obj; }

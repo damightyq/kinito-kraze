@@ -11,13 +11,13 @@
 #include <lime/text/Font.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_5a4734c126739f39_628_new,"__ASSET__assets_fonts_pixel_latin_ttf","new",0xea77543d,"__ASSET__assets_fonts_pixel_latin_ttf.new","ManifestResources.hx",628,0xf77aa668)
+HX_DEFINE_STACK_FRAME(_hx_pos_5a4734c126739f39_661_new,"__ASSET__assets_fonts_pixel_latin_ttf","new",0xea77543d,"__ASSET__assets_fonts_pixel_latin_ttf.new","ManifestResources.hx",661,0xf77aa668)
 
 void __ASSET__assets_fonts_pixel_latin_ttf_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_5a4734c126739f39_628_new)
-HXDLIN( 628)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/pixel-latin.ttf",5e,7a,20,f0));
-HXDLIN( 628)		this->name = HX_("Pixel Arial 11 Bold Latin",f2,c3,dd,5d);
-HXDLIN( 628)		super::__construct(null());
+            	HX_STACKFRAME(&_hx_pos_5a4734c126739f39_661_new)
+HXDLIN( 661)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/pixel-latin.ttf",5e,7a,20,f0));
+HXDLIN( 661)		this->name = HX_("Pixel Arial 11 Bold Latin",f2,c3,dd,5d);
+HXDLIN( 661)		super::__construct(null());
             	}
 
 Dynamic __ASSET__assets_fonts_pixel_latin_ttf_obj::__CreateEmpty() { return new __ASSET__assets_fonts_pixel_latin_ttf_obj; }

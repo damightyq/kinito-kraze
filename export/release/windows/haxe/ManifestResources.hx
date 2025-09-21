@@ -332,19 +332,19 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_go_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_good_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_healthbar_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_brad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_bf_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_brad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_dad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_face_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_gf_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_jade_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_kinito_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_kinito1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_kito_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_mark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_pond_brad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_pond_kinito_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_sam_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_jade_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_kinito_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_kinito1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_kito_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_mark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_pond_brad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_pond_kinito_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_icons_icon_sam_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_jade_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_kinitonotes_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_kinitonotes_xml extends null { }
@@ -364,8 +364,6 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_logobumpin_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_mainmenu_menu_achievements_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_mainmenu_menu_achievements_xml extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_mainmenu_menu_awards_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_mainmenu_menu_awards_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_mainmenu_menu_credits_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_mainmenu_menu_credits_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_mainmenu_menu_freeplay_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -539,7 +537,42 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_sounds_secret_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_sounds_sounds_go_here_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_sounds_soundtest_ogg extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_bedroom_2_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_bedroom_2_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_bedroom_red_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_bedroom_red_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_hallway_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_hallway_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_jade_bg_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_jade_bg_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_kito_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_kito_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_mark_bg_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_mark_bg_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_pond_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_pond_lua extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_readme_txt extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_samdox_bg_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_samdox_bg_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_sam_bg_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_sam_bg_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_stage_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_the_finale_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_the_finale_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_the_monitor_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_the_monitor_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_windowsbg_glitch_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_windowsbg_glitch_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_windowsbg_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_windowsbg_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_your_world_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_your_world_lua extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_weeks_k0_test_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_weeks_k1_kinitopet_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_weeks_k2_mark_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_weeks_k3_myworld_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_weeks_k4_dox_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_weeks_k5_kito_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_weeks_weeklist_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_embed_images_psych_ui_arrow_down_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_embed_images_psych_ui_arrow_up_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }

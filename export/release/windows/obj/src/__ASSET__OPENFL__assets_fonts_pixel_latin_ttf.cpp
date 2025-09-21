@@ -14,13 +14,13 @@
 #include <openfl/text/Font.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_2f1a3c958d48f998_654_new,"__ASSET__OPENFL__assets_fonts_pixel_latin_ttf","new",0x325ccaed,"__ASSET__OPENFL__assets_fonts_pixel_latin_ttf.new","ManifestResources.hx",654,0xf77aa668)
+HX_DEFINE_STACK_FRAME(_hx_pos_2f1a3c958d48f998_687_new,"__ASSET__OPENFL__assets_fonts_pixel_latin_ttf","new",0x325ccaed,"__ASSET__OPENFL__assets_fonts_pixel_latin_ttf.new","ManifestResources.hx",687,0xf77aa668)
 
 void __ASSET__OPENFL__assets_fonts_pixel_latin_ttf_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_2f1a3c958d48f998_654_new)
-HXDLIN( 654)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/pixel-latin.ttf",5e,7a,20,f0));
-HXDLIN( 654)		this->name = HX_("Pixel Arial 11 Bold Latin",f2,c3,dd,5d);
-HXDLIN( 654)		super::__construct(null());
+            	HX_STACKFRAME(&_hx_pos_2f1a3c958d48f998_687_new)
+HXDLIN( 687)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/pixel-latin.ttf",5e,7a,20,f0));
+HXDLIN( 687)		this->name = HX_("Pixel Arial 11 Bold Latin",f2,c3,dd,5d);
+HXDLIN( 687)		super::__construct(null());
             	}
 
 Dynamic __ASSET__OPENFL__assets_fonts_pixel_latin_ttf_obj::__CreateEmpty() { return new __ASSET__OPENFL__assets_fonts_pixel_latin_ttf_obj; }

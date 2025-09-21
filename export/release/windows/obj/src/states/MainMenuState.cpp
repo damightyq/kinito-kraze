@@ -8,6 +8,9 @@
 #ifndef INCLUDED_Date
 #include <Date.h>
 #endif
+#ifndef INCLUDED_EReg
+#include <EReg.h>
+#endif
 #ifndef INCLUDED_Std
 #include <Std.h>
 #endif
@@ -158,6 +161,9 @@
 #ifndef INCLUDED_lime_app_Module
 #include <lime/app/Module.h>
 #endif
+#ifndef INCLUDED_openfl_Lib
+#include <openfl/Lib.h>
+#endif
 #ifndef INCLUDED_openfl_events_EventDispatcher
 #include <openfl/events/EventDispatcher.h>
 #endif
@@ -166,6 +172,9 @@
 #endif
 #ifndef INCLUDED_openfl_media_Sound
 #include <openfl/media/Sound.h>
+#endif
+#ifndef INCLUDED_openfl_net_URLRequest
+#include <openfl/net/URLRequest.h>
 #endif
 #ifndef INCLUDED_options_OptionsState
 #include <options/OptionsState.h>
@@ -215,7 +224,7 @@ HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_42_create,"states.MainMenuState","
 HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_130_createMenuItem,"states.MainMenuState","createMenuItem",0x8644948f,"states.MainMenuState.createMenuItem","states/MainMenuState.hx",130,0x1c04e2b2)
 HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_148_update,"states.MainMenuState","update",0x2298202a,"states.MainMenuState.update","states/MainMenuState.hx",148,0x1c04e2b2)
 HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_294_update,"states.MainMenuState","update",0x2298202a,"states.MainMenuState.update","states/MainMenuState.hx",294,0x1c04e2b2)
-HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_351_changeItem,"states.MainMenuState","changeItem",0xa229b944,"states.MainMenuState.changeItem","states/MainMenuState.hx",351,0x1c04e2b2)
+HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_355_changeItem,"states.MainMenuState","changeItem",0xa229b944,"states.MainMenuState.changeItem","states/MainMenuState.hx",355,0x1c04e2b2)
 HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_17_boot,"states.MainMenuState","boot",0xc7fda413,"states.MainMenuState.boot","states/MainMenuState.hx",17,0x1c04e2b2)
 HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_18_boot,"states.MainMenuState","boot",0xc7fda413,"states.MainMenuState.boot","states/MainMenuState.hx",18,0x1c04e2b2)
 HX_LOCAL_STACK_FRAME(_hx_pos_89e648ab22b7047a_19_boot,"states.MainMenuState","boot",0xc7fda413,"states.MainMenuState.boot","states/MainMenuState.hx",19,0x1c04e2b2)
@@ -499,7 +508,7 @@ HXLINE(  99)			_hx_tmp15 = (HX_("assets/",4c,2a,dc,36) + folderKey);
 HXDLIN(  99)		psychVer->setFormat(_hx_tmp15,16,-1,HX_("left",07,08,b0,47),::flixel::text::FlxTextBorderStyle_obj::OUTLINE_dyn(),-16777216,null());
 HXLINE( 100)		this->add(psychVer);
 HXLINE( 101)		int fnfVer = (::flixel::FlxG_obj::height - 24);
-HXDLIN( 101)		 ::flixel::text::FlxText fnfVer1 =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,12,fnfVer,0,(HX_("Kinito Kraze Dev Build version: ",1a,92,aa,8b) + ::lime::app::Application_obj::current->meta->get(HX_("version",18,e7,f1,7c))),12,null());
+HXDLIN( 101)		 ::flixel::text::FlxText fnfVer1 =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,12,fnfVer,0,(HX_("Friday Night Funkin' v",03,65,b0,2f) + ::lime::app::Application_obj::current->meta->get(HX_("version",18,e7,f1,7c))),12,null());
 HXLINE( 102)		{
 HXLINE( 102)			 ::flixel::math::FlxBasePoint this5 = fnfVer1->scrollFactor;
 HXDLIN( 102)			this5->set_x(( (Float)(0) ));
@@ -799,6 +808,18 @@ HXDLIN( 308)						goto _hx_goto_9;
 HXLINE( 312)						::backend::MusicBeatState_obj::switchState( ::states::CreditsState_obj::__alloc( HX_CTX ));
 HXDLIN( 312)						goto _hx_goto_9;
             					}
+            					if (  (_hx_switch_0==HX_("donate",6f,f1,29,2e)) ){
+HXLINE( 323)						{
+HXLINE( 323)							::String url = HX_("https://ninja-muffin24.itch.io/funkin",69,b0,72,92);
+HXDLIN( 323)							if (!( ::EReg_obj::__alloc( HX_CTX ,HX_("^.\\w+?:/*",16,3c,ef,2d),HX_("",00,00,00,00))->match(url))) {
+HXLINE( 323)								url = (HX_("https://",cf,b4,ae,3e) + url);
+            							}
+HXDLIN( 323)							::openfl::Lib_obj::getURL( ::openfl::net::URLRequest_obj::__alloc( HX_CTX ,url),HX_("_blank",95,26,d9,b0));
+            						}
+HXLINE( 324)						_gthis->selectedSomethin = false;
+HXLINE( 325)						item->__get(0).StaticCast<  ::flixel::FlxSprite >()->set_visible(true);
+HXLINE( 322)						goto _hx_goto_9;
+            					}
             					if (  (_hx_switch_0==HX_("freeplay",a0,90,86,22)) ){
 HXLINE( 299)						::backend::MusicBeatState_obj::switchState( ::states::FreeplayState_obj::__alloc( HX_CTX ));
 HXDLIN( 299)						goto _hx_goto_9;
@@ -822,9 +843,9 @@ HXLINE( 297)						::backend::MusicBeatState_obj::switchState( ::states::StoryMen
 HXDLIN( 297)						goto _hx_goto_9;
             					}
             					/* default */{
-HXLINE( 323)						::haxe::Log_obj::trace(((HX_("Menu Item ",6c,72,46,c5) + option->__get(0)) + HX_(" doesn't do anything",b9,c2,ed,73)),::hx::SourceInfo(HX_("source/states/MainMenuState.hx",3e,32,23,ea),323,HX_("states.MainMenuState",2d,4c,08,36),HX_("update",09,86,05,87)));
-HXLINE( 324)						_gthis->selectedSomethin = false;
-HXLINE( 325)						item->__get(0).StaticCast<  ::flixel::FlxSprite >()->set_visible(true);
+HXLINE( 327)						::haxe::Log_obj::trace(((HX_("Menu Item ",6c,72,46,c5) + option->__get(0)) + HX_(" doesn't do anything",b9,c2,ed,73)),::hx::SourceInfo(HX_("source/states/MainMenuState.hx",3e,32,23,ea),327,HX_("states.MainMenuState",2d,4c,08,36),HX_("update",09,86,05,87)));
+HXLINE( 328)						_gthis->selectedSomethin = false;
+HXLINE( 329)						item->__get(0).StaticCast<  ::flixel::FlxSprite >()->set_visible(true);
             					}
             					_hx_goto_9:;
             				}
@@ -857,67 +878,67 @@ HXLINE( 289)						item[0] = this->rightItem;
             					break;
             				}
 HXLINE( 292)				::flixel::effects::FlxFlicker_obj::flicker(item->__get(0).StaticCast<  ::flixel::FlxSprite >(),1,((Float)0.06),false,false, ::Dynamic(new _hx_Closure_0(_gthis,option,item)),null());
-HXLINE( 329)				{
-HXLINE( 329)					 ::Dynamic filter = null();
-HXDLIN( 329)					 ::flixel::group::FlxTypedGroupIterator memb1 =  ::flixel::group::FlxTypedGroupIterator_obj::__alloc( HX_CTX ,this->menuItems->members,filter);
-HXDLIN( 329)					while(memb1->hasNext()){
-HXLINE( 329)						 ::flixel::FlxSprite memb2 = memb1->next().StaticCast<  ::flixel::FlxSprite >();
-HXLINE( 331)						if (::hx::IsInstanceEq( memb2,item->__get(0).StaticCast<  ::flixel::FlxSprite >() )) {
-HXLINE( 332)							continue;
+HXLINE( 333)				{
+HXLINE( 333)					 ::Dynamic filter = null();
+HXDLIN( 333)					 ::flixel::group::FlxTypedGroupIterator memb1 =  ::flixel::group::FlxTypedGroupIterator_obj::__alloc( HX_CTX ,this->menuItems->members,filter);
+HXDLIN( 333)					while(memb1->hasNext()){
+HXLINE( 333)						 ::flixel::FlxSprite memb2 = memb1->next().StaticCast<  ::flixel::FlxSprite >();
+HXLINE( 335)						if (::hx::IsInstanceEq( memb2,item->__get(0).StaticCast<  ::flixel::FlxSprite >() )) {
+HXLINE( 336)							continue;
             						}
-HXLINE( 334)						::flixel::tweens::FlxTween_obj::tween(memb2, ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 338)						::flixel::tweens::FlxTween_obj::tween(memb2, ::Dynamic(::hx::Anon_obj::Create(1)
             							->setFixed(0,HX_("alpha",5e,a7,96,21),0)),((Float)0.4), ::Dynamic(::hx::Anon_obj::Create(1)
             							->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::quadOut_dyn())));
             					}
             				}
             			}
-HXLINE( 338)			if (this->get_controls()->justPressed(HX_("debug_1",05,20,57,5b))) {
-HXLINE( 340)				this->selectedSomethin = true;
-HXLINE( 341)				::flixel::FlxG_obj::mouse->set_visible(false);
-HXLINE( 342)				::backend::MusicBeatState_obj::switchState( ::states::editors::MasterEditorMenu_obj::__alloc( HX_CTX ));
+HXLINE( 342)			if (this->get_controls()->justPressed(HX_("debug_1",05,20,57,5b))) {
+HXLINE( 344)				this->selectedSomethin = true;
+HXLINE( 345)				::flixel::FlxG_obj::mouse->set_visible(false);
+HXLINE( 346)				::backend::MusicBeatState_obj::switchState( ::states::editors::MasterEditorMenu_obj::__alloc( HX_CTX ));
             			}
             		}
-HXLINE( 347)		this->super::update(elapsed);
+HXLINE( 351)		this->super::update(elapsed);
             	}
 
 
 void MainMenuState_obj::changeItem(::hx::Null< int >  __o_change){
             		int change = __o_change.Default(0);
-            	HX_GC_STACKFRAME(&_hx_pos_89e648ab22b7047a_351_changeItem)
-HXLINE( 352)		if ((change != 0)) {
-HXLINE( 352)			::states::MainMenuState_obj::curColumn = ::states::MainMenuColumn_obj::CENTER_dyn();
+            	HX_GC_STACKFRAME(&_hx_pos_89e648ab22b7047a_355_changeItem)
+HXLINE( 356)		if ((change != 0)) {
+HXLINE( 356)			::states::MainMenuState_obj::curColumn = ::states::MainMenuColumn_obj::CENTER_dyn();
             		}
-HXLINE( 353)		::states::MainMenuState_obj::curSelected = ::flixel::math::FlxMath_obj::wrap((::states::MainMenuState_obj::curSelected + change),0,(this->optionShit->length - 1));
-HXLINE( 354)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
-HXDLIN( 354)		_hx_tmp->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
-HXLINE( 356)		{
-HXLINE( 356)			 ::Dynamic filter = null();
-HXDLIN( 356)			 ::flixel::group::FlxTypedGroupIterator item =  ::flixel::group::FlxTypedGroupIterator_obj::__alloc( HX_CTX ,this->menuItems->members,filter);
-HXDLIN( 356)			while(item->hasNext()){
-HXLINE( 356)				 ::flixel::FlxSprite item1 = item->next().StaticCast<  ::flixel::FlxSprite >();
-HXLINE( 358)				item1->animation->play(HX_("idle",14,a7,b3,45),null(),null(),null());
-HXLINE( 359)				item1->centerOffsets(null());
+HXLINE( 357)		::states::MainMenuState_obj::curSelected = ::flixel::math::FlxMath_obj::wrap((::states::MainMenuState_obj::curSelected + change),0,(this->optionShit->length - 1));
+HXLINE( 358)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
+HXDLIN( 358)		_hx_tmp->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
+HXLINE( 360)		{
+HXLINE( 360)			 ::Dynamic filter = null();
+HXDLIN( 360)			 ::flixel::group::FlxTypedGroupIterator item =  ::flixel::group::FlxTypedGroupIterator_obj::__alloc( HX_CTX ,this->menuItems->members,filter);
+HXDLIN( 360)			while(item->hasNext()){
+HXLINE( 360)				 ::flixel::FlxSprite item1 = item->next().StaticCast<  ::flixel::FlxSprite >();
+HXLINE( 362)				item1->animation->play(HX_("idle",14,a7,b3,45),null(),null(),null());
+HXLINE( 363)				item1->centerOffsets(null());
             			}
             		}
-HXLINE( 362)		 ::flixel::FlxSprite selectedItem;
-HXLINE( 363)		switch((int)(::states::MainMenuState_obj::curColumn->_hx_getIndex())){
+HXLINE( 366)		 ::flixel::FlxSprite selectedItem;
+HXLINE( 367)		switch((int)(::states::MainMenuState_obj::curColumn->_hx_getIndex())){
             			case (int)0: {
-HXLINE( 368)				selectedItem = this->leftItem;
+HXLINE( 372)				selectedItem = this->leftItem;
             			}
             			break;
             			case (int)1: {
-HXLINE( 366)				selectedItem = Dynamic( this->menuItems->members->__get(::states::MainMenuState_obj::curSelected)).StaticCast<  ::flixel::FlxSprite >();
+HXLINE( 370)				selectedItem = Dynamic( this->menuItems->members->__get(::states::MainMenuState_obj::curSelected)).StaticCast<  ::flixel::FlxSprite >();
             			}
             			break;
             			case (int)2: {
-HXLINE( 370)				selectedItem = this->rightItem;
+HXLINE( 374)				selectedItem = this->rightItem;
             			}
             			break;
             		}
-HXLINE( 372)		selectedItem->animation->play(HX_("selected",5b,2a,6d,b1),null(),null(),null());
-HXLINE( 373)		selectedItem->centerOffsets(null());
-HXLINE( 374)		 ::flixel::FlxObject _hx_tmp1 = this->camFollow;
-HXDLIN( 374)		_hx_tmp1->set_y(selectedItem->getGraphicMidpoint(null())->y);
+HXLINE( 376)		selectedItem->animation->play(HX_("selected",5b,2a,6d,b1),null(),null(),null());
+HXLINE( 377)		selectedItem->centerOffsets(null());
+HXLINE( 378)		 ::flixel::FlxObject _hx_tmp1 = this->camFollow;
+HXDLIN( 378)		_hx_tmp1->set_y(selectedItem->getGraphicMidpoint(null())->y);
             	}
 
 
