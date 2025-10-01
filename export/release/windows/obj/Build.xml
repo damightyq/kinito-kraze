@@ -3179,6 +3179,26 @@
    <depend name="include/sys/FileSystem.h"/>
    <depend name="include/sys/io/File.h"/>
   </file>
+  <file name="src/states/ComputerMainMenuState.cpp" >
+   <depend name="include/backend/DiscordClient.h"/>
+   <depend name="include/backend/MusicBeatState.h"/>
+   <depend name="include/backend/Paths.h"/>
+   <depend name="include/flixel/FlxBasic.h"/>
+   <depend name="include/flixel/FlxG.h"/>
+   <depend name="include/flixel/FlxObject.h"/>
+   <depend name="include/flixel/FlxSprite.h"/>
+   <depend name="include/flixel/FlxState.h"/>
+   <depend name="include/flixel/graphics/FlxGraphic.h"/>
+   <depend name="include/flixel/group/FlxTypedGroup.h"/>
+   <depend name="include/flixel/math/FlxBasePoint.h"/>
+   <depend name="include/flixel/text/FlxText.h"/>
+   <depend name="include/flixel/util/IFlxDestroyable.h"/>
+   <depend name="include/flixel/util/IFlxPooled.h"/>
+   <depend name="include/states/ComputerMainMenuState.h"/>
+  </file>
+  <file name="src/states/ComputerColumn.cpp" >
+   <depend name="include/states/ComputerColumn.h"/>
+  </file>
   <file name="src/states/ResetAchievementSubstate.cpp" >
    <depend name="include/EReg.h"/>
    <depend name="include/Std.h"/>
@@ -17663,8 +17683,8 @@
    <depend name="include/openfl/media/SoundChannel.h"/>
    <depend name="include/shaders/ColorSwap.h"/>
    <depend name="include/shaders/ColorSwapShader.h"/>
+   <depend name="include/states/ComputerMainMenuState.h"/>
    <depend name="include/states/FlashingState.h"/>
-   <depend name="include/states/MainMenuState.h"/>
    <depend name="include/states/StoryMenuState.h"/>
    <depend name="include/states/TitleState.h"/>
    <depend name="include/sys/FileSystem.h"/>
@@ -18064,6 +18084,7 @@
    <depend name="include/states/stages/NeneState.h"/>
    <depend name="include/states/stages/HenchmenKillState.h"/>
    <depend name="include/states/MainMenuColumn.h"/>
+   <depend name="include/states/ComputerColumn.h"/>
    <depend name="include/options/OptionType.h"/>
    <depend name="include/openfl/display3D/_internal/_AGALConverter/RegisterUsage.h"/>
    <depend name="include/openfl/display3D/_internal/_AGALConverter/ProgramType.h"/>

@@ -16,6 +16,9 @@
 #ifndef INCLUDED_states_MainMenuColumn
 #include <states/MainMenuColumn.h>
 #endif
+#ifndef INCLUDED_states_ComputerColumn
+#include <states/ComputerColumn.h>
+#endif
 #ifndef INCLUDED_options_OptionType
 #include <options/OptionType.h>
 #endif
@@ -1860,6 +1863,9 @@
 #endif
 #ifndef INCLUDED_states_CreditsState
 #include <states/CreditsState.h>
+#endif
+#ifndef INCLUDED_states_ComputerMainMenuState
+#include <states/ComputerMainMenuState.h>
 #endif
 #ifndef INCLUDED_states_ResetAchievementSubstate
 #include <states/ResetAchievementSubstate.h>
@@ -4297,6 +4303,7 @@ __files__boot();
 ::states::stages::NeneState_obj::__register();
 ::states::stages::HenchmenKillState_obj::__register();
 ::states::MainMenuColumn_obj::__register();
+::states::ComputerColumn_obj::__register();
 ::options::OptionType_obj::__register();
 ::openfl::display3D::_internal::_AGALConverter::RegisterUsage_obj::__register();
 ::openfl::display3D::_internal::_AGALConverter::ProgramType_obj::__register();
@@ -4912,6 +4919,7 @@ __files__boot();
 ::states::SongMetadata_obj::__register();
 ::states::ErrorState_obj::__register();
 ::states::CreditsState_obj::__register();
+::states::ComputerMainMenuState_obj::__register();
 ::states::ResetAchievementSubstate_obj::__register();
 ::states::AchievementsMenuState_obj::__register();
 ::shaders::RGBPaletteShader_obj::__register();
@@ -5725,6 +5733,7 @@ __files__boot();
 ::states::stages::NeneState_obj::__boot();
 ::states::stages::HenchmenKillState_obj::__boot();
 ::states::MainMenuColumn_obj::__boot();
+::states::ComputerColumn_obj::__boot();
 ::options::OptionType_obj::__boot();
 ::openfl::display3D::_internal::_AGALConverter::RegisterUsage_obj::__boot();
 ::openfl::display3D::_internal::_AGALConverter::ProgramType_obj::__boot();

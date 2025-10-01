@@ -205,11 +205,11 @@
 #ifndef INCLUDED_shaders_ColorSwapShader
 #include <shaders/ColorSwapShader.h>
 #endif
+#ifndef INCLUDED_states_ComputerMainMenuState
+#include <states/ComputerMainMenuState.h>
+#endif
 #ifndef INCLUDED_states_FlashingState
 #include <states/FlashingState.h>
-#endif
-#ifndef INCLUDED_states_MainMenuState
-#include <states/MainMenuState.h>
 #endif
 #ifndef INCLUDED_states_StoryMenuState
 #include <states/StoryMenuState.h>
@@ -1155,7 +1155,7 @@ HXLINE( 375)			if (pressedEnter) {
             				HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_0) HXARGC(1)
             				void _hx_run( ::flixel::util::FlxTimer tmr){
             					HX_GC_STACKFRAME(&_hx_pos_f4f54134d4f9e667_389_update)
-HXLINE( 390)					::backend::MusicBeatState_obj::switchState( ::states::MainMenuState_obj::__alloc( HX_CTX ));
+HXLINE( 390)					::backend::MusicBeatState_obj::switchState( ::states::ComputerMainMenuState_obj::__alloc( HX_CTX ));
 HXLINE( 391)					::states::TitleState_obj::closedState = true;
             				}
             				HX_END_LOCAL_FUNC1((void))
