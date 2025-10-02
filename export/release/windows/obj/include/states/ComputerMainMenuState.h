@@ -15,8 +15,8 @@ HX_DECLARE_CLASS1(flixel,FlxObject)
 HX_DECLARE_CLASS1(flixel,FlxSprite)
 HX_DECLARE_CLASS1(flixel,FlxState)
 HX_DECLARE_CLASS2(flixel,group,FlxTypedGroup)
-HX_DECLARE_CLASS2(flixel,text,FlxText)
 HX_DECLARE_CLASS2(flixel,util,IFlxDestroyable)
+HX_DECLARE_CLASS1(states,ComputerColumn)
 HX_DECLARE_CLASS1(states,ComputerMainMenuState)
 
 namespace states{
@@ -46,7 +46,9 @@ class HXCPP_CLASS_ATTRIBUTES ComputerMainMenuState_obj : public  ::backend::Musi
 
 		HX_DO_RTTI_ALL;
 		::hx::Val __Field(const ::String &inString, ::hx::PropertyAccess inCallProp);
+		static bool __GetStatic(const ::String &inString, Dynamic &outValue, ::hx::PropertyAccess inCallProp);
 		::hx::Val __SetField(const ::String &inString,const ::hx::Val &inValue, ::hx::PropertyAccess inCallProp);
+		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, ::hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
@@ -54,16 +56,21 @@ class HXCPP_CLASS_ATTRIBUTES ComputerMainMenuState_obj : public  ::backend::Musi
 		bool _hx_isInstanceOf(int inClassId);
 		::String __ToString() const { return HX_("ComputerMainMenuState",3e,a2,de,4b); }
 
+		static void __boot();
+		static  ::states::ComputerColumn curColumn;
+		static int curSelected;
 		 ::flixel::FlxSprite bg;
 		 ::flixel::FlxObject camFollow;
 		 ::flixel::FlxSprite monitor;
 		 ::flixel::FlxSprite screenbg;
 		 ::flixel::FlxSprite screenGlow;
-		 ::flixel::text::FlxText freeplay;
-		 ::flixel::FlxSprite story;
-		 ::flixel::FlxSprite options;
-		 ::flixel::FlxSprite credits;
+		 ::flixel::group::FlxTypedGroup menuImages;
+		::String leftOption;
+		::String rightOption;
+		::Array< ::String > array;
 		void create();
+
+		void update(Float elapsed);
 
 };
 

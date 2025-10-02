@@ -3191,9 +3191,9 @@
    <depend name="include/flixel/graphics/FlxGraphic.h"/>
    <depend name="include/flixel/group/FlxTypedGroup.h"/>
    <depend name="include/flixel/math/FlxBasePoint.h"/>
-   <depend name="include/flixel/text/FlxText.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
    <depend name="include/flixel/util/IFlxPooled.h"/>
+   <depend name="include/states/ComputerColumn.h"/>
    <depend name="include/states/ComputerMainMenuState.h"/>
   </file>
   <file name="src/states/ComputerColumn.cpp" >
@@ -18178,6 +18178,7 @@
    <depend name="include/states/LoadingState.h"/>
    <depend name="include/states/FreeplayState.h"/>
    <depend name="include/states/FlashingState.h"/>
+   <depend name="include/states/ComputerMainMenuState.h"/>
    <depend name="include/shaders/RainShader.h"/>
    <depend name="include/psychlua/ReflectionFunctions.h"/>
    <depend name="include/psychlua/LuaUtils.h"/>

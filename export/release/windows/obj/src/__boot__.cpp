@@ -298,6 +298,9 @@
 #ifndef INCLUDED_states_FlashingState
 #include <states/FlashingState.h>
 #endif
+#ifndef INCLUDED_states_ComputerMainMenuState
+#include <states/ComputerMainMenuState.h>
+#endif
 #ifndef INCLUDED_shaders_RainShader
 #include <shaders/RainShader.h>
 #endif
@@ -1863,9 +1866,6 @@
 #endif
 #ifndef INCLUDED_states_CreditsState
 #include <states/CreditsState.h>
-#endif
-#ifndef INCLUDED_states_ComputerMainMenuState
-#include <states/ComputerMainMenuState.h>
 #endif
 #ifndef INCLUDED_states_ResetAchievementSubstate
 #include <states/ResetAchievementSubstate.h>
@@ -4397,6 +4397,7 @@ __files__boot();
 ::states::LoadingState_obj::__register();
 ::states::FreeplayState_obj::__register();
 ::states::FlashingState_obj::__register();
+::states::ComputerMainMenuState_obj::__register();
 ::shaders::RainShader_obj::__register();
 ::psychlua::ReflectionFunctions_obj::__register();
 ::psychlua::LuaUtils_obj::__register();
@@ -4919,7 +4920,6 @@ __files__boot();
 ::states::SongMetadata_obj::__register();
 ::states::ErrorState_obj::__register();
 ::states::CreditsState_obj::__register();
-::states::ComputerMainMenuState_obj::__register();
 ::states::ResetAchievementSubstate_obj::__register();
 ::states::AchievementsMenuState_obj::__register();
 ::shaders::RGBPaletteShader_obj::__register();
@@ -6264,6 +6264,7 @@ __files__boot();
 ::psychlua::LuaUtils_obj::__boot();
 ::psychlua::ReflectionFunctions_obj::__boot();
 ::shaders::RainShader_obj::__boot();
+::states::ComputerMainMenuState_obj::__boot();
 ::states::FlashingState_obj::__boot();
 ::states::FreeplayState_obj::__boot();
 ::states::LoadingState_obj::__boot();

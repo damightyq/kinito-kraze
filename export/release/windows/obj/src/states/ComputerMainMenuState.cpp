@@ -34,26 +34,35 @@
 #ifndef INCLUDED_flixel_math_FlxBasePoint
 #include <flixel/math/FlxBasePoint.h>
 #endif
-#ifndef INCLUDED_flixel_text_FlxText
-#include <flixel/text/FlxText.h>
-#endif
 #ifndef INCLUDED_flixel_util_IFlxDestroyable
 #include <flixel/util/IFlxDestroyable.h>
 #endif
 #ifndef INCLUDED_flixel_util_IFlxPooled
 #include <flixel/util/IFlxPooled.h>
 #endif
+#ifndef INCLUDED_states_ComputerColumn
+#include <states/ComputerColumn.h>
+#endif
 #ifndef INCLUDED_states_ComputerMainMenuState
 #include <states/ComputerMainMenuState.h>
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_ad2dc547d242da88_14_new,"states.ComputerMainMenuState","new",0x20956c04,"states.ComputerMainMenuState.new","states/ComputerMainMenuState.hx",14,0xe5963aed)
-HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_24_create,"states.ComputerMainMenuState","create",0x1ae7a9d8,"states.ComputerMainMenuState.create","states/ComputerMainMenuState.hx",24,0xe5963aed)
+static const ::String _hx_array_data_456e5a12_1[] = {
+	HX_("storymode",d8,85,a8,3d),HX_("freeplay",a0,90,86,22),HX_("options",5e,33,fe,df),HX_("credits",1a,0e,5e,13),
+};
+HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_38_create,"states.ComputerMainMenuState","create",0x1ae7a9d8,"states.ComputerMainMenuState.create","states/ComputerMainMenuState.hx",38,0xe5963aed)
+HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_81_update,"states.ComputerMainMenuState","update",0x25ddc8e5,"states.ComputerMainMenuState.update","states/ComputerMainMenuState.hx",81,0xe5963aed)
+HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_15_boot,"states.ComputerMainMenuState","boot",0x5a42180e,"states.ComputerMainMenuState.boot","states/ComputerMainMenuState.hx",15,0xe5963aed)
+HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_16_boot,"states.ComputerMainMenuState","boot",0x5a42180e,"states.ComputerMainMenuState.boot","states/ComputerMainMenuState.hx",16,0xe5963aed)
 namespace states{
 
 void ComputerMainMenuState_obj::__construct(){
             	HX_STACKFRAME(&_hx_pos_ad2dc547d242da88_14_new)
-HXDLIN(  14)		super::__construct();
+HXLINE(  29)		this->array = ::Array_obj< ::String >::fromData( _hx_array_data_456e5a12_1,4);
+HXLINE(  26)		this->rightOption = HX_("options",5e,33,fe,df);
+HXLINE(  25)		this->leftOption = HX_("achievements",24,a1,6b,86);
+HXLINE(  14)		super::__construct();
             	}
 
 Dynamic ComputerMainMenuState_obj::__CreateEmpty() { return new ComputerMainMenuState_obj; }
@@ -84,67 +93,98 @@ bool ComputerMainMenuState_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void ComputerMainMenuState_obj::create(){
-            	HX_GC_STACKFRAME(&_hx_pos_ad2dc547d242da88_24_create)
-HXLINE(  25)		this->super::create();
-HXLINE(  27)		::backend::DiscordClient_obj::changePresence(HX_("In the Menus",0a,c1,ad,c6),null(),null(),null(),null(),null());
-HXLINE(  28)		 ::flixel::FlxSprite _hx_tmp =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
-HXDLIN(  28)		this->bg = _hx_tmp->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/bg",ba,af,82,f0),null(),null()),null(),null(),null(),null(),null());
-HXLINE(  29)		 ::flixel::FlxSprite _hx_tmp1 = this->bg;
-HXDLIN(  29)		Float _hx_tmp2 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN(  29)		_hx_tmp1->set_x((_hx_tmp2 - (this->bg->get_width() / ( (Float)(2) ))));
-HXLINE(  30)		 ::flixel::FlxSprite _hx_tmp3 = this->bg;
-HXDLIN(  30)		Float _hx_tmp4 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
-HXDLIN(  30)		_hx_tmp3->set_y((_hx_tmp4 - (this->bg->get_height() / ( (Float)(2) ))));
-HXLINE(  31)		{
-HXLINE(  31)			 ::flixel::math::FlxBasePoint this1 = this->bg->scale;
-HXDLIN(  31)			this1->set_x(((Float)0.75));
-HXDLIN(  31)			this1->set_y(((Float)0.75));
+            	HX_GC_STACKFRAME(&_hx_pos_ad2dc547d242da88_38_create)
+HXLINE(  39)		this->super::create();
+HXLINE(  41)		::backend::DiscordClient_obj::changePresence(HX_("In the Menus",0a,c1,ad,c6),null(),null(),null(),null(),null());
+HXLINE(  42)		 ::flixel::FlxSprite _hx_tmp =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
+HXDLIN(  42)		this->bg = _hx_tmp->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/bg",ba,af,82,f0),null(),null()),null(),null(),null(),null(),null());
+HXLINE(  43)		 ::flixel::FlxSprite _hx_tmp1 = this->bg;
+HXDLIN(  43)		Float _hx_tmp2 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN(  43)		_hx_tmp1->set_x((_hx_tmp2 - (this->bg->get_width() / ( (Float)(2) ))));
+HXLINE(  44)		 ::flixel::FlxSprite _hx_tmp3 = this->bg;
+HXDLIN(  44)		Float _hx_tmp4 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN(  44)		_hx_tmp3->set_y((_hx_tmp4 - (this->bg->get_height() / ( (Float)(2) ))));
+HXLINE(  45)		{
+HXLINE(  45)			 ::flixel::math::FlxBasePoint this1 = this->bg->scale;
+HXDLIN(  45)			this1->set_x(((Float)0.75));
+HXDLIN(  45)			this1->set_y(((Float)0.75));
             		}
-HXLINE(  32)		this->add(this->bg);
-HXLINE(  34)		 ::flixel::FlxSprite _hx_tmp5 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
-HXDLIN(  34)		this->screenbg = _hx_tmp5->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/blueBG",54,cf,31,c0),null(),null()),null(),null(),null(),null(),null());
-HXLINE(  35)		{
-HXLINE(  35)			 ::flixel::math::FlxBasePoint this2 = this->screenbg->scale;
-HXDLIN(  35)			this2->set_x(((Float)0.75));
-HXDLIN(  35)			this2->set_y(((Float)0.75));
-            		}
-HXLINE(  36)		 ::flixel::FlxSprite _hx_tmp6 = this->screenbg;
-HXDLIN(  36)		Float _hx_tmp7 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN(  36)		_hx_tmp6->set_x((_hx_tmp7 - (this->screenbg->get_width() / ( (Float)(2) ))));
-HXLINE(  37)		 ::flixel::FlxSprite _hx_tmp8 = this->screenbg;
-HXDLIN(  37)		Float _hx_tmp9 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
-HXDLIN(  37)		_hx_tmp8->set_y((_hx_tmp9 - (this->screenbg->get_height() / ( (Float)(2) ))));
-HXLINE(  38)		this->add(this->screenbg);
-HXLINE(  40)		 ::flixel::FlxSprite _hx_tmp10 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
-HXDLIN(  40)		this->monitor = _hx_tmp10->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/monitor",85,a8,de,62),null(),null()),null(),null(),null(),null(),null());
-HXLINE(  41)		{
-HXLINE(  41)			 ::flixel::math::FlxBasePoint this3 = this->monitor->scale;
-HXDLIN(  41)			this3->set_x(((Float)0.75));
-HXDLIN(  41)			this3->set_y(((Float)0.75));
-            		}
-HXLINE(  42)		 ::flixel::FlxSprite _hx_tmp11 = this->monitor;
-HXDLIN(  42)		Float _hx_tmp12 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN(  42)		_hx_tmp11->set_x((_hx_tmp12 - (this->monitor->get_width() / ( (Float)(2) ))));
-HXLINE(  43)		 ::flixel::FlxSprite _hx_tmp13 = this->monitor;
-HXDLIN(  43)		Float _hx_tmp14 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
-HXDLIN(  43)		_hx_tmp13->set_y((_hx_tmp14 - (this->monitor->get_height() / ( (Float)(2) ))));
-HXLINE(  44)		this->add(this->monitor);
-HXLINE(  46)		 ::flixel::FlxSprite _hx_tmp15 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
-HXDLIN(  46)		this->screenGlow = _hx_tmp15->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/blueBGglow",e1,57,d5,c0),null(),null()),null(),null(),null(),null(),null());
-HXLINE(  47)		 ::flixel::FlxSprite _hx_tmp16 = this->screenGlow;
-HXDLIN(  47)		Float _hx_tmp17 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN(  47)		_hx_tmp16->set_x((_hx_tmp17 - (this->screenGlow->get_width() / ( (Float)(2) ))));
-HXLINE(  48)		 ::flixel::FlxSprite _hx_tmp18 = this->screenGlow;
-HXDLIN(  48)		Float _hx_tmp19 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
-HXDLIN(  48)		_hx_tmp18->set_y((_hx_tmp19 - (this->screenGlow->get_height() / ( (Float)(2) ))));
+HXLINE(  46)		this->add(this->bg);
+HXLINE(  48)		 ::flixel::FlxSprite _hx_tmp5 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
+HXDLIN(  48)		this->screenbg = _hx_tmp5->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/blueBG",54,cf,31,c0),null(),null()),null(),null(),null(),null(),null());
 HXLINE(  49)		{
-HXLINE(  49)			 ::flixel::math::FlxBasePoint this4 = this->screenGlow->scale;
-HXDLIN(  49)			this4->set_x(((Float)0.75));
-HXDLIN(  49)			this4->set_y(((Float)0.75));
+HXLINE(  49)			 ::flixel::math::FlxBasePoint this2 = this->screenbg->scale;
+HXDLIN(  49)			this2->set_x(((Float)0.75));
+HXDLIN(  49)			this2->set_y(((Float)0.75));
             		}
-HXLINE(  50)		this->add(this->screenGlow);
+HXLINE(  50)		 ::flixel::FlxSprite _hx_tmp6 = this->screenbg;
+HXDLIN(  50)		Float _hx_tmp7 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN(  50)		_hx_tmp6->set_x((_hx_tmp7 - (this->screenbg->get_width() / ( (Float)(2) ))));
+HXLINE(  51)		 ::flixel::FlxSprite _hx_tmp8 = this->screenbg;
+HXDLIN(  51)		Float _hx_tmp9 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN(  51)		_hx_tmp8->set_y((_hx_tmp9 - (this->screenbg->get_height() / ( (Float)(2) ))));
+HXLINE(  52)		this->add(this->screenbg);
+HXLINE(  54)		this->menuImages =  ::flixel::group::FlxTypedGroup_obj::__alloc( HX_CTX ,null());
+HXLINE(  55)		this->add(this->menuImages);
+HXLINE(  57)		{
+HXLINE(  57)			int _g = 0;
+HXDLIN(  57)			int _g1 = this->array->length;
+HXDLIN(  57)			while((_g < _g1)){
+HXLINE(  57)				_g = (_g + 1);
+HXDLIN(  57)				int menuitem = (_g - 1);
+HXLINE(  58)				 ::flixel::FlxSprite menu =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,::backend::Paths_obj::image((HX_("computermenu/BUTTONS/",a3,f6,0d,b6) + this->array->__get(menuitem)),null(),null()));
+HXLINE(  59)				{
+HXLINE(  59)					 ::flixel::math::FlxBasePoint this3 = menu->scale;
+HXDLIN(  59)					this3->set_x(((Float)0.75));
+HXDLIN(  59)					this3->set_y(((Float)0.75));
+            				}
+HXLINE(  60)				Float _hx_tmp10 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN(  60)				menu->set_x((_hx_tmp10 - (menu->get_width() / ( (Float)(2) ))));
+HXLINE(  61)				Float _hx_tmp11 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN(  61)				menu->set_y((_hx_tmp11 - (menu->get_height() / ( (Float)(2) ))));
+HXLINE(  62)				menu->ID = menuitem;
+HXLINE(  63)				this->menuImages->add(menu).StaticCast<  ::flixel::FlxSprite >();
+            			}
+            		}
+HXLINE(  66)		 ::flixel::FlxSprite _hx_tmp12 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
+HXDLIN(  66)		this->monitor = _hx_tmp12->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/monitor",85,a8,de,62),null(),null()),null(),null(),null(),null(),null());
+HXLINE(  67)		{
+HXLINE(  67)			 ::flixel::math::FlxBasePoint this4 = this->monitor->scale;
+HXDLIN(  67)			this4->set_x(((Float)0.75));
+HXDLIN(  67)			this4->set_y(((Float)0.75));
+            		}
+HXLINE(  68)		 ::flixel::FlxSprite _hx_tmp13 = this->monitor;
+HXDLIN(  68)		Float _hx_tmp14 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN(  68)		_hx_tmp13->set_x((_hx_tmp14 - (this->monitor->get_width() / ( (Float)(2) ))));
+HXLINE(  69)		 ::flixel::FlxSprite _hx_tmp15 = this->monitor;
+HXDLIN(  69)		Float _hx_tmp16 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN(  69)		_hx_tmp15->set_y((_hx_tmp16 - (this->monitor->get_height() / ( (Float)(2) ))));
+HXLINE(  70)		this->add(this->monitor);
+HXLINE(  72)		 ::flixel::FlxSprite _hx_tmp17 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
+HXDLIN(  72)		this->screenGlow = _hx_tmp17->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/blueBGglow",e1,57,d5,c0),null(),null()),null(),null(),null(),null(),null());
+HXLINE(  73)		 ::flixel::FlxSprite _hx_tmp18 = this->screenGlow;
+HXDLIN(  73)		Float _hx_tmp19 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN(  73)		_hx_tmp18->set_x((_hx_tmp19 - (this->screenGlow->get_width() / ( (Float)(2) ))));
+HXLINE(  74)		 ::flixel::FlxSprite _hx_tmp20 = this->screenGlow;
+HXDLIN(  74)		Float _hx_tmp21 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN(  74)		_hx_tmp20->set_y((_hx_tmp21 - (this->screenGlow->get_height() / ( (Float)(2) ))));
+HXLINE(  75)		{
+HXLINE(  75)			 ::flixel::math::FlxBasePoint this5 = this->screenGlow->scale;
+HXDLIN(  75)			this5->set_x(((Float)0.75));
+HXDLIN(  75)			this5->set_y(((Float)0.75));
+            		}
+HXLINE(  76)		this->add(this->screenGlow);
             	}
 
+
+void ComputerMainMenuState_obj::update(Float elapsed){
+            	HX_STACKFRAME(&_hx_pos_ad2dc547d242da88_81_update)
+            	}
+
+
+ ::states::ComputerColumn ComputerMainMenuState_obj::curColumn;
+
+int ComputerMainMenuState_obj::curSelected;
 
 
 ::hx::ObjectPtr< ComputerMainMenuState_obj > ComputerMainMenuState_obj::__new() {
@@ -172,10 +212,10 @@ void ComputerMainMenuState_obj::__Mark(HX_MARK_PARAMS)
 	HX_MARK_MEMBER_NAME(monitor,"monitor");
 	HX_MARK_MEMBER_NAME(screenbg,"screenbg");
 	HX_MARK_MEMBER_NAME(screenGlow,"screenGlow");
-	HX_MARK_MEMBER_NAME(freeplay,"freeplay");
-	HX_MARK_MEMBER_NAME(story,"story");
-	HX_MARK_MEMBER_NAME(options,"options");
-	HX_MARK_MEMBER_NAME(credits,"credits");
+	HX_MARK_MEMBER_NAME(menuImages,"menuImages");
+	HX_MARK_MEMBER_NAME(leftOption,"leftOption");
+	HX_MARK_MEMBER_NAME(rightOption,"rightOption");
+	HX_MARK_MEMBER_NAME(array,"array");
 	 ::backend::MusicBeatState_obj::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
 }
@@ -187,10 +227,10 @@ void ComputerMainMenuState_obj::__Visit(HX_VISIT_PARAMS)
 	HX_VISIT_MEMBER_NAME(monitor,"monitor");
 	HX_VISIT_MEMBER_NAME(screenbg,"screenbg");
 	HX_VISIT_MEMBER_NAME(screenGlow,"screenGlow");
-	HX_VISIT_MEMBER_NAME(freeplay,"freeplay");
-	HX_VISIT_MEMBER_NAME(story,"story");
-	HX_VISIT_MEMBER_NAME(options,"options");
-	HX_VISIT_MEMBER_NAME(credits,"credits");
+	HX_VISIT_MEMBER_NAME(menuImages,"menuImages");
+	HX_VISIT_MEMBER_NAME(leftOption,"leftOption");
+	HX_VISIT_MEMBER_NAME(rightOption,"rightOption");
+	HX_VISIT_MEMBER_NAME(array,"array");
 	 ::backend::MusicBeatState_obj::__Visit(HX_VISIT_ARG);
 }
 
@@ -201,27 +241,42 @@ void ComputerMainMenuState_obj::__Visit(HX_VISIT_PARAMS)
 		if (HX_FIELD_EQ(inName,"bg") ) { return ::hx::Val( bg ); }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"story") ) { return ::hx::Val( story ); }
+		if (HX_FIELD_EQ(inName,"array") ) { return ::hx::Val( array ); }
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"create") ) { return ::hx::Val( create_dyn() ); }
+		if (HX_FIELD_EQ(inName,"update") ) { return ::hx::Val( update_dyn() ); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"monitor") ) { return ::hx::Val( monitor ); }
-		if (HX_FIELD_EQ(inName,"options") ) { return ::hx::Val( options ); }
-		if (HX_FIELD_EQ(inName,"credits") ) { return ::hx::Val( credits ); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"screenbg") ) { return ::hx::Val( screenbg ); }
-		if (HX_FIELD_EQ(inName,"freeplay") ) { return ::hx::Val( freeplay ); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"camFollow") ) { return ::hx::Val( camFollow ); }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"screenGlow") ) { return ::hx::Val( screenGlow ); }
+		if (HX_FIELD_EQ(inName,"menuImages") ) { return ::hx::Val( menuImages ); }
+		if (HX_FIELD_EQ(inName,"leftOption") ) { return ::hx::Val( leftOption ); }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"rightOption") ) { return ::hx::Val( rightOption ); }
 	}
 	return super::__Field(inName,inCallProp);
+}
+
+bool ComputerMainMenuState_obj::__GetStatic(const ::String &inName, Dynamic &outValue, ::hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 9:
+		if (HX_FIELD_EQ(inName,"curColumn") ) { outValue = ( curColumn ); return true; }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"curSelected") ) { outValue = ( curSelected ); return true; }
+	}
+	return false;
 }
 
 ::hx::Val ComputerMainMenuState_obj::__SetField(const ::String &inName,const ::hx::Val &inValue,::hx::PropertyAccess inCallProp)
@@ -231,24 +286,38 @@ void ComputerMainMenuState_obj::__Visit(HX_VISIT_PARAMS)
 		if (HX_FIELD_EQ(inName,"bg") ) { bg=inValue.Cast<  ::flixel::FlxSprite >(); return inValue; }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"story") ) { story=inValue.Cast<  ::flixel::FlxSprite >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"array") ) { array=inValue.Cast< ::Array< ::String > >(); return inValue; }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"monitor") ) { monitor=inValue.Cast<  ::flixel::FlxSprite >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"options") ) { options=inValue.Cast<  ::flixel::FlxSprite >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"credits") ) { credits=inValue.Cast<  ::flixel::FlxSprite >(); return inValue; }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"screenbg") ) { screenbg=inValue.Cast<  ::flixel::FlxSprite >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"freeplay") ) { freeplay=inValue.Cast<  ::flixel::text::FlxText >(); return inValue; }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"camFollow") ) { camFollow=inValue.Cast<  ::flixel::FlxObject >(); return inValue; }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"screenGlow") ) { screenGlow=inValue.Cast<  ::flixel::FlxSprite >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"menuImages") ) { menuImages=inValue.Cast<  ::flixel::group::FlxTypedGroup >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"leftOption") ) { leftOption=inValue.Cast< ::String >(); return inValue; }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"rightOption") ) { rightOption=inValue.Cast< ::String >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
+}
+
+bool ComputerMainMenuState_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,::hx::PropertyAccess inCallProp)
+{
+	switch(inName.length) {
+	case 9:
+		if (HX_FIELD_EQ(inName,"curColumn") ) { curColumn=ioValue.Cast<  ::states::ComputerColumn >(); return true; }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"curSelected") ) { curSelected=ioValue.Cast< int >(); return true; }
+	}
+	return false;
 }
 
 void ComputerMainMenuState_obj::__GetFields(Array< ::String> &outFields)
@@ -258,10 +327,10 @@ void ComputerMainMenuState_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_("monitor",9a,3a,14,b2));
 	outFields->push(HX_("screenbg",31,44,b4,c5));
 	outFields->push(HX_("screenGlow",19,dc,9d,bc));
-	outFields->push(HX_("freeplay",a0,90,86,22));
-	outFields->push(HX_("story",f5,13,16,84));
-	outFields->push(HX_("options",5e,33,fe,df));
-	outFields->push(HX_("credits",1a,0e,5e,13));
+	outFields->push(HX_("menuImages",b7,8b,16,e1));
+	outFields->push(HX_("leftOption",dc,8e,8b,5a));
+	outFields->push(HX_("rightOption",71,a0,ff,94));
+	outFields->push(HX_("array",99,6d,8f,25));
 	super::__GetFields(outFields);
 };
 
@@ -272,13 +341,17 @@ static ::hx::StorageInfo ComputerMainMenuState_obj_sMemberStorageInfo[] = {
 	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(ComputerMainMenuState_obj,monitor),HX_("monitor",9a,3a,14,b2)},
 	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(ComputerMainMenuState_obj,screenbg),HX_("screenbg",31,44,b4,c5)},
 	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(ComputerMainMenuState_obj,screenGlow),HX_("screenGlow",19,dc,9d,bc)},
-	{::hx::fsObject /*  ::flixel::text::FlxText */ ,(int)offsetof(ComputerMainMenuState_obj,freeplay),HX_("freeplay",a0,90,86,22)},
-	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(ComputerMainMenuState_obj,story),HX_("story",f5,13,16,84)},
-	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(ComputerMainMenuState_obj,options),HX_("options",5e,33,fe,df)},
-	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(ComputerMainMenuState_obj,credits),HX_("credits",1a,0e,5e,13)},
+	{::hx::fsObject /*  ::flixel::group::FlxTypedGroup */ ,(int)offsetof(ComputerMainMenuState_obj,menuImages),HX_("menuImages",b7,8b,16,e1)},
+	{::hx::fsString,(int)offsetof(ComputerMainMenuState_obj,leftOption),HX_("leftOption",dc,8e,8b,5a)},
+	{::hx::fsString,(int)offsetof(ComputerMainMenuState_obj,rightOption),HX_("rightOption",71,a0,ff,94)},
+	{::hx::fsObject /* ::Array< ::String > */ ,(int)offsetof(ComputerMainMenuState_obj,array),HX_("array",99,6d,8f,25)},
 	{ ::hx::fsUnknown, 0, null()}
 };
-static ::hx::StaticInfo *ComputerMainMenuState_obj_sStaticStorageInfo = 0;
+static ::hx::StaticInfo ComputerMainMenuState_obj_sStaticStorageInfo[] = {
+	{::hx::fsObject /*  ::states::ComputerColumn */ ,(void *) &ComputerMainMenuState_obj::curColumn,HX_("curColumn",76,68,18,37)},
+	{::hx::fsInt,(void *) &ComputerMainMenuState_obj::curSelected,HX_("curSelected",fb,eb,ab,32)},
+	{ ::hx::fsUnknown, 0, null()}
+};
 #endif
 
 static ::String ComputerMainMenuState_obj_sMemberFields[] = {
@@ -287,14 +360,34 @@ static ::String ComputerMainMenuState_obj_sMemberFields[] = {
 	HX_("monitor",9a,3a,14,b2),
 	HX_("screenbg",31,44,b4,c5),
 	HX_("screenGlow",19,dc,9d,bc),
-	HX_("freeplay",a0,90,86,22),
-	HX_("story",f5,13,16,84),
-	HX_("options",5e,33,fe,df),
-	HX_("credits",1a,0e,5e,13),
+	HX_("menuImages",b7,8b,16,e1),
+	HX_("leftOption",dc,8e,8b,5a),
+	HX_("rightOption",71,a0,ff,94),
+	HX_("array",99,6d,8f,25),
 	HX_("create",fc,66,0f,7c),
+	HX_("update",09,86,05,87),
 	::String(null()) };
 
+static void ComputerMainMenuState_obj_sMarkStatics(HX_MARK_PARAMS) {
+	HX_MARK_MEMBER_NAME(ComputerMainMenuState_obj::curColumn,"curColumn");
+	HX_MARK_MEMBER_NAME(ComputerMainMenuState_obj::curSelected,"curSelected");
+};
+
+#ifdef HXCPP_VISIT_ALLOCS
+static void ComputerMainMenuState_obj_sVisitStatics(HX_VISIT_PARAMS) {
+	HX_VISIT_MEMBER_NAME(ComputerMainMenuState_obj::curColumn,"curColumn");
+	HX_VISIT_MEMBER_NAME(ComputerMainMenuState_obj::curSelected,"curSelected");
+};
+
+#endif
+
 ::hx::Class ComputerMainMenuState_obj::__mClass;
+
+static ::String ComputerMainMenuState_obj_sStaticFields[] = {
+	HX_("curColumn",76,68,18,37),
+	HX_("curSelected",fb,eb,ab,32),
+	::String(null())
+};
 
 void ComputerMainMenuState_obj::__register()
 {
@@ -305,11 +398,15 @@ void ComputerMainMenuState_obj::__register()
 	__mClass->mSuper = &super::__SGetClass();
 	__mClass->mConstructEmpty = &__CreateEmpty;
 	__mClass->mConstructArgs = &__Create;
-	__mClass->mGetStaticField = &::hx::Class_obj::GetNoStaticField;
-	__mClass->mSetStaticField = &::hx::Class_obj::SetNoStaticField;
-	__mClass->mStatics = ::hx::Class_obj::dupFunctions(0 /* sStaticFields */);
+	__mClass->mGetStaticField = &ComputerMainMenuState_obj::__GetStatic;
+	__mClass->mSetStaticField = &ComputerMainMenuState_obj::__SetStatic;
+	__mClass->mMarkFunc = ComputerMainMenuState_obj_sMarkStatics;
+	__mClass->mStatics = ::hx::Class_obj::dupFunctions(ComputerMainMenuState_obj_sStaticFields);
 	__mClass->mMembers = ::hx::Class_obj::dupFunctions(ComputerMainMenuState_obj_sMemberFields);
 	__mClass->mCanCast = ::hx::TCanCast< ComputerMainMenuState_obj >;
+#ifdef HXCPP_VISIT_ALLOCS
+	__mClass->mVisitFunc = ComputerMainMenuState_obj_sVisitStatics;
+#endif
 #ifdef HXCPP_SCRIPTABLE
 	__mClass->mMemberStorageInfo = ComputerMainMenuState_obj_sMemberStorageInfo;
 #endif
@@ -317,6 +414,18 @@ void ComputerMainMenuState_obj::__register()
 	__mClass->mStaticStorageInfo = ComputerMainMenuState_obj_sStaticStorageInfo;
 #endif
 	::hx::_hx_RegisterClass(__mClass->mName, __mClass);
+}
+
+void ComputerMainMenuState_obj::__boot()
+{
+{
+            	HX_STACKFRAME(&_hx_pos_ad2dc547d242da88_15_boot)
+HXDLIN(  15)		curColumn = ::states::ComputerColumn_obj::LEFT_dyn();
+            	}
+{
+            	HX_STACKFRAME(&_hx_pos_ad2dc547d242da88_16_boot)
+HXDLIN(  16)		curSelected = 0;
+            	}
 }
 
 } // end namespace states
