@@ -4,7 +4,7 @@ import backend.WeekData;
 
 import objects.Character;
 
-import states.MainMenuState;
+import states.ComputerMainMenuState;
 import states.FreeplayState;
 
 class MasterEditorMenu extends MusicBeatState
@@ -28,6 +28,7 @@ class MasterEditorMenu extends MusicBeatState
 
 	override function create()
 	{
+		Language.reloadPhrases();
 		FlxG.camera.bgColor = FlxColor.BLACK;
 		#if DISCORD_ALLOWED
 		// Updating Discord Rich Presence
@@ -99,7 +100,7 @@ class MasterEditorMenu extends MusicBeatState
 
 		if (controls.BACK)
 		{
-			MusicBeatState.switchState(new MainMenuState());
+			MusicBeatState.switchState(new ComputerMainMenuState());
 		}
 
 		if (controls.ACCEPT)

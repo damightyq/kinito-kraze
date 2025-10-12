@@ -19,6 +19,9 @@ class CreditsState extends MusicBeatState
 
 	override function create()
 	{
+		
+		Language.reloadPhrases();
+
 		#if DISCORD_ALLOWED
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
@@ -179,7 +182,7 @@ class CreditsState extends MusicBeatState
 			if (controls.BACK)
 			{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
-				MusicBeatState.switchState(new MainMenuState());
+				MusicBeatState.switchState(new ComputerMainMenuState());
 				quitting = true;
 			}
 		}

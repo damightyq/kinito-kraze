@@ -44,6 +44,9 @@ class OptionsState extends MusicBeatState
 
 	override function create()
 	{
+		
+		Language.reloadPhrases();
+
 		#if DISCORD_ALLOWED
 		DiscordClient.changePresence("Options Menu", null);
 		#end

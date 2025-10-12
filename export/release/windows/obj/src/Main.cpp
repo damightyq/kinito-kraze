@@ -206,11 +206,11 @@
 #ifndef INCLUDED_psychlua_CallbackHandler
 #include <psychlua/CallbackHandler.h>
 #endif
+#ifndef INCLUDED_states_ComputerMainMenuState
+#include <states/ComputerMainMenuState.h>
+#endif
 #ifndef INCLUDED_states_PlayState
 #include <states/PlayState.h>
-#endif
-#ifndef INCLUDED_states_TitleState
-#include <states/TitleState.h>
 #endif
 #ifndef INCLUDED_sys_FileSystem
 #include <sys/FileSystem.h>
@@ -683,7 +683,7 @@ HXDLIN(  52)		game =  ::Dynamic(::hx::Anon_obj::Create(6)
             			->setFixed(1,HX_("height",e7,07,4c,02),720)
             			->setFixed(2,HX_("skipSplash",46,75,9c,27),true)
             			->setFixed(3,HX_("startFullscreen",3d,c1,ee,2d),false)
-            			->setFixed(4,HX_("initialState",ed,76,1b,48),::hx::ClassOf< ::states::TitleState >())
+            			->setFixed(4,HX_("initialState",ed,76,1b,48),::hx::ClassOf< ::states::ComputerMainMenuState >())
             			->setFixed(5,HX_("framerate",8d,e5,4b,4e),60));
             	}
 }

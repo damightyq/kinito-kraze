@@ -173,6 +173,9 @@
 #ifndef INCLUDED_options_GameplayChangersSubstate
 #include <options/GameplayChangersSubstate.h>
 #endif
+#ifndef INCLUDED_states_ComputerMainMenuState
+#include <states/ComputerMainMenuState.h>
+#endif
 #ifndef INCLUDED_states_ErrorState
 #include <states/ErrorState.h>
 #endif
@@ -687,7 +690,7 @@ HXDLIN( 278)		if (_hx_tmp8) {
 HXLINE( 280)			 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp10 = ::flixel::FlxG_obj::sound;
 HXDLIN( 280)			_hx_tmp10->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("cancelMenu",39,a4,43,b7)),null(),true,null()),null(),null(),null(),null(),null());
 HXLINE( 281)			this->movedBack = true;
-HXLINE( 282)			::backend::MusicBeatState_obj::switchState( ::states::MainMenuState_obj::__alloc( HX_CTX ));
+HXLINE( 282)			::backend::MusicBeatState_obj::switchState( ::states::ComputerMainMenuState_obj::__alloc( HX_CTX ));
             		}
 HXLINE( 285)		this->super::update(elapsed);
 HXLINE( 287)		Float offY = Dynamic( this->grpWeekText->members->__get(::states::StoryMenuState_obj::curWeek)).StaticCast<  ::objects::MenuItem >()->targetY;

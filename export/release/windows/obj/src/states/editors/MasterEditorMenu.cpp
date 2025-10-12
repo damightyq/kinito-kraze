@@ -115,14 +115,14 @@
 #ifndef INCLUDED_openfl_media_Sound
 #include <openfl/media/Sound.h>
 #endif
+#ifndef INCLUDED_states_ComputerMainMenuState
+#include <states/ComputerMainMenuState.h>
+#endif
 #ifndef INCLUDED_states_FreeplayState
 #include <states/FreeplayState.h>
 #endif
 #ifndef INCLUDED_states_LoadingState
 #include <states/LoadingState.h>
-#endif
-#ifndef INCLUDED_states_MainMenuState
-#include <states/MainMenuState.h>
 #endif
 #ifndef INCLUDED_states_editors_CharacterEditorState
 #include <states/editors/CharacterEditorState.h>
@@ -160,9 +160,9 @@ static const ::String _hx_array_data_298ced42_1[] = {
 	HX_("Chart Editor",ef,b4,29,e9),HX_("Character Editor",84,45,58,b1),HX_("Stage Editor",0f,63,39,a5),HX_("Week Editor",59,6c,6c,6d),HX_("Menu Character Editor",05,2d,60,f9),HX_("Dialogue Editor",b5,bb,62,71),HX_("Dialogue Portrait Editor",ea,22,45,b5),HX_("Note Splash Editor",b8,52,34,fe),
 };
 HX_LOCAL_STACK_FRAME(_hx_pos_2474f81768c26797_30_create,"states.editors.MasterEditorMenu","create",0xc786dca8,"states.editors.MasterEditorMenu.create","states/editors/MasterEditorMenu.hx",30,0xa5460afa)
-HX_LOCAL_STACK_FRAME(_hx_pos_2474f81768c26797_80_update,"states.editors.MasterEditorMenu","update",0xd27cfbb5,"states.editors.MasterEditorMenu.update","states/editors/MasterEditorMenu.hx",80,0xa5460afa)
-HX_LOCAL_STACK_FRAME(_hx_pos_2474f81768c26797_140_changeSelection,"states.editors.MasterEditorMenu","changeSelection",0x91300d90,"states.editors.MasterEditorMenu.changeSelection","states/editors/MasterEditorMenu.hx",140,0xa5460afa)
-HX_LOCAL_STACK_FRAME(_hx_pos_2474f81768c26797_147_changeDirectory,"states.editors.MasterEditorMenu","changeDirectory",0x135a07b1,"states.editors.MasterEditorMenu.changeDirectory","states/editors/MasterEditorMenu.hx",147,0xa5460afa)
+HX_LOCAL_STACK_FRAME(_hx_pos_2474f81768c26797_81_update,"states.editors.MasterEditorMenu","update",0xd27cfbb5,"states.editors.MasterEditorMenu.update","states/editors/MasterEditorMenu.hx",81,0xa5460afa)
+HX_LOCAL_STACK_FRAME(_hx_pos_2474f81768c26797_141_changeSelection,"states.editors.MasterEditorMenu","changeSelection",0x91300d90,"states.editors.MasterEditorMenu.changeSelection","states/editors/MasterEditorMenu.hx",141,0xa5460afa)
+HX_LOCAL_STACK_FRAME(_hx_pos_2474f81768c26797_148_changeDirectory,"states.editors.MasterEditorMenu","changeDirectory",0x135a07b1,"states.editors.MasterEditorMenu.changeDirectory","states/editors/MasterEditorMenu.hx",148,0xa5460afa)
 namespace states{
 namespace editors{
 
@@ -204,190 +204,191 @@ bool MasterEditorMenu_obj::_hx_isInstanceOf(int inClassId) {
 
 void MasterEditorMenu_obj::create(){
             	HX_GC_STACKFRAME(&_hx_pos_2474f81768c26797_30_create)
-HXLINE(  31)		::flixel::FlxG_obj::camera->bgColor = -16777216;
-HXLINE(  34)		::backend::DiscordClient_obj::changePresence(HX_("Editors Main Menu",4c,98,82,a7),null(),null(),null(),null(),null());
-HXLINE(  37)		 ::flixel::FlxSprite bg =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,null(),null(),null());
-HXDLIN(  37)		 ::flixel::FlxSprite bg1 = bg->loadGraphic(::backend::Paths_obj::image(HX_("menuDesat",26,91,04,72),null(),null()),null(),null(),null(),null(),null());
-HXLINE(  38)		{
-HXLINE(  38)			 ::flixel::math::FlxBasePoint this1 = bg1->scrollFactor;
-HXDLIN(  38)			this1->set_x(( (Float)(0) ));
-HXDLIN(  38)			this1->set_y(( (Float)(0) ));
+HXLINE(  31)		::backend::Language_obj::reloadPhrases();
+HXLINE(  32)		::flixel::FlxG_obj::camera->bgColor = -16777216;
+HXLINE(  35)		::backend::DiscordClient_obj::changePresence(HX_("Editors Main Menu",4c,98,82,a7),null(),null(),null(),null(),null());
+HXLINE(  38)		 ::flixel::FlxSprite bg =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,null(),null(),null());
+HXDLIN(  38)		 ::flixel::FlxSprite bg1 = bg->loadGraphic(::backend::Paths_obj::image(HX_("menuDesat",26,91,04,72),null(),null()),null(),null(),null(),null(),null());
+HXLINE(  39)		{
+HXLINE(  39)			 ::flixel::math::FlxBasePoint this1 = bg1->scrollFactor;
+HXDLIN(  39)			this1->set_x(( (Float)(0) ));
+HXDLIN(  39)			this1->set_y(( (Float)(0) ));
             		}
-HXLINE(  39)		bg1->set_color(-13290187);
-HXLINE(  40)		this->add(bg1);
-HXLINE(  42)		this->grpTexts =  ::flixel::group::FlxTypedGroup_obj::__alloc( HX_CTX ,null());
-HXLINE(  43)		this->add(this->grpTexts);
-HXLINE(  45)		{
-HXLINE(  45)			int _g = 0;
-HXDLIN(  45)			int _g1 = this->options->length;
-HXDLIN(  45)			while((_g < _g1)){
-HXLINE(  45)				_g = (_g + 1);
-HXDLIN(  45)				int i = (_g - 1);
-HXLINE(  47)				 ::objects::Alphabet leText =  ::objects::Alphabet_obj::__alloc( HX_CTX ,( (Float)(90) ),( (Float)(320) ),this->options->__get(i),true);
-HXLINE(  48)				leText->isMenuItem = true;
-HXLINE(  49)				leText->targetY = i;
-HXLINE(  50)				this->grpTexts->add(leText).StaticCast<  ::objects::Alphabet >();
-HXLINE(  51)				leText->snapToPosition();
+HXLINE(  40)		bg1->set_color(-13290187);
+HXLINE(  41)		this->add(bg1);
+HXLINE(  43)		this->grpTexts =  ::flixel::group::FlxTypedGroup_obj::__alloc( HX_CTX ,null());
+HXLINE(  44)		this->add(this->grpTexts);
+HXLINE(  46)		{
+HXLINE(  46)			int _g = 0;
+HXDLIN(  46)			int _g1 = this->options->length;
+HXDLIN(  46)			while((_g < _g1)){
+HXLINE(  46)				_g = (_g + 1);
+HXDLIN(  46)				int i = (_g - 1);
+HXLINE(  48)				 ::objects::Alphabet leText =  ::objects::Alphabet_obj::__alloc( HX_CTX ,( (Float)(90) ),( (Float)(320) ),this->options->__get(i),true);
+HXLINE(  49)				leText->isMenuItem = true;
+HXLINE(  50)				leText->targetY = i;
+HXLINE(  51)				this->grpTexts->add(leText).StaticCast<  ::objects::Alphabet >();
+HXLINE(  52)				leText->snapToPosition();
             			}
             		}
-HXLINE(  55)		 ::flixel::FlxSprite textBG =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,(::flixel::FlxG_obj::height - 42),null())->makeGraphic(::flixel::FlxG_obj::width,42,-16777216,null(),null());
-HXLINE(  56)		textBG->set_alpha(((Float)0.6));
-HXLINE(  57)		this->add(textBG);
-HXLINE(  59)		this->directoryTxt =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,textBG->x,(textBG->y + 4),::flixel::FlxG_obj::width,HX_("",00,00,00,00),32,null());
-HXLINE(  60)		 ::flixel::text::FlxText _hx_tmp = this->directoryTxt;
-HXDLIN(  60)		::String key = (HX_("fonts/",eb,13,ef,fa) + HX_("vcr.ttf",9d,d2,a7,82));
-HXDLIN(  60)		::Dynamic this2 = ::backend::Language_obj::phrases;
-HXDLIN(  60)		::String str = ( ( ::haxe::ds::StringMap)(this2) )->get_string(::StringTools_obj::trim(key).toLowerCase());
-HXDLIN(  60)		if (::hx::IsNotNull( str )) {
-HXLINE(  60)			key = str;
+HXLINE(  56)		 ::flixel::FlxSprite textBG =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,(::flixel::FlxG_obj::height - 42),null())->makeGraphic(::flixel::FlxG_obj::width,42,-16777216,null(),null());
+HXLINE(  57)		textBG->set_alpha(((Float)0.6));
+HXLINE(  58)		this->add(textBG);
+HXLINE(  60)		this->directoryTxt =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,textBG->x,(textBG->y + 4),::flixel::FlxG_obj::width,HX_("",00,00,00,00),32,null());
+HXLINE(  61)		 ::flixel::text::FlxText _hx_tmp = this->directoryTxt;
+HXDLIN(  61)		::String key = (HX_("fonts/",eb,13,ef,fa) + HX_("vcr.ttf",9d,d2,a7,82));
+HXDLIN(  61)		::Dynamic this2 = ::backend::Language_obj::phrases;
+HXDLIN(  61)		::String str = ( ( ::haxe::ds::StringMap)(this2) )->get_string(::StringTools_obj::trim(key).toLowerCase());
+HXDLIN(  61)		if (::hx::IsNotNull( str )) {
+HXLINE(  61)			key = str;
             		}
-HXDLIN(  60)		::String folderKey = key;
-HXDLIN(  60)		::String file = ::backend::Paths_obj::modFolders(folderKey);
-HXDLIN(  60)		::String _hx_tmp1;
-HXDLIN(  60)		if (::sys::FileSystem_obj::exists(file)) {
-HXLINE(  60)			_hx_tmp1 = file;
+HXDLIN(  61)		::String folderKey = key;
+HXDLIN(  61)		::String file = ::backend::Paths_obj::modFolders(folderKey);
+HXDLIN(  61)		::String _hx_tmp1;
+HXDLIN(  61)		if (::sys::FileSystem_obj::exists(file)) {
+HXLINE(  61)			_hx_tmp1 = file;
             		}
             		else {
-HXLINE(  60)			_hx_tmp1 = (HX_("assets/",4c,2a,dc,36) + folderKey);
+HXLINE(  61)			_hx_tmp1 = (HX_("assets/",4c,2a,dc,36) + folderKey);
             		}
-HXDLIN(  60)		_hx_tmp->setFormat(_hx_tmp1,32,-1,HX_("center",d5,25,db,05),null(),null(),null());
-HXLINE(  61)		{
-HXLINE(  61)			 ::flixel::math::FlxBasePoint this3 = this->directoryTxt->scrollFactor;
-HXDLIN(  61)			this3->set_x(( (Float)(0) ));
-HXDLIN(  61)			this3->set_y(( (Float)(0) ));
+HXDLIN(  61)		_hx_tmp->setFormat(_hx_tmp1,32,-1,HX_("center",d5,25,db,05),null(),null(),null());
+HXLINE(  62)		{
+HXLINE(  62)			 ::flixel::math::FlxBasePoint this3 = this->directoryTxt->scrollFactor;
+HXDLIN(  62)			this3->set_x(( (Float)(0) ));
+HXDLIN(  62)			this3->set_y(( (Float)(0) ));
             		}
-HXLINE(  62)		this->add(this->directoryTxt);
-HXLINE(  64)		{
-HXLINE(  64)			int _g2 = 0;
-HXDLIN(  64)			::Array< ::String > list = ::Array_obj< ::String >::__new(0);
-HXDLIN(  64)			::String modsFolder = HX_("mods/",9e,2f,58,0c);
-HXDLIN(  64)			if (::sys::FileSystem_obj::exists(modsFolder)) {
-HXLINE(  64)				int _g3 = 0;
-HXDLIN(  64)				::Array< ::String > _g4 = ::sys::FileSystem_obj::readDirectory(modsFolder);
-HXDLIN(  64)				while((_g3 < _g4->length)){
-HXLINE(  64)					::String folder = _g4->__get(_g3);
-HXDLIN(  64)					_g3 = (_g3 + 1);
-HXDLIN(  64)					::String path = ::haxe::io::Path_obj::join(::Array_obj< ::String >::__new(2)->init(0,modsFolder)->init(1,folder));
-HXDLIN(  64)					bool _hx_tmp2;
-HXDLIN(  64)					bool _hx_tmp3;
-HXDLIN(  64)					if (::sys::FileSystem_obj::isDirectory(path)) {
-HXLINE(  64)						_hx_tmp3 = !(::backend::Mods_obj::ignoreModFolders->contains(folder.toLowerCase()));
+HXLINE(  63)		this->add(this->directoryTxt);
+HXLINE(  65)		{
+HXLINE(  65)			int _g2 = 0;
+HXDLIN(  65)			::Array< ::String > list = ::Array_obj< ::String >::__new(0);
+HXDLIN(  65)			::String modsFolder = HX_("mods/",9e,2f,58,0c);
+HXDLIN(  65)			if (::sys::FileSystem_obj::exists(modsFolder)) {
+HXLINE(  65)				int _g3 = 0;
+HXDLIN(  65)				::Array< ::String > _g4 = ::sys::FileSystem_obj::readDirectory(modsFolder);
+HXDLIN(  65)				while((_g3 < _g4->length)){
+HXLINE(  65)					::String folder = _g4->__get(_g3);
+HXDLIN(  65)					_g3 = (_g3 + 1);
+HXDLIN(  65)					::String path = ::haxe::io::Path_obj::join(::Array_obj< ::String >::__new(2)->init(0,modsFolder)->init(1,folder));
+HXDLIN(  65)					bool _hx_tmp2;
+HXDLIN(  65)					bool _hx_tmp3;
+HXDLIN(  65)					if (::sys::FileSystem_obj::isDirectory(path)) {
+HXLINE(  65)						_hx_tmp3 = !(::backend::Mods_obj::ignoreModFolders->contains(folder.toLowerCase()));
             					}
             					else {
-HXLINE(  64)						_hx_tmp3 = false;
+HXLINE(  65)						_hx_tmp3 = false;
             					}
-HXDLIN(  64)					if (_hx_tmp3) {
-HXLINE(  64)						_hx_tmp2 = !(list->contains(folder));
+HXDLIN(  65)					if (_hx_tmp3) {
+HXLINE(  65)						_hx_tmp2 = !(list->contains(folder));
             					}
             					else {
-HXLINE(  64)						_hx_tmp2 = false;
+HXLINE(  65)						_hx_tmp2 = false;
             					}
-HXDLIN(  64)					if (_hx_tmp2) {
-HXLINE(  64)						list->push(folder);
+HXDLIN(  65)					if (_hx_tmp2) {
+HXLINE(  65)						list->push(folder);
             					}
             				}
             			}
-HXDLIN(  64)			::Array< ::String > _g5 = list;
-HXDLIN(  64)			while((_g2 < _g5->length)){
-HXLINE(  64)				::String folder1 = _g5->__get(_g2);
-HXDLIN(  64)				_g2 = (_g2 + 1);
-HXLINE(  66)				this->directories->push(folder1);
+HXDLIN(  65)			::Array< ::String > _g5 = list;
+HXDLIN(  65)			while((_g2 < _g5->length)){
+HXLINE(  65)				::String folder1 = _g5->__get(_g2);
+HXDLIN(  65)				_g2 = (_g2 + 1);
+HXLINE(  67)				this->directories->push(folder1);
             			}
             		}
-HXLINE(  69)		int found = this->directories->indexOf(::backend::Mods_obj::currentModDirectory,null());
-HXLINE(  70)		if ((found > -1)) {
-HXLINE(  70)			this->curDirectory = found;
+HXLINE(  70)		int found = this->directories->indexOf(::backend::Mods_obj::currentModDirectory,null());
+HXLINE(  71)		if ((found > -1)) {
+HXLINE(  71)			this->curDirectory = found;
             		}
-HXLINE(  71)		this->changeDirectory(null());
-HXLINE(  73)		this->changeSelection(null());
-HXLINE(  75)		::flixel::FlxG_obj::mouse->set_visible(false);
-HXLINE(  76)		this->super::create();
+HXLINE(  72)		this->changeDirectory(null());
+HXLINE(  74)		this->changeSelection(null());
+HXLINE(  76)		::flixel::FlxG_obj::mouse->set_visible(false);
+HXLINE(  77)		this->super::create();
             	}
 
 
 void MasterEditorMenu_obj::update(Float elapsed){
-            	HX_GC_STACKFRAME(&_hx_pos_2474f81768c26797_80_update)
-HXLINE(  81)		if (this->get_controls()->get_UI_UP_P()) {
-HXLINE(  83)			this->changeSelection(-1);
+            	HX_GC_STACKFRAME(&_hx_pos_2474f81768c26797_81_update)
+HXLINE(  82)		if (this->get_controls()->get_UI_UP_P()) {
+HXLINE(  84)			this->changeSelection(-1);
             		}
-HXLINE(  85)		if (this->get_controls()->get_UI_DOWN_P()) {
-HXLINE(  87)			this->changeSelection(1);
+HXLINE(  86)		if (this->get_controls()->get_UI_DOWN_P()) {
+HXLINE(  88)			this->changeSelection(1);
             		}
-HXLINE(  90)		if (this->get_controls()->get_UI_LEFT_P()) {
-HXLINE(  92)			this->changeDirectory(-1);
+HXLINE(  91)		if (this->get_controls()->get_UI_LEFT_P()) {
+HXLINE(  93)			this->changeDirectory(-1);
             		}
-HXLINE(  94)		if (this->get_controls()->get_UI_RIGHT_P()) {
-HXLINE(  96)			this->changeDirectory(1);
+HXLINE(  95)		if (this->get_controls()->get_UI_RIGHT_P()) {
+HXLINE(  97)			this->changeDirectory(1);
             		}
-HXLINE( 100)		if (this->get_controls()->get_BACK()) {
-HXLINE( 102)			::backend::MusicBeatState_obj::switchState( ::states::MainMenuState_obj::__alloc( HX_CTX ));
+HXLINE( 101)		if (this->get_controls()->get_BACK()) {
+HXLINE( 103)			::backend::MusicBeatState_obj::switchState( ::states::ComputerMainMenuState_obj::__alloc( HX_CTX ));
             		}
-HXLINE( 105)		if (this->get_controls()->get_ACCEPT()) {
-HXLINE( 107)			::String _hx_switch_0 = this->options->__get(this->curSelected);
+HXLINE( 106)		if (this->get_controls()->get_ACCEPT()) {
+HXLINE( 108)			::String _hx_switch_0 = this->options->__get(this->curSelected);
             			if (  (_hx_switch_0==HX_("Character Editor",84,45,58,b1)) ){
-HXLINE( 111)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::editors::CharacterEditorState_obj::__alloc( HX_CTX ,::objects::Character_obj::DEFAULT_CHARACTER,false)) ),false,true));
-HXDLIN( 111)				goto _hx_goto_6;
+HXLINE( 112)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::editors::CharacterEditorState_obj::__alloc( HX_CTX ,::objects::Character_obj::DEFAULT_CHARACTER,false)) ),false,true));
+HXDLIN( 112)				goto _hx_goto_6;
             			}
             			if (  (_hx_switch_0==HX_("Chart Editor",ef,b4,29,e9)) ){
-HXLINE( 109)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::editors::ChartingState_obj::__alloc( HX_CTX ,null())) ),false,true));
-HXDLIN( 109)				goto _hx_goto_6;
+HXLINE( 110)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::editors::ChartingState_obj::__alloc( HX_CTX ,null())) ),false,true));
+HXDLIN( 110)				goto _hx_goto_6;
             			}
             			if (  (_hx_switch_0==HX_("Dialogue Editor",b5,bb,62,71)) ){
-HXLINE( 119)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::editors::DialogueEditorState_obj::__alloc( HX_CTX )) ),false,true));
-HXDLIN( 119)				goto _hx_goto_6;
+HXLINE( 120)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::editors::DialogueEditorState_obj::__alloc( HX_CTX )) ),false,true));
+HXDLIN( 120)				goto _hx_goto_6;
             			}
             			if (  (_hx_switch_0==HX_("Dialogue Portrait Editor",ea,22,45,b5)) ){
-HXLINE( 121)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::editors::DialogueCharacterEditorState_obj::__alloc( HX_CTX )) ),false,true));
-HXDLIN( 121)				goto _hx_goto_6;
+HXLINE( 122)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::editors::DialogueCharacterEditorState_obj::__alloc( HX_CTX )) ),false,true));
+HXDLIN( 122)				goto _hx_goto_6;
             			}
             			if (  (_hx_switch_0==HX_("Menu Character Editor",05,2d,60,f9)) ){
-HXLINE( 117)				::backend::MusicBeatState_obj::switchState( ::states::editors::MenuCharacterEditorState_obj::__alloc( HX_CTX ));
-HXDLIN( 117)				goto _hx_goto_6;
+HXLINE( 118)				::backend::MusicBeatState_obj::switchState( ::states::editors::MenuCharacterEditorState_obj::__alloc( HX_CTX ));
+HXDLIN( 118)				goto _hx_goto_6;
             			}
             			if (  (_hx_switch_0==HX_("Note Splash Editor",b8,52,34,fe)) ){
-HXLINE( 123)				::backend::MusicBeatState_obj::switchState( ::states::editors::NoteSplashEditorState_obj::__alloc( HX_CTX ));
-HXDLIN( 123)				goto _hx_goto_6;
+HXLINE( 124)				::backend::MusicBeatState_obj::switchState( ::states::editors::NoteSplashEditorState_obj::__alloc( HX_CTX ));
+HXDLIN( 124)				goto _hx_goto_6;
             			}
             			if (  (_hx_switch_0==HX_("Stage Editor",0f,63,39,a5)) ){
-HXLINE( 113)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::editors::StageEditorState_obj::__alloc( HX_CTX ,null(),null())) ),false,true));
-HXDLIN( 113)				goto _hx_goto_6;
+HXLINE( 114)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::editors::StageEditorState_obj::__alloc( HX_CTX ,null(),null())) ),false,true));
+HXDLIN( 114)				goto _hx_goto_6;
             			}
             			if (  (_hx_switch_0==HX_("Week Editor",59,6c,6c,6d)) ){
-HXLINE( 115)				::backend::MusicBeatState_obj::switchState( ::states::editors::WeekEditorState_obj::__alloc( HX_CTX ,null()));
-HXDLIN( 115)				goto _hx_goto_6;
+HXLINE( 116)				::backend::MusicBeatState_obj::switchState( ::states::editors::WeekEditorState_obj::__alloc( HX_CTX ,null()));
+HXDLIN( 116)				goto _hx_goto_6;
             			}
             			_hx_goto_6:;
-HXLINE( 125)			::flixel::FlxG_obj::sound->music->set_volume(( (Float)(0) ));
-HXLINE( 126)			::states::FreeplayState_obj::destroyFreeplayVocals();
+HXLINE( 126)			::flixel::FlxG_obj::sound->music->set_volume(( (Float)(0) ));
+HXLINE( 127)			::states::FreeplayState_obj::destroyFreeplayVocals();
             		}
-HXLINE( 129)		{
-HXLINE( 129)			int _g_current = 0;
-HXDLIN( 129)			::Array< ::Dynamic> _g_array = this->grpTexts->members;
-HXDLIN( 129)			while((_g_current < _g_array->length)){
-HXLINE( 129)				 ::objects::Alphabet _g_value = _g_array->__get(_g_current).StaticCast<  ::objects::Alphabet >();
-HXDLIN( 129)				_g_current = (_g_current + 1);
-HXDLIN( 129)				int _g_key = (_g_current - 1);
-HXDLIN( 129)				int num = _g_key;
-HXDLIN( 129)				 ::objects::Alphabet item = _g_value;
-HXLINE( 130)				{
-HXLINE( 131)					item->targetY = (num - this->curSelected);
-HXLINE( 132)					item->set_alpha(((Float)0.6));
-HXLINE( 133)					if ((item->targetY == 0)) {
-HXLINE( 134)						item->set_alpha(( (Float)(1) ));
+HXLINE( 130)		{
+HXLINE( 130)			int _g_current = 0;
+HXDLIN( 130)			::Array< ::Dynamic> _g_array = this->grpTexts->members;
+HXDLIN( 130)			while((_g_current < _g_array->length)){
+HXLINE( 130)				 ::objects::Alphabet _g_value = _g_array->__get(_g_current).StaticCast<  ::objects::Alphabet >();
+HXDLIN( 130)				_g_current = (_g_current + 1);
+HXDLIN( 130)				int _g_key = (_g_current - 1);
+HXDLIN( 130)				int num = _g_key;
+HXDLIN( 130)				 ::objects::Alphabet item = _g_value;
+HXLINE( 131)				{
+HXLINE( 132)					item->targetY = (num - this->curSelected);
+HXLINE( 133)					item->set_alpha(((Float)0.6));
+HXLINE( 134)					if ((item->targetY == 0)) {
+HXLINE( 135)						item->set_alpha(( (Float)(1) ));
             					}
             				}
             			}
             		}
-HXLINE( 136)		this->super::update(elapsed);
+HXLINE( 137)		this->super::update(elapsed);
             	}
 
 
 void MasterEditorMenu_obj::changeSelection(::hx::Null< int >  __o_change){
             		int change = __o_change.Default(0);
-            	HX_STACKFRAME(&_hx_pos_2474f81768c26797_140_changeSelection)
-HXLINE( 141)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
-HXDLIN( 141)		_hx_tmp->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),((Float)0.4),null(),null(),null(),null());
-HXLINE( 142)		this->curSelected = ::flixel::math::FlxMath_obj::wrap((this->curSelected + change),0,(this->options->length - 1));
+            	HX_STACKFRAME(&_hx_pos_2474f81768c26797_141_changeSelection)
+HXLINE( 142)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
+HXDLIN( 142)		_hx_tmp->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),((Float)0.4),null(),null(),null(),null());
+HXLINE( 143)		this->curSelected = ::flixel::math::FlxMath_obj::wrap((this->curSelected + change),0,(this->options->length - 1));
             	}
 
 
@@ -395,34 +396,34 @@ HX_DEFINE_DYNAMIC_FUNC1(MasterEditorMenu_obj,changeSelection,(void))
 
 void MasterEditorMenu_obj::changeDirectory(::hx::Null< int >  __o_change){
             		int change = __o_change.Default(0);
-            	HX_STACKFRAME(&_hx_pos_2474f81768c26797_147_changeDirectory)
-HXLINE( 148)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
-HXDLIN( 148)		_hx_tmp->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),((Float)0.4),null(),null(),null(),null());
-HXLINE( 150)		 ::states::editors::MasterEditorMenu _hx_tmp1 = ::hx::ObjectPtr<OBJ_>(this);
-HXDLIN( 150)		_hx_tmp1->curDirectory = (_hx_tmp1->curDirectory + change);
-HXLINE( 152)		if ((this->curDirectory < 0)) {
-HXLINE( 153)			this->curDirectory = (this->directories->length - 1);
+            	HX_STACKFRAME(&_hx_pos_2474f81768c26797_148_changeDirectory)
+HXLINE( 149)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
+HXDLIN( 149)		_hx_tmp->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),((Float)0.4),null(),null(),null(),null());
+HXLINE( 151)		 ::states::editors::MasterEditorMenu _hx_tmp1 = ::hx::ObjectPtr<OBJ_>(this);
+HXDLIN( 151)		_hx_tmp1->curDirectory = (_hx_tmp1->curDirectory + change);
+HXLINE( 153)		if ((this->curDirectory < 0)) {
+HXLINE( 154)			this->curDirectory = (this->directories->length - 1);
             		}
-HXLINE( 154)		if ((this->curDirectory >= this->directories->length)) {
-HXLINE( 155)			this->curDirectory = 0;
+HXLINE( 155)		if ((this->curDirectory >= this->directories->length)) {
+HXLINE( 156)			this->curDirectory = 0;
             		}
-HXLINE( 157)		::backend::WeekData_obj::setDirectoryFromWeek(null());
-HXLINE( 158)		bool _hx_tmp2;
-HXDLIN( 158)		if (::hx::IsNotNull( this->directories->__get(this->curDirectory) )) {
-HXLINE( 158)			_hx_tmp2 = (this->directories->__get(this->curDirectory).length < 1);
-            		}
-            		else {
-HXLINE( 158)			_hx_tmp2 = true;
-            		}
-HXDLIN( 158)		if (_hx_tmp2) {
-HXLINE( 159)			this->directoryTxt->set_text(HX_("< No Mod Directory Loaded >",6f,05,c4,e1));
+HXLINE( 158)		::backend::WeekData_obj::setDirectoryFromWeek(null());
+HXLINE( 159)		bool _hx_tmp2;
+HXDLIN( 159)		if (::hx::IsNotNull( this->directories->__get(this->curDirectory) )) {
+HXLINE( 159)			_hx_tmp2 = (this->directories->__get(this->curDirectory).length < 1);
             		}
             		else {
-HXLINE( 162)			::backend::Mods_obj::currentModDirectory = this->directories->__get(this->curDirectory);
-HXLINE( 163)			this->directoryTxt->set_text(((HX_("< Loaded Mod Directory: ",1e,b9,7b,3e) + ::backend::Mods_obj::currentModDirectory) + HX_(" >",1e,1c,00,00)));
+HXLINE( 159)			_hx_tmp2 = true;
             		}
-HXLINE( 165)		 ::flixel::text::FlxText _hx_tmp3 = this->directoryTxt;
-HXDLIN( 165)		_hx_tmp3->set_text(this->directoryTxt->text.toUpperCase());
+HXDLIN( 159)		if (_hx_tmp2) {
+HXLINE( 160)			this->directoryTxt->set_text(HX_("< No Mod Directory Loaded >",6f,05,c4,e1));
+            		}
+            		else {
+HXLINE( 163)			::backend::Mods_obj::currentModDirectory = this->directories->__get(this->curDirectory);
+HXLINE( 164)			this->directoryTxt->set_text(((HX_("< Loaded Mod Directory: ",1e,b9,7b,3e) + ::backend::Mods_obj::currentModDirectory) + HX_(" >",1e,1c,00,00)));
+            		}
+HXLINE( 166)		 ::flixel::text::FlxText _hx_tmp3 = this->directoryTxt;
+HXDLIN( 166)		_hx_tmp3->set_text(this->directoryTxt->text.toUpperCase());
             	}
 
 

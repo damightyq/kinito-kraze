@@ -59,16 +59,25 @@ class HXCPP_CLASS_ATTRIBUTES ComputerMainMenuState_obj : public  ::backend::Musi
 		static void __boot();
 		static  ::states::ComputerColumn curColumn;
 		static int curSelected;
+		static bool initialized;
 		 ::flixel::FlxSprite bg;
 		 ::flixel::FlxObject camFollow;
 		 ::flixel::FlxSprite monitor;
 		 ::flixel::FlxSprite screenbg;
 		 ::flixel::FlxSprite screenGlow;
 		 ::flixel::group::FlxTypedGroup menuImages;
+		Float musicBPM;
+		bool selectedSomethin;
 		::String leftOption;
 		::String rightOption;
 		::Array< ::String > array;
 		void create();
+
+		void loadJsonData();
+		::Dynamic loadJsonData_dyn();
+
+		void ButtonThingy();
+		::Dynamic ButtonThingy_dyn();
 
 		void update(Float elapsed);
 

@@ -14,6 +14,8 @@
 -D flixel-addons=3.2.2
 -cp C:/HaxeToolkit/haxe/lib/tjson/1,4,0
 -D tjson=1.4.0
+-cp C:/HaxeToolkit/haxe/lib/hxwindowcolormode/0,2,1/src
+-D hxWindowColorMode=0.2.1
 -cp C:/HaxeToolkit/haxe/lib/linc_luajit/git
 -D linc_luajit=0.0.7
 -cp C:/HaxeToolkit/haxe/lib/hscript-iris/1,1,3

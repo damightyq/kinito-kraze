@@ -137,10 +137,10 @@ static const ::String _hx_array_data_14992103_1[] = {
 };
 HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_23_openSelectedSubstate,"options.OptionsState","openSelectedSubstate",0x28c3b341,"options.OptionsState.openSelectedSubstate","options/OptionsState.hx",23,0xaa608eba)
 HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_46_create,"options.OptionsState","create",0xc1bf1307,"options.OptionsState.create","options/OptionsState.hx",46,0xaa608eba)
-HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_82_closeSubState,"options.OptionsState","closeSubState",0xbc3ad39e,"options.OptionsState.closeSubState","options/OptionsState.hx",82,0xaa608eba)
-HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_90_update,"options.OptionsState","update",0xccb53214,"options.OptionsState.update","options/OptionsState.hx",90,0xaa608eba)
-HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_113_changeSelection,"options.OptionsState","changeSelection",0xa0e39351,"options.OptionsState.changeSelection","options/OptionsState.hx",113,0xaa608eba)
-HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_133_destroy,"options.OptionsState","destroy",0xd88d0a8f,"options.OptionsState.destroy","options/OptionsState.hx",133,0xaa608eba)
+HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_85_closeSubState,"options.OptionsState","closeSubState",0xbc3ad39e,"options.OptionsState.closeSubState","options/OptionsState.hx",85,0xaa608eba)
+HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_93_update,"options.OptionsState","update",0xccb53214,"options.OptionsState.update","options/OptionsState.hx",93,0xaa608eba)
+HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_116_changeSelection,"options.OptionsState","changeSelection",0xa0e39351,"options.OptionsState.changeSelection","options/OptionsState.hx",116,0xaa608eba)
+HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_136_destroy,"options.OptionsState","destroy",0xd88d0a8f,"options.OptionsState.destroy","options/OptionsState.hx",136,0xaa608eba)
 HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_18_boot,"options.OptionsState","boot",0x584b877d,"options.OptionsState.boot","options/OptionsState.hx",18,0xaa608eba)
 HX_LOCAL_STACK_FRAME(_hx_pos_bddb8806f8971119_20_boot,"options.OptionsState","boot",0x584b877d,"options.OptionsState.boot","options/OptionsState.hx",20,0xaa608eba)
 namespace options{
@@ -217,146 +217,147 @@ HX_DEFINE_DYNAMIC_FUNC1(OptionsState_obj,openSelectedSubstate,(void))
 
 void OptionsState_obj::create(){
             	HX_GC_STACKFRAME(&_hx_pos_bddb8806f8971119_46_create)
-HXLINE(  48)		::backend::DiscordClient_obj::changePresence(HX_("Options Menu",e1,25,4c,98),null(),null(),null(),null(),null());
-HXLINE(  51)		 ::flixel::FlxSprite bg =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,null(),null(),null());
-HXDLIN(  51)		 ::flixel::FlxSprite bg1 = bg->loadGraphic(::backend::Paths_obj::image(HX_("menuDesat",26,91,04,72),null(),null()),null(),null(),null(),null(),null());
-HXLINE(  52)		bg1->set_antialiasing(::backend::ClientPrefs_obj::data->antialiasing);
-HXLINE(  53)		bg1->set_color(-1412611);
-HXLINE(  54)		bg1->updateHitbox();
-HXLINE(  56)		{
-HXLINE(  56)			int axes = 17;
-HXDLIN(  56)			bool _hx_tmp;
-HXDLIN(  56)			if ((axes != 1)) {
-HXLINE(  56)				_hx_tmp = (axes == 17);
+HXLINE(  48)		::backend::Language_obj::reloadPhrases();
+HXLINE(  51)		::backend::DiscordClient_obj::changePresence(HX_("Options Menu",e1,25,4c,98),null(),null(),null(),null(),null());
+HXLINE(  54)		 ::flixel::FlxSprite bg =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,null(),null(),null());
+HXDLIN(  54)		 ::flixel::FlxSprite bg1 = bg->loadGraphic(::backend::Paths_obj::image(HX_("menuDesat",26,91,04,72),null(),null()),null(),null(),null(),null(),null());
+HXLINE(  55)		bg1->set_antialiasing(::backend::ClientPrefs_obj::data->antialiasing);
+HXLINE(  56)		bg1->set_color(-1412611);
+HXLINE(  57)		bg1->updateHitbox();
+HXLINE(  59)		{
+HXLINE(  59)			int axes = 17;
+HXDLIN(  59)			bool _hx_tmp;
+HXDLIN(  59)			if ((axes != 1)) {
+HXLINE(  59)				_hx_tmp = (axes == 17);
             			}
             			else {
-HXLINE(  56)				_hx_tmp = true;
+HXLINE(  59)				_hx_tmp = true;
             			}
-HXDLIN(  56)			if (_hx_tmp) {
-HXLINE(  56)				int _hx_tmp1 = ::flixel::FlxG_obj::width;
-HXDLIN(  56)				bg1->set_x(((( (Float)(_hx_tmp1) ) - bg1->get_width()) / ( (Float)(2) )));
+HXDLIN(  59)			if (_hx_tmp) {
+HXLINE(  59)				int _hx_tmp1 = ::flixel::FlxG_obj::width;
+HXDLIN(  59)				bg1->set_x(((( (Float)(_hx_tmp1) ) - bg1->get_width()) / ( (Float)(2) )));
             			}
-HXDLIN(  56)			bool _hx_tmp2;
-HXDLIN(  56)			if ((axes != 16)) {
-HXLINE(  56)				_hx_tmp2 = (axes == 17);
+HXDLIN(  59)			bool _hx_tmp2;
+HXDLIN(  59)			if ((axes != 16)) {
+HXLINE(  59)				_hx_tmp2 = (axes == 17);
             			}
             			else {
-HXLINE(  56)				_hx_tmp2 = true;
+HXLINE(  59)				_hx_tmp2 = true;
             			}
-HXDLIN(  56)			if (_hx_tmp2) {
-HXLINE(  56)				int _hx_tmp3 = ::flixel::FlxG_obj::height;
-HXDLIN(  56)				bg1->set_y(((( (Float)(_hx_tmp3) ) - bg1->get_height()) / ( (Float)(2) )));
+HXDLIN(  59)			if (_hx_tmp2) {
+HXLINE(  59)				int _hx_tmp3 = ::flixel::FlxG_obj::height;
+HXDLIN(  59)				bg1->set_y(((( (Float)(_hx_tmp3) ) - bg1->get_height()) / ( (Float)(2) )));
             			}
             		}
-HXLINE(  57)		this->add(bg1);
-HXLINE(  59)		this->grpOptions =  ::flixel::group::FlxTypedGroup_obj::__alloc( HX_CTX ,null());
-HXLINE(  60)		this->add(this->grpOptions);
-HXLINE(  62)		{
-HXLINE(  62)			int _g_current = 0;
-HXDLIN(  62)			::Array< ::String > _g_array = this->options;
-HXDLIN(  62)			while((_g_current < _g_array->length)){
-HXLINE(  62)				::String _g_value = _g_array->__get(_g_current);
-HXDLIN(  62)				_g_current = (_g_current + 1);
-HXDLIN(  62)				int _g_key = (_g_current - 1);
-HXDLIN(  62)				int num = _g_key;
-HXDLIN(  62)				::String option = _g_value;
-HXLINE(  63)				{
-HXLINE(  64)					::String key = (HX_("options_",41,bf,6e,1e) + option);
-HXDLIN(  64)					::cpp::VirtualArray values = null();
-HXDLIN(  64)					::Dynamic this1 = ::backend::Language_obj::phrases;
-HXDLIN(  64)					 ::EReg hideChars =  ::EReg_obj::__alloc( HX_CTX ,HX_("[~&\\\\/;:<>#.,'\"%?!]",85,3f,6d,6d),HX_("g",67,00,00,00));
-HXDLIN(  64)					::String str = ( ( ::haxe::ds::StringMap)(this1) )->get_string(::StringTools_obj::trim(hideChars->replace(::StringTools_obj::replace(key,HX_(" ",20,00,00,00),HX_("_",5f,00,00,00)),HX_("",00,00,00,00)).toLowerCase()));
-HXDLIN(  64)					if (::hx::IsNull( str )) {
+HXLINE(  60)		this->add(bg1);
+HXLINE(  62)		this->grpOptions =  ::flixel::group::FlxTypedGroup_obj::__alloc( HX_CTX ,null());
+HXLINE(  63)		this->add(this->grpOptions);
+HXLINE(  65)		{
+HXLINE(  65)			int _g_current = 0;
+HXDLIN(  65)			::Array< ::String > _g_array = this->options;
+HXDLIN(  65)			while((_g_current < _g_array->length)){
+HXLINE(  65)				::String _g_value = _g_array->__get(_g_current);
+HXDLIN(  65)				_g_current = (_g_current + 1);
+HXDLIN(  65)				int _g_key = (_g_current - 1);
+HXDLIN(  65)				int num = _g_key;
+HXDLIN(  65)				::String option = _g_value;
+HXLINE(  66)				{
+HXLINE(  67)					::String key = (HX_("options_",41,bf,6e,1e) + option);
+HXDLIN(  67)					::cpp::VirtualArray values = null();
+HXDLIN(  67)					::Dynamic this1 = ::backend::Language_obj::phrases;
+HXDLIN(  67)					 ::EReg hideChars =  ::EReg_obj::__alloc( HX_CTX ,HX_("[~&\\\\/;:<>#.,'\"%?!]",85,3f,6d,6d),HX_("g",67,00,00,00));
+HXDLIN(  67)					::String str = ( ( ::haxe::ds::StringMap)(this1) )->get_string(::StringTools_obj::trim(hideChars->replace(::StringTools_obj::replace(key,HX_(" ",20,00,00,00),HX_("_",5f,00,00,00)),HX_("",00,00,00,00)).toLowerCase()));
+HXDLIN(  67)					if (::hx::IsNull( str )) {
 HXLINE(  62)						str = option;
             					}
-HXLINE(  64)					if (::hx::IsNull( str )) {
+HXLINE(  67)					if (::hx::IsNull( str )) {
 HXLINE(  68)						str = key;
             					}
-HXLINE(  64)					if (::hx::IsNotNull( values )) {
-HXLINE(  64)						int _g_current1 = 0;
-HXDLIN(  64)						::cpp::VirtualArray _g_array1 = values;
-HXDLIN(  64)						while((_g_current1 < _g_array1->get_length())){
-HXLINE(  64)							 ::Dynamic _g_value1 = _g_array1->__get(_g_current1);
-HXDLIN(  64)							_g_current1 = (_g_current1 + 1);
-HXDLIN(  64)							int _g_key1 = (_g_current1 - 1);
-HXDLIN(  64)							int num1 = _g_key1;
-HXDLIN(  64)							 ::Dynamic value = _g_value1;
+HXLINE(  67)					if (::hx::IsNotNull( values )) {
+HXLINE(  67)						int _g_current1 = 0;
+HXDLIN(  67)						::cpp::VirtualArray _g_array1 = values;
+HXDLIN(  67)						while((_g_current1 < _g_array1->get_length())){
+HXLINE(  67)							 ::Dynamic _g_value1 = _g_array1->__get(_g_current1);
+HXDLIN(  67)							_g_current1 = (_g_current1 + 1);
+HXDLIN(  67)							int _g_key1 = (_g_current1 - 1);
+HXDLIN(  67)							int num1 = _g_key1;
+HXDLIN(  67)							 ::Dynamic value = _g_value1;
 HXLINE(  72)							str = ::StringTools_obj::replace(str,((HX_("{",7b,00,00,00) + (num1 + 1)) + HX_("}",7d,00,00,00)),( (::String)(value) ));
             						}
             					}
-HXLINE(  64)					 ::objects::Alphabet optionText =  ::objects::Alphabet_obj::__alloc( HX_CTX ,( (Float)(0) ),( (Float)(0) ),str,true);
-HXLINE(  65)					{
-HXLINE(  65)						int axes1 = 17;
-HXDLIN(  65)						bool _hx_tmp4;
-HXDLIN(  65)						if ((axes1 != 1)) {
-HXLINE(  65)							_hx_tmp4 = (axes1 == 17);
+HXLINE(  67)					 ::objects::Alphabet optionText =  ::objects::Alphabet_obj::__alloc( HX_CTX ,( (Float)(0) ),( (Float)(0) ),str,true);
+HXLINE(  68)					{
+HXLINE(  68)						int axes1 = 17;
+HXDLIN(  68)						bool _hx_tmp4;
+HXDLIN(  68)						if ((axes1 != 1)) {
+HXLINE(  68)							_hx_tmp4 = (axes1 == 17);
             						}
             						else {
-HXLINE(  65)							_hx_tmp4 = true;
+HXLINE(  68)							_hx_tmp4 = true;
             						}
-HXDLIN(  65)						if (_hx_tmp4) {
-HXLINE(  65)							int _hx_tmp5 = ::flixel::FlxG_obj::width;
-HXDLIN(  65)							optionText->set_x(((( (Float)(_hx_tmp5) ) - optionText->get_width()) / ( (Float)(2) )));
+HXDLIN(  68)						if (_hx_tmp4) {
+HXLINE(  68)							int _hx_tmp5 = ::flixel::FlxG_obj::width;
+HXDLIN(  68)							optionText->set_x(((( (Float)(_hx_tmp5) ) - optionText->get_width()) / ( (Float)(2) )));
             						}
-HXDLIN(  65)						bool _hx_tmp6;
-HXDLIN(  65)						if ((axes1 != 16)) {
-HXLINE(  65)							_hx_tmp6 = (axes1 == 17);
+HXDLIN(  68)						bool _hx_tmp6;
+HXDLIN(  68)						if ((axes1 != 16)) {
+HXLINE(  68)							_hx_tmp6 = (axes1 == 17);
             						}
             						else {
-HXLINE(  65)							_hx_tmp6 = true;
+HXLINE(  68)							_hx_tmp6 = true;
             						}
-HXDLIN(  65)						if (_hx_tmp6) {
-HXLINE(  65)							int _hx_tmp7 = ::flixel::FlxG_obj::height;
-HXDLIN(  65)							optionText->set_y(((( (Float)(_hx_tmp7) ) - optionText->get_height()) / ( (Float)(2) )));
+HXDLIN(  68)						if (_hx_tmp6) {
+HXLINE(  68)							int _hx_tmp7 = ::flixel::FlxG_obj::height;
+HXDLIN(  68)							optionText->set_y(((( (Float)(_hx_tmp7) ) - optionText->get_height()) / ( (Float)(2) )));
             						}
             					}
-HXLINE(  66)					optionText->set_y((optionText->y + ((( (Float)(92) ) * (( (Float)(num) ) - (( (Float)(this->options->length) ) / ( (Float)(2) )))) + 45)));
-HXLINE(  67)					this->grpOptions->add(optionText).StaticCast<  ::objects::Alphabet >();
+HXLINE(  69)					optionText->set_y((optionText->y + ((( (Float)(92) ) * (( (Float)(num) ) - (( (Float)(this->options->length) ) / ( (Float)(2) )))) + 45)));
+HXLINE(  70)					this->grpOptions->add(optionText).StaticCast<  ::objects::Alphabet >();
             				}
             			}
             		}
-HXLINE(  70)		this->selectorLeft =  ::objects::Alphabet_obj::__alloc( HX_CTX ,( (Float)(0) ),( (Float)(0) ),HX_(">",3e,00,00,00),true);
-HXLINE(  71)		this->add(this->selectorLeft);
-HXLINE(  72)		this->selectorRight =  ::objects::Alphabet_obj::__alloc( HX_CTX ,( (Float)(0) ),( (Float)(0) ),HX_("<",3c,00,00,00),true);
-HXLINE(  73)		this->add(this->selectorRight);
-HXLINE(  75)		this->changeSelection(null());
-HXLINE(  76)		::backend::ClientPrefs_obj::saveSettings();
-HXLINE(  78)		this->super::create();
+HXLINE(  73)		this->selectorLeft =  ::objects::Alphabet_obj::__alloc( HX_CTX ,( (Float)(0) ),( (Float)(0) ),HX_(">",3e,00,00,00),true);
+HXLINE(  74)		this->add(this->selectorLeft);
+HXLINE(  75)		this->selectorRight =  ::objects::Alphabet_obj::__alloc( HX_CTX ,( (Float)(0) ),( (Float)(0) ),HX_("<",3c,00,00,00),true);
+HXLINE(  76)		this->add(this->selectorRight);
+HXLINE(  78)		this->changeSelection(null());
+HXLINE(  79)		::backend::ClientPrefs_obj::saveSettings();
+HXLINE(  81)		this->super::create();
             	}
 
 
 void OptionsState_obj::closeSubState(){
-            	HX_STACKFRAME(&_hx_pos_bddb8806f8971119_82_closeSubState)
-HXLINE(  83)		this->super::closeSubState();
-HXLINE(  84)		::backend::ClientPrefs_obj::saveSettings();
-HXLINE(  86)		::backend::DiscordClient_obj::changePresence(HX_("Options Menu",e1,25,4c,98),null(),null(),null(),null(),null());
+            	HX_STACKFRAME(&_hx_pos_bddb8806f8971119_85_closeSubState)
+HXLINE(  86)		this->super::closeSubState();
+HXLINE(  87)		::backend::ClientPrefs_obj::saveSettings();
+HXLINE(  89)		::backend::DiscordClient_obj::changePresence(HX_("Options Menu",e1,25,4c,98),null(),null(),null(),null(),null());
             	}
 
 
 void OptionsState_obj::update(Float elapsed){
-            	HX_GC_STACKFRAME(&_hx_pos_bddb8806f8971119_90_update)
-HXLINE(  91)		this->super::update(elapsed);
-HXLINE(  93)		if (this->get_controls()->get_UI_UP_P()) {
-HXLINE(  94)			this->changeSelection(-1);
+            	HX_GC_STACKFRAME(&_hx_pos_bddb8806f8971119_93_update)
+HXLINE(  94)		this->super::update(elapsed);
+HXLINE(  96)		if (this->get_controls()->get_UI_UP_P()) {
+HXLINE(  97)			this->changeSelection(-1);
             		}
-HXLINE(  95)		if (this->get_controls()->get_UI_DOWN_P()) {
-HXLINE(  96)			this->changeSelection(1);
+HXLINE(  98)		if (this->get_controls()->get_UI_DOWN_P()) {
+HXLINE(  99)			this->changeSelection(1);
             		}
-HXLINE(  98)		if (this->get_controls()->get_BACK()) {
-HXLINE( 100)			 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
-HXDLIN( 100)			_hx_tmp->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("cancelMenu",39,a4,43,b7)),null(),true,null()),null(),null(),null(),null(),null());
-HXLINE( 101)			if (::options::OptionsState_obj::onPlayState) {
-HXLINE( 103)				::backend::StageData_obj::loadDirectory(::states::PlayState_obj::SONG);
-HXLINE( 104)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::PlayState_obj::__alloc( HX_CTX )) ),false,true));
-HXLINE( 105)				::flixel::FlxG_obj::sound->music->set_volume(( (Float)(0) ));
+HXLINE( 101)		if (this->get_controls()->get_BACK()) {
+HXLINE( 103)			 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
+HXDLIN( 103)			_hx_tmp->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("cancelMenu",39,a4,43,b7)),null(),true,null()),null(),null(),null(),null(),null());
+HXLINE( 104)			if (::options::OptionsState_obj::onPlayState) {
+HXLINE( 106)				::backend::StageData_obj::loadDirectory(::states::PlayState_obj::SONG);
+HXLINE( 107)				::backend::MusicBeatState_obj::switchState(::states::LoadingState_obj::getNextState(( ( ::flixel::FlxState)( ::states::PlayState_obj::__alloc( HX_CTX )) ),false,true));
+HXLINE( 108)				::flixel::FlxG_obj::sound->music->set_volume(( (Float)(0) ));
             			}
             			else {
-HXLINE( 107)				::backend::MusicBeatState_obj::switchState( ::states::MainMenuState_obj::__alloc( HX_CTX ));
+HXLINE( 110)				::backend::MusicBeatState_obj::switchState( ::states::MainMenuState_obj::__alloc( HX_CTX ));
             			}
             		}
             		else {
-HXLINE( 109)			if (this->get_controls()->get_ACCEPT()) {
-HXLINE( 109)				this->openSelectedSubstate(this->options->__get(::options::OptionsState_obj::curSelected));
+HXLINE( 112)			if (this->get_controls()->get_ACCEPT()) {
+HXLINE( 112)				this->openSelectedSubstate(this->options->__get(::options::OptionsState_obj::curSelected));
             			}
             		}
             	}
@@ -364,43 +365,43 @@ HXLINE( 109)				this->openSelectedSubstate(this->options->__get(::options::Optio
 
 void OptionsState_obj::changeSelection(::hx::Null< int >  __o_change){
             		int change = __o_change.Default(0);
-            	HX_STACKFRAME(&_hx_pos_bddb8806f8971119_113_changeSelection)
-HXLINE( 114)		::options::OptionsState_obj::curSelected = ::flixel::math::FlxMath_obj::wrap((::options::OptionsState_obj::curSelected + change),0,(this->options->length - 1));
-HXLINE( 116)		{
-HXLINE( 116)			int _g_current = 0;
-HXDLIN( 116)			::Array< ::Dynamic> _g_array = this->grpOptions->members;
-HXDLIN( 116)			while((_g_current < _g_array->length)){
-HXLINE( 116)				 ::objects::Alphabet _g_value = _g_array->__get(_g_current).StaticCast<  ::objects::Alphabet >();
-HXDLIN( 116)				_g_current = (_g_current + 1);
-HXDLIN( 116)				int _g_key = (_g_current - 1);
-HXDLIN( 116)				int num = _g_key;
-HXDLIN( 116)				 ::objects::Alphabet item = _g_value;
-HXLINE( 117)				{
-HXLINE( 118)					item->targetY = (num - ::options::OptionsState_obj::curSelected);
-HXLINE( 119)					item->set_alpha(((Float)0.6));
-HXLINE( 120)					if ((item->targetY == 0)) {
-HXLINE( 122)						item->set_alpha(( (Float)(1) ));
-HXLINE( 123)						this->selectorLeft->set_x((item->x - ( (Float)(63) )));
-HXLINE( 124)						this->selectorLeft->set_y(item->y);
-HXLINE( 125)						 ::objects::Alphabet _hx_tmp = this->selectorRight;
-HXDLIN( 125)						Float item1 = item->x;
-HXDLIN( 125)						_hx_tmp->set_x(((item1 + item->get_width()) + 15));
-HXLINE( 126)						this->selectorRight->set_y(item->y);
+            	HX_STACKFRAME(&_hx_pos_bddb8806f8971119_116_changeSelection)
+HXLINE( 117)		::options::OptionsState_obj::curSelected = ::flixel::math::FlxMath_obj::wrap((::options::OptionsState_obj::curSelected + change),0,(this->options->length - 1));
+HXLINE( 119)		{
+HXLINE( 119)			int _g_current = 0;
+HXDLIN( 119)			::Array< ::Dynamic> _g_array = this->grpOptions->members;
+HXDLIN( 119)			while((_g_current < _g_array->length)){
+HXLINE( 119)				 ::objects::Alphabet _g_value = _g_array->__get(_g_current).StaticCast<  ::objects::Alphabet >();
+HXDLIN( 119)				_g_current = (_g_current + 1);
+HXDLIN( 119)				int _g_key = (_g_current - 1);
+HXDLIN( 119)				int num = _g_key;
+HXDLIN( 119)				 ::objects::Alphabet item = _g_value;
+HXLINE( 120)				{
+HXLINE( 121)					item->targetY = (num - ::options::OptionsState_obj::curSelected);
+HXLINE( 122)					item->set_alpha(((Float)0.6));
+HXLINE( 123)					if ((item->targetY == 0)) {
+HXLINE( 125)						item->set_alpha(( (Float)(1) ));
+HXLINE( 126)						this->selectorLeft->set_x((item->x - ( (Float)(63) )));
+HXLINE( 127)						this->selectorLeft->set_y(item->y);
+HXLINE( 128)						 ::objects::Alphabet _hx_tmp = this->selectorRight;
+HXDLIN( 128)						Float item1 = item->x;
+HXDLIN( 128)						_hx_tmp->set_x(((item1 + item->get_width()) + 15));
+HXLINE( 129)						this->selectorRight->set_y(item->y);
             					}
             				}
             			}
             		}
-HXLINE( 129)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp1 = ::flixel::FlxG_obj::sound;
-HXDLIN( 129)		_hx_tmp1->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
+HXLINE( 132)		 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp1 = ::flixel::FlxG_obj::sound;
+HXDLIN( 132)		_hx_tmp1->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
             	}
 
 
 HX_DEFINE_DYNAMIC_FUNC1(OptionsState_obj,changeSelection,(void))
 
 void OptionsState_obj::destroy(){
-            	HX_STACKFRAME(&_hx_pos_bddb8806f8971119_133_destroy)
-HXLINE( 134)		::backend::ClientPrefs_obj::loadPrefs();
-HXLINE( 135)		this->super::destroy();
+            	HX_STACKFRAME(&_hx_pos_bddb8806f8971119_136_destroy)
+HXLINE( 137)		::backend::ClientPrefs_obj::loadPrefs();
+HXLINE( 138)		this->super::destroy();
             	}
 
 

@@ -31,7 +31,8 @@ class PauseSubState extends MusicBeatSubstate
 	public static var songName:String = null;
 
 	override function create()
-	{
+	{	
+		Language.reloadPhrases();
 		if(Difficulty.list.length < 2) menuItemsOG.remove('Change Difficulty'); //No need to change difficulty if there is only one!
 		if(PlayState.chartingMode)
 		{
@@ -430,6 +431,7 @@ class PauseSubState extends MusicBeatSubstate
 		skipTimeText.visible = (skipTimeTracker.alpha >= 1);
 	}
 
-	function updateSkipTimeText()
+	function updateSkipTimeText() {
 		skipTimeText.text = FlxStringUtil.formatTime(Math.max(0, Math.floor(curTime / 1000)), false) + ' / ' + FlxStringUtil.formatTime(Math.max(0, Math.floor(FlxG.sound.music.length / 1000)), false);
+	}
 }

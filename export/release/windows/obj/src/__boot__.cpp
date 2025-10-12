@@ -16,9 +16,6 @@
 #ifndef INCLUDED_states_MainMenuColumn
 #include <states/MainMenuColumn.h>
 #endif
-#ifndef INCLUDED_states_ComputerColumn
-#include <states/ComputerColumn.h>
-#endif
 #ifndef INCLUDED_options_OptionType
 #include <options/OptionType.h>
 #endif
@@ -232,6 +229,9 @@
 #ifndef INCLUDED_ValueType
 #include <ValueType.h>
 #endif
+#ifndef INCLUDED_states_ComputerColumn
+#include <states/ComputerColumn.h>
+#endif
 #ifndef INCLUDED_tjson_TJSON
 #include <tjson/TJSON.h>
 #endif
@@ -280,6 +280,9 @@
 #ifndef INCLUDED_states_editors_ChartingState
 #include <states/editors/ChartingState.h>
 #endif
+#ifndef INCLUDED_states_TitleState
+#include <states/TitleState.h>
+#endif
 #ifndef INCLUDED_states_StoryMenuState
 #include <states/StoryMenuState.h>
 #endif
@@ -297,9 +300,6 @@
 #endif
 #ifndef INCLUDED_states_FlashingState
 #include <states/FlashingState.h>
-#endif
-#ifndef INCLUDED_states_ComputerMainMenuState
-#include <states/ComputerMainMenuState.h>
 #endif
 #ifndef INCLUDED_shaders_RainShader
 #include <shaders/RainShader.h>
@@ -1063,6 +1063,9 @@
 #ifndef INCLUDED_lime__internal_backend_native_NativeAudioSource
 #include <lime/_internal/backend/native/NativeAudioSource.h>
 #endif
+#ifndef INCLUDED_hxwindowmode_WindowColorMode
+#include <hxwindowmode/WindowColorMode.h>
+#endif
 #ifndef INCLUDED_haxe_zip_InflateImpl
 #include <haxe/zip/InflateImpl.h>
 #endif
@@ -1609,8 +1612,8 @@
 #ifndef INCLUDED_Main
 #include <Main.h>
 #endif
-#ifndef INCLUDED_states_TitleState
-#include <states/TitleState.h>
+#ifndef INCLUDED_states_ComputerMainMenuState
+#include <states/ComputerMainMenuState.h>
 #endif
 #ifndef INCLUDED_backend_MusicBeatState
 #include <backend/MusicBeatState.h>
@@ -4303,7 +4306,6 @@ __files__boot();
 ::states::stages::NeneState_obj::__register();
 ::states::stages::HenchmenKillState_obj::__register();
 ::states::MainMenuColumn_obj::__register();
-::states::ComputerColumn_obj::__register();
 ::options::OptionType_obj::__register();
 ::openfl::display3D::_internal::_AGALConverter::RegisterUsage_obj::__register();
 ::openfl::display3D::_internal::_AGALConverter::ProgramType_obj::__register();
@@ -4375,6 +4377,7 @@ __files__boot();
 ::crowplexus::hscript::Const_obj::__register();
 ::backend::Countdown_obj::__register();
 ::ValueType_obj::__register();
+::states::ComputerColumn_obj::__register();
 ::tjson::TJSON_obj::__register();
 ::sys::ssl::Socket_obj::__register();
 ::sys::ssl::Key_obj::__register();
@@ -4391,13 +4394,13 @@ __files__boot();
 ::states::editors::DialogueEditorState_obj::__register();
 ::states::editors::DialogueCharacterEditorState_obj::__register();
 ::states::editors::ChartingState_obj::__register();
+::states::TitleState_obj::__register();
 ::states::StoryMenuState_obj::__register();
 ::states::PlayState_obj::__register();
 ::states::MainMenuState_obj::__register();
 ::states::LoadingState_obj::__register();
 ::states::FreeplayState_obj::__register();
 ::states::FlashingState_obj::__register();
-::states::ComputerMainMenuState_obj::__register();
 ::shaders::RainShader_obj::__register();
 ::psychlua::ReflectionFunctions_obj::__register();
 ::psychlua::LuaUtils_obj::__register();
@@ -4652,6 +4655,7 @@ __files__boot();
 ::lime::_internal::format::Base64_obj::__register();
 ::lime::_internal::backend::native::NativeOpenGLRenderContext_obj::__register();
 ::lime::_internal::backend::native::NativeAudioSource_obj::__register();
+::hxwindowmode::WindowColorMode_obj::__register();
 ::haxe::zip::InflateImpl_obj::__register();
 ::haxe::xml::Parser_obj::__register();
 ::haxe::crypto::Base64_obj::__register();
@@ -4834,7 +4838,7 @@ __files__boot();
 ::__ASSET__assets_embed_images_psych_ui_arrow_down_png_obj::__register();
 ::DateTools_obj::__register();
 ::Main_obj::__register();
-::states::TitleState_obj::__register();
+::states::ComputerMainMenuState_obj::__register();
 ::backend::MusicBeatState_obj::__register();
 ::flixel::FlxBasic_obj::__register();
 ::openfl::display::DisplayObject_obj::__register();
@@ -5733,7 +5737,6 @@ __files__boot();
 ::states::stages::NeneState_obj::__boot();
 ::states::stages::HenchmenKillState_obj::__boot();
 ::states::MainMenuColumn_obj::__boot();
-::states::ComputerColumn_obj::__boot();
 ::options::OptionType_obj::__boot();
 ::openfl::display3D::_internal::_AGALConverter::RegisterUsage_obj::__boot();
 ::openfl::display3D::_internal::_AGALConverter::ProgramType_obj::__boot();
@@ -5805,6 +5808,7 @@ __files__boot();
 ::crowplexus::hscript::Const_obj::__boot();
 ::backend::Countdown_obj::__boot();
 ::ValueType_obj::__boot();
+::states::ComputerColumn_obj::__boot();
 ::lime::_internal::backend::native::NativeApplication_obj::__init__();
 ::lime::app::Application_obj::__init__();
 ::ApplicationMain_obj::__init__();
@@ -5828,7 +5832,7 @@ __files__boot();
 ::openfl::display::DisplayObject_obj::__boot();
 ::flixel::FlxBasic_obj::__boot();
 ::backend::MusicBeatState_obj::__boot();
-::states::TitleState_obj::__boot();
+::states::ComputerMainMenuState_obj::__boot();
 ::Main_obj::__boot();
 ::DateTools_obj::__boot();
 ::__ASSET__assets_embed_images_psych_ui_arrow_down_png_obj::__boot();
@@ -6010,6 +6014,7 @@ __files__boot();
 ::haxe::crypto::Base64_obj::__boot();
 ::haxe::xml::Parser_obj::__boot();
 ::haxe::zip::InflateImpl_obj::__boot();
+::hxwindowmode::WindowColorMode_obj::__boot();
 ::lime::_internal::backend::native::NativeAudioSource_obj::__boot();
 ::lime::_internal::backend::native::NativeOpenGLRenderContext_obj::__boot();
 ::lime::_internal::format::Base64_obj::__boot();
@@ -6264,13 +6269,13 @@ __files__boot();
 ::psychlua::LuaUtils_obj::__boot();
 ::psychlua::ReflectionFunctions_obj::__boot();
 ::shaders::RainShader_obj::__boot();
-::states::ComputerMainMenuState_obj::__boot();
 ::states::FlashingState_obj::__boot();
 ::states::FreeplayState_obj::__boot();
 ::states::LoadingState_obj::__boot();
 ::states::MainMenuState_obj::__boot();
 ::states::PlayState_obj::__boot();
 ::states::StoryMenuState_obj::__boot();
+::states::TitleState_obj::__boot();
 ::states::editors::ChartingState_obj::__boot();
 ::states::editors::DialogueCharacterEditorState_obj::__boot();
 ::states::editors::DialogueEditorState_obj::__boot();
