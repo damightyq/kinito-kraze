@@ -107,11 +107,11 @@ class FreeplayState extends MusicBeatState
 
     var cds:Array<CDSprite> = [];
     var positions:Array<Float> = [
-        -355,                     // 0 -> Fora da tela (esquerda)
-        (955 / 2) - 335,          // 1 -> Segunda posição visível
-        (955 / 2),                // 2 -> Centro (posição inicial do primeiro CD)
-        (955 / 2) + 444,          // 3 -> Quarta posição visível
-        FlxG.width + 355          // 4 -> Fora da tela (direita)
+        -355,                     // 0 -> offscreen (left)
+        (955 / 2) - 335,          // 1 -> 2nd visible pos
+        (955 / 2),                // 2 -> center (initial starting pos for CD)
+        (955 / 2) + 444,          // 3 -> 4th visible pos
+        FlxG.width + 355          // 4 -> offscreen (right)
     ];
 
 	public static function loadBPMData():Map<String, Int> {
@@ -160,9 +160,10 @@ class FreeplayState extends MusicBeatState
 		PlayState.isStoryMode = false;
 		WeekData.reloadWeekFiles(false);
 
+		openfl.Lib.application.window.title = "wmplayer.exe";
 		#if DISCORD_ALLOWED
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("wmplayer.exe", null);
 		#end
 
 		for (i in 0...WeekData.weeksList.length) {
@@ -271,10 +272,11 @@ class FreeplayState extends MusicBeatState
 		
         var musicas:Array<String> = [];
         
-        // Pega todas as músicas disponíveis
+        // have them all available
         for (i in 0...WeekData.weeksList.length) {
+			
+			var leWeek:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[i]);
             if (weekIsLocked(WeekData.weeksList[i])) continue;
-            var leWeek:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[i]);
             
             for (song in leWeek.songs) {
                 musicas.push(song[0].toLowerCase());
@@ -282,20 +284,20 @@ class FreeplayState extends MusicBeatState
         }
 
 		if (musicas.length > positions.length) {
-			var lastPos = positions[positions.length - 1]; // Última posição da array
+			var lastPos = positions[positions.length - 1]; // last pos for the array
 			while (positions.length < musicas.length) {
-				positions.push(lastPos); // Clona a última posição para os extras
+				positions.push(lastPos); // clones the last pos for extras
 			}
 		}
         
-        // Criar CDs
+        // create cds
         for (i in 0...musicas.length) {
             var posIndex = 0;
 
-            if (i == 0) posIndex = 2; // Primeiro CD começa no meio
+            if (i == 0) posIndex = 2; // first cd starts in the middle
             else if (i == 1) posIndex = 3;
             else if (i == 2) posIndex = 4;
-            else if (i == musicas.length - 1) posIndex = 1; // Último CD começa no centro também
+            else if (i == musicas.length - 1) posIndex = 1; // last cd starts in the middle too
 
             var cd = new CDSprite(positions[posIndex], 162, musicas[i]);
             cds.push(cd);
@@ -351,7 +353,7 @@ class FreeplayState extends MusicBeatState
 		highscoreShadow.setFormat(Paths.font("kongtext.ttf"), 16, 0x999894, FlxTextAlign.CENTER);
 
 		scoreBG = new FlxSprite(scoreText.x - 6, 0).makeGraphic(1, 66, 0xFF000000);
-		scoreBG.alpha = 0;
+		scoreBG.alpha = 100;
 		add(scoreBG);
 
 		diffText = new FlxText(scoreText.x, scoreText.y + 36, 0, "", 24);
@@ -485,7 +487,7 @@ class FreeplayState extends MusicBeatState
 			cd.updateCover();
 			if (cd.x == positions[1]) {
 				intendedScore = Highscore.getScore(cd.getTrueName(), curDifficulty);
-				trace ("alguma coisa: " + Highscore.getScore(cd.getTrueName(), curDifficulty));
+				trace ("some stuff: " + Highscore.getScore(cd.getTrueName(), curDifficulty));
 				intendedRating = Highscore.getRating(cd.getTrueName(), curDifficulty);
 			}
 		}
@@ -587,16 +589,17 @@ class FreeplayState extends MusicBeatState
 			// 	}
 			// }
 
-			// if (controls.UI_LEFT_P)
-			// {
-			// 	changeDiff(-1);
-			// 	_updateSongLastDifficulty();
-			// }
-			// else if (controls.UI_RIGHT_P)
-			// {
-			// 	changeDiff(1);
-			// 	_updateSongLastDifficulty();
-			// }
+			//if (controls.UI_LEFT_P) {
+
+			//	changeDiff(-1);
+			//	_updateSongLastDifficulty();
+
+			//} else if (controls.UI_RIGHT_P) {
+				
+			//	changeDiff(1);
+			//	_updateSongLastDifficulty();
+
+			//}
 
 		checkHover(left, outlineLeft, "freeplay/arrowLeft");
 		checkHover(right, outlineRight, "freeplay/arrowRight");
@@ -714,43 +717,52 @@ class FreeplayState extends MusicBeatState
 			var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 			var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
 			trace(poop);
-			try
-			{
-				PlayState.SONG = Song.loadFromJson(poop, songLowercase);
-				PlayState.isStoryMode = false;
-				PlayState.storyDifficulty = curDifficulty;
+			//try
+			//{
+			//	PlayState.SONG = Song.loadFromJson(poop, songLowercase);
+			//	PlayState.isStoryMode = false;
+			//	PlayState.storyDifficulty = curDifficulty;
 
-				trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
-				if(colorTween != null) {
-					colorTween.cancel();
-				}
-			}
-			catch(e:Dynamic)
-			{
-				trace('ERROR! $e');
+			//	trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+			//	if(colorTween != null) {
+			//		colorTween.cancel();
+			//	}
+			//}
+			//catch(e:Dynamic)
+			//{
+			//	trace('ERROR! $e');
 
-				var errorStr:String = e.toString();
-				if(errorStr.startsWith('[file_contents,assets/data/')) errorStr = 'Missing file: ' + errorStr.substring(34, errorStr.length-1); //Missing chart
-				missingText.text = 'ERROR WHILE LOADING CHART:\n$errorStr';
-				missingText.screenCenter(Y);
-				missingText.visible = true;
-				missingTextBG.visible = true;
-				FlxG.sound.play(Paths.sound('cancelMenu'));
+			//	var errorStr:String = e.toString();
+			//	if(errorStr.startsWith('[file_contents,assets/data/')) errorStr = 'Missing file: ' + errorStr.substring(34, errorStr.length-1); //Missing chart
+			//	missingText.text = 'ERROR WHILE LOADING CHART:\n$errorStr';
+			//	missingText.screenCenter(Y);
+			//	missingText.visible = true;
+			//	missingTextBG.visible = true;
+			//	FlxG.sound.play(Paths.sound('cancelMenu'));
 
-				updateTexts(elapsed);
-				super.update(elapsed);
-				return;
-			}
-			LoadingState.loadAndSwitchState(new PlayState());
+			//	updateTexts(elapsed);
+			//	super.update(elapsed);
+			//	return;
+			//}
+			//LoadingState.loadAndSwitchState(new PlayState());
 
-			FlxG.sound.music.volume = 0;
+			//FlxG.sound.music.volume = 0;
 					
-			destroyFreeplayVocals();
+			//destroyFreeplayVocals();
+			getName();
+			shiftDown();
 			#if (MODS_ALLOWED && DISCORD_ALLOWED)
 			DiscordClient.loadModRPC();
 			#end
-		}
-		else if(controls.RESET && !player.playingMusic)
+		} else if(controls.UI_LEFT_P){
+
+			shiftRight();
+
+		} else if(controls.UI_RIGHT_P){
+
+			shiftLeft();
+
+		} else if(controls.RESET && !player.playingMusic)
 		{
 			persistentUpdate = false;
 			openSubState(new ResetScoreSubState(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
@@ -828,9 +840,10 @@ class FreeplayState extends MusicBeatState
 	
 		for (i in 0...cds.length) {
 			var cd = cds[i];
-			if (cd.x == positions[1]) {
+			if (cd.x == positions[3]) {
 				intendedScore = Highscore.getScore(cd.getTrueName(), curDifficulty);
 				intendedRating = Highscore.getRating(cd.getTrueName(), curDifficulty);
+				trace(cd.getTrueName());
 			}
 		}
 	
@@ -846,9 +859,10 @@ class FreeplayState extends MusicBeatState
 	
 		for (i in 0...cds.length) {
 			var cd = cds[i];
-			if (cd.x == positions[3]) {
+			if (cd.x == positions[1]) {
 				intendedScore = Highscore.getScore(cd.getTrueName(), curDifficulty);
 				intendedRating = Highscore.getRating(cd.getTrueName(), curDifficulty);
+				trace(cd.getTrueName());
 			}
 		}
 	

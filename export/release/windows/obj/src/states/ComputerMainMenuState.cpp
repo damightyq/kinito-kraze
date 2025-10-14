@@ -89,6 +89,24 @@
 #ifndef INCLUDED_hxwindowmode_WindowColorMode
 #include <hxwindowmode/WindowColorMode.h>
 #endif
+#ifndef INCLUDED_lime_app_Application
+#include <lime/app/Application.h>
+#endif
+#ifndef INCLUDED_lime_app_IModule
+#include <lime/app/IModule.h>
+#endif
+#ifndef INCLUDED_lime_app_Module
+#include <lime/app/Module.h>
+#endif
+#ifndef INCLUDED_lime_ui_Window
+#include <lime/ui/Window.h>
+#endif
+#ifndef INCLUDED_openfl_Lib
+#include <openfl/Lib.h>
+#endif
+#ifndef INCLUDED_openfl_display_Application
+#include <openfl/display/Application.h>
+#endif
 #ifndef INCLUDED_openfl_events_EventDispatcher
 #include <openfl/events/EventDispatcher.h>
 #endif
@@ -140,9 +158,9 @@ static const int _hx_array_data_456e5a12_4[] = {
 static const int _hx_array_data_456e5a12_5[] = {
 	(int)255,(int)255,(int)255,
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_120_loadJsonData,"states.ComputerMainMenuState","loadJsonData",0x9145b494,"states.ComputerMainMenuState.loadJsonData","states/ComputerMainMenuState.hx",120,0xe5963aed)
-HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_142_ButtonThingy,"states.ComputerMainMenuState","ButtonThingy",0x8e855c59,"states.ComputerMainMenuState.ButtonThingy","states/ComputerMainMenuState.hx",142,0xe5963aed)
-HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_160_update,"states.ComputerMainMenuState","update",0x25ddc8e5,"states.ComputerMainMenuState.update","states/ComputerMainMenuState.hx",160,0xe5963aed)
+HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_124_loadJsonData,"states.ComputerMainMenuState","loadJsonData",0x9145b494,"states.ComputerMainMenuState.loadJsonData","states/ComputerMainMenuState.hx",124,0xe5963aed)
+HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_146_ButtonThingy,"states.ComputerMainMenuState","ButtonThingy",0x8e855c59,"states.ComputerMainMenuState.ButtonThingy","states/ComputerMainMenuState.hx",146,0xe5963aed)
+HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_164_update,"states.ComputerMainMenuState","update",0x25ddc8e5,"states.ComputerMainMenuState.update","states/ComputerMainMenuState.hx",164,0xe5963aed)
 HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_38_boot,"states.ComputerMainMenuState","boot",0x5a42180e,"states.ComputerMainMenuState.boot","states/ComputerMainMenuState.hx",38,0xe5963aed)
 HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_39_boot,"states.ComputerMainMenuState","boot",0x5a42180e,"states.ComputerMainMenuState.boot","states/ComputerMainMenuState.hx",39,0xe5963aed)
 HX_LOCAL_STACK_FRAME(_hx_pos_ad2dc547d242da88_40_boot,"states.ComputerMainMenuState","boot",0x5a42180e,"states.ComputerMainMenuState.boot","states/ComputerMainMenuState.hx",40,0xe5963aed)
@@ -188,147 +206,148 @@ bool ComputerMainMenuState_obj::_hx_isInstanceOf(int inClassId) {
 void ComputerMainMenuState_obj::create(){
             	HX_GC_STACKFRAME(&_hx_pos_ad2dc547d242da88_64_create)
 HXLINE(  65)		this->super::create();
-HXLINE(  67)		::backend::DiscordClient_obj::changePresence(HX_("In the Menus",0a,c1,ad,c6),null(),null(),null(),null(),null());
-HXLINE(  69)		{
-HXLINE(  69)			::Array< int > color = ::Array_obj< int >::fromData( _hx_array_data_456e5a12_4,3);
-HXDLIN(  69)			::Array< int > colorArray;
-HXDLIN(  69)			if (::hx::IsNotNull( color )) {
-HXLINE(  69)				colorArray = color;
+HXLINE(  69)		::backend::DiscordClient_obj::changePresence(HX_("explorer.exe",a3,11,12,ed),null(),null(),null(),null(),null());
+HXLINE(  72)		::openfl::Lib_obj::get_application()->_hx___window->set_title(HX_("explorer.exe",a3,11,12,ed));
+HXLINE(  73)		{
+HXLINE(  73)			::Array< int > color = ::Array_obj< int >::fromData( _hx_array_data_456e5a12_4,3);
+HXDLIN(  73)			::Array< int > colorArray;
+HXDLIN(  73)			if (::hx::IsNotNull( color )) {
+HXLINE(  73)				colorArray = color;
             			}
             			else {
-HXLINE(  69)				colorArray = ::Array_obj< int >::fromData( _hx_array_data_456e5a12_5,3);
+HXLINE(  73)				colorArray = ::Array_obj< int >::fromData( _hx_array_data_456e5a12_5,3);
             			}
-HXDLIN(  69)			nativeWindowColorMode::setWindowBorderColor(colorArray,true,true);
-HXDLIN(  69)			::hxwindowmode::WindowColorMode_obj::windowHeaderColor = colorArray;
-HXDLIN(  69)			::hxwindowmode::WindowColorMode_obj::windowBorderColor = colorArray;
+HXDLIN(  73)			nativeWindowColorMode::setWindowBorderColor(colorArray,true,true);
+HXDLIN(  73)			::hxwindowmode::WindowColorMode_obj::windowHeaderColor = colorArray;
+HXDLIN(  73)			::hxwindowmode::WindowColorMode_obj::windowBorderColor = colorArray;
             		}
-HXLINE(  71)		 ::flixel::FlxSprite _hx_tmp =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
-HXDLIN(  71)		this->bg = _hx_tmp->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/bg",ba,af,82,f0),null(),null()),null(),null(),null(),null(),null());
-HXLINE(  72)		 ::flixel::FlxSprite _hx_tmp1 = this->bg;
-HXDLIN(  72)		Float _hx_tmp2 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN(  72)		_hx_tmp1->set_x((_hx_tmp2 - (this->bg->get_width() / ( (Float)(2) ))));
-HXLINE(  73)		 ::flixel::FlxSprite _hx_tmp3 = this->bg;
-HXDLIN(  73)		Float _hx_tmp4 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
-HXDLIN(  73)		_hx_tmp3->set_y((_hx_tmp4 - (this->bg->get_height() / ( (Float)(2) ))));
-HXLINE(  74)		{
-HXLINE(  74)			 ::flixel::math::FlxBasePoint this1 = this->bg->scale;
-HXDLIN(  74)			this1->set_x(((Float)0.75));
-HXDLIN(  74)			this1->set_y(((Float)0.75));
-            		}
-HXLINE(  75)		this->add(this->bg);
-HXLINE(  77)		 ::flixel::FlxSprite _hx_tmp5 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
-HXDLIN(  77)		this->screenbg = _hx_tmp5->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/blueBG",54,cf,31,c0),null(),null()),null(),null(),null(),null(),null());
+HXLINE(  75)		 ::flixel::FlxSprite _hx_tmp =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
+HXDLIN(  75)		this->bg = _hx_tmp->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/bg",ba,af,82,f0),null(),null()),null(),null(),null(),null(),null());
+HXLINE(  76)		 ::flixel::FlxSprite _hx_tmp1 = this->bg;
+HXDLIN(  76)		Float _hx_tmp2 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN(  76)		_hx_tmp1->set_x((_hx_tmp2 - (this->bg->get_width() / ( (Float)(2) ))));
+HXLINE(  77)		 ::flixel::FlxSprite _hx_tmp3 = this->bg;
+HXDLIN(  77)		Float _hx_tmp4 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN(  77)		_hx_tmp3->set_y((_hx_tmp4 - (this->bg->get_height() / ( (Float)(2) ))));
 HXLINE(  78)		{
-HXLINE(  78)			 ::flixel::math::FlxBasePoint this2 = this->screenbg->scale;
-HXDLIN(  78)			this2->set_x(((Float)0.75));
-HXDLIN(  78)			this2->set_y(((Float)0.75));
+HXLINE(  78)			 ::flixel::math::FlxBasePoint this1 = this->bg->scale;
+HXDLIN(  78)			this1->set_x(((Float)0.75));
+HXDLIN(  78)			this1->set_y(((Float)0.75));
             		}
-HXLINE(  79)		 ::flixel::FlxSprite _hx_tmp6 = this->screenbg;
-HXDLIN(  79)		Float _hx_tmp7 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN(  79)		_hx_tmp6->set_x((_hx_tmp7 - (this->screenbg->get_width() / ( (Float)(2) ))));
-HXLINE(  80)		 ::flixel::FlxSprite _hx_tmp8 = this->screenbg;
-HXDLIN(  80)		Float _hx_tmp9 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
-HXDLIN(  80)		_hx_tmp8->set_y((_hx_tmp9 - (this->screenbg->get_height() / ( (Float)(2) ))));
-HXLINE(  81)		this->add(this->screenbg);
-HXLINE(  83)		this->menuImages =  ::flixel::group::FlxTypedGroup_obj::__alloc( HX_CTX ,null());
-HXLINE(  84)		this->add(this->menuImages);
-HXLINE(  87)		{
-HXLINE(  87)			int _g = 0;
-HXDLIN(  87)			int _g1 = this->array->length;
-HXDLIN(  87)			while((_g < _g1)){
-HXLINE(  87)				_g = (_g + 1);
-HXDLIN(  87)				int menuitem = (_g - 1);
-HXLINE(  88)				 ::flixel::FlxSprite menu =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,::backend::Paths_obj::image((HX_("computermenu/BUTTONS/",a3,f6,0d,b6) + this->array->__get(menuitem)),null(),null()));
-HXLINE(  89)				{
-HXLINE(  89)					 ::flixel::math::FlxBasePoint this3 = menu->scale;
-HXDLIN(  89)					this3->set_x(((Float)0.75));
-HXDLIN(  89)					this3->set_y(((Float)0.75));
+HXLINE(  79)		this->add(this->bg);
+HXLINE(  81)		 ::flixel::FlxSprite _hx_tmp5 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
+HXDLIN(  81)		this->screenbg = _hx_tmp5->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/blueBG",54,cf,31,c0),null(),null()),null(),null(),null(),null(),null());
+HXLINE(  82)		{
+HXLINE(  82)			 ::flixel::math::FlxBasePoint this2 = this->screenbg->scale;
+HXDLIN(  82)			this2->set_x(((Float)0.75));
+HXDLIN(  82)			this2->set_y(((Float)0.75));
+            		}
+HXLINE(  83)		 ::flixel::FlxSprite _hx_tmp6 = this->screenbg;
+HXDLIN(  83)		Float _hx_tmp7 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN(  83)		_hx_tmp6->set_x((_hx_tmp7 - (this->screenbg->get_width() / ( (Float)(2) ))));
+HXLINE(  84)		 ::flixel::FlxSprite _hx_tmp8 = this->screenbg;
+HXDLIN(  84)		Float _hx_tmp9 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN(  84)		_hx_tmp8->set_y((_hx_tmp9 - (this->screenbg->get_height() / ( (Float)(2) ))));
+HXLINE(  85)		this->add(this->screenbg);
+HXLINE(  87)		this->menuImages =  ::flixel::group::FlxTypedGroup_obj::__alloc( HX_CTX ,null());
+HXLINE(  88)		this->add(this->menuImages);
+HXLINE(  91)		{
+HXLINE(  91)			int _g = 0;
+HXDLIN(  91)			int _g1 = this->array->length;
+HXDLIN(  91)			while((_g < _g1)){
+HXLINE(  91)				_g = (_g + 1);
+HXDLIN(  91)				int menuitem = (_g - 1);
+HXLINE(  92)				 ::flixel::FlxSprite menu =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,::backend::Paths_obj::image((HX_("computermenu/BUTTONS/",a3,f6,0d,b6) + this->array->__get(menuitem)),null(),null()));
+HXLINE(  93)				{
+HXLINE(  93)					 ::flixel::math::FlxBasePoint this3 = menu->scale;
+HXDLIN(  93)					this3->set_x(((Float)0.75));
+HXDLIN(  93)					this3->set_y(((Float)0.75));
             				}
-HXLINE(  90)				Float _hx_tmp10 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN(  90)				menu->set_x((_hx_tmp10 - (menu->get_width() / ( (Float)(2) ))));
-HXLINE(  91)				Float _hx_tmp11 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
-HXDLIN(  91)				menu->set_y((_hx_tmp11 - (menu->get_height() / ( (Float)(2) ))));
-HXLINE(  92)				menu->ID = menuitem;
-HXLINE(  93)				this->menuImages->add(menu).StaticCast<  ::flixel::FlxSprite >();
+HXLINE(  94)				Float _hx_tmp10 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN(  94)				menu->set_x((_hx_tmp10 - (menu->get_width() / ( (Float)(2) ))));
+HXLINE(  95)				Float _hx_tmp11 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN(  95)				menu->set_y((_hx_tmp11 - (menu->get_height() / ( (Float)(2) ))));
+HXLINE(  96)				menu->ID = menuitem;
+HXLINE(  97)				this->menuImages->add(menu).StaticCast<  ::flixel::FlxSprite >();
             			}
             		}
-HXLINE(  96)		 ::flixel::FlxSprite _hx_tmp12 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
-HXDLIN(  96)		this->monitor = _hx_tmp12->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/monitor",85,a8,de,62),null(),null()),null(),null(),null(),null(),null());
-HXLINE(  97)		{
-HXLINE(  97)			 ::flixel::math::FlxBasePoint this4 = this->monitor->scale;
-HXDLIN(  97)			this4->set_x(((Float)0.75));
-HXDLIN(  97)			this4->set_y(((Float)0.75));
+HXLINE( 100)		 ::flixel::FlxSprite _hx_tmp12 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
+HXDLIN( 100)		this->monitor = _hx_tmp12->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/monitor",85,a8,de,62),null(),null()),null(),null(),null(),null(),null());
+HXLINE( 101)		{
+HXLINE( 101)			 ::flixel::math::FlxBasePoint this4 = this->monitor->scale;
+HXDLIN( 101)			this4->set_x(((Float)0.75));
+HXDLIN( 101)			this4->set_y(((Float)0.75));
             		}
-HXLINE(  98)		 ::flixel::FlxSprite _hx_tmp13 = this->monitor;
-HXDLIN(  98)		Float _hx_tmp14 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN(  98)		_hx_tmp13->set_x((_hx_tmp14 - (this->monitor->get_width() / ( (Float)(2) ))));
-HXLINE(  99)		 ::flixel::FlxSprite _hx_tmp15 = this->monitor;
-HXDLIN(  99)		Float _hx_tmp16 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
-HXDLIN(  99)		_hx_tmp15->set_y((_hx_tmp16 - (this->monitor->get_height() / ( (Float)(2) ))));
-HXLINE( 100)		this->add(this->monitor);
-HXLINE( 102)		 ::flixel::FlxSprite _hx_tmp17 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
-HXDLIN( 102)		this->screenGlow = _hx_tmp17->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/blueBGglow",e1,57,d5,c0),null(),null()),null(),null(),null(),null(),null());
-HXLINE( 103)		 ::flixel::FlxSprite _hx_tmp18 = this->screenGlow;
-HXDLIN( 103)		Float _hx_tmp19 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN( 103)		_hx_tmp18->set_x((_hx_tmp19 - (this->screenGlow->get_width() / ( (Float)(2) ))));
-HXLINE( 104)		 ::flixel::FlxSprite _hx_tmp20 = this->screenGlow;
-HXDLIN( 104)		Float _hx_tmp21 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
-HXDLIN( 104)		_hx_tmp20->set_y((_hx_tmp21 - (this->screenGlow->get_height() / ( (Float)(2) ))));
-HXLINE( 105)		{
-HXLINE( 105)			 ::flixel::math::FlxBasePoint this5 = this->screenGlow->scale;
-HXDLIN( 105)			this5->set_x(((Float)0.75));
-HXDLIN( 105)			this5->set_y(((Float)0.75));
+HXLINE( 102)		 ::flixel::FlxSprite _hx_tmp13 = this->monitor;
+HXDLIN( 102)		Float _hx_tmp14 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN( 102)		_hx_tmp13->set_x((_hx_tmp14 - (this->monitor->get_width() / ( (Float)(2) ))));
+HXLINE( 103)		 ::flixel::FlxSprite _hx_tmp15 = this->monitor;
+HXDLIN( 103)		Float _hx_tmp16 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN( 103)		_hx_tmp15->set_y((_hx_tmp16 - (this->monitor->get_height() / ( (Float)(2) ))));
+HXLINE( 104)		this->add(this->monitor);
+HXLINE( 106)		 ::flixel::FlxSprite _hx_tmp17 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,0,0,null());
+HXDLIN( 106)		this->screenGlow = _hx_tmp17->loadGraphic(::backend::Paths_obj::image(HX_("computermenu/blueBGglow",e1,57,d5,c0),null(),null()),null(),null(),null(),null(),null());
+HXLINE( 107)		 ::flixel::FlxSprite _hx_tmp18 = this->screenGlow;
+HXDLIN( 107)		Float _hx_tmp19 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN( 107)		_hx_tmp18->set_x((_hx_tmp19 - (this->screenGlow->get_width() / ( (Float)(2) ))));
+HXLINE( 108)		 ::flixel::FlxSprite _hx_tmp20 = this->screenGlow;
+HXDLIN( 108)		Float _hx_tmp21 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN( 108)		_hx_tmp20->set_y((_hx_tmp21 - (this->screenGlow->get_height() / ( (Float)(2) ))));
+HXLINE( 109)		{
+HXLINE( 109)			 ::flixel::math::FlxBasePoint this5 = this->screenGlow->scale;
+HXDLIN( 109)			this5->set_x(((Float)0.75));
+HXDLIN( 109)			this5->set_y(((Float)0.75));
             		}
-HXLINE( 106)		this->add(this->screenGlow);
-HXLINE( 108)		this->persistentUpdate = true;
-HXLINE( 109)		bool _hx_tmp22;
-HXDLIN( 109)		if (!(::states::ComputerMainMenuState_obj::initialized)) {
-HXLINE( 109)			_hx_tmp22 = ::hx::IsNull( ::flixel::FlxG_obj::sound->music );
+HXLINE( 110)		this->add(this->screenGlow);
+HXLINE( 112)		this->persistentUpdate = true;
+HXLINE( 113)		bool _hx_tmp22;
+HXDLIN( 113)		if (!(::states::ComputerMainMenuState_obj::initialized)) {
+HXLINE( 113)			_hx_tmp22 = ::hx::IsNull( ::flixel::FlxG_obj::sound->music );
             		}
             		else {
-HXLINE( 109)			_hx_tmp22 = false;
+HXLINE( 113)			_hx_tmp22 = false;
             		}
-HXDLIN( 109)		if (_hx_tmp22) {
-HXLINE( 110)			 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp23 = ::flixel::FlxG_obj::sound;
-HXDLIN( 110)			_hx_tmp23->playMusic(::backend::Paths_obj::returnSound((HX_("music/",ea,bf,1b,3f) + HX_("freakyMenu",15,c9,93,86)),null(),true,null()),100,null(),null());
+HXDLIN( 113)		if (_hx_tmp22) {
+HXLINE( 114)			 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp23 = ::flixel::FlxG_obj::sound;
+HXDLIN( 114)			_hx_tmp23->playMusic(::backend::Paths_obj::returnSound((HX_("music/",ea,bf,1b,3f) + HX_("freakyMenu",15,c9,93,86)),null(),true,null()),100,null(),null());
             		}
-HXLINE( 112)		this->loadJsonData();
-HXLINE( 114)		::backend::Conductor_obj::set_bpm(this->musicBPM);
+HXLINE( 116)		this->loadJsonData();
+HXLINE( 118)		::backend::Conductor_obj::set_bpm(this->musicBPM);
             	}
 
 
 void ComputerMainMenuState_obj::loadJsonData(){
-            	HX_STACKFRAME(&_hx_pos_ad2dc547d242da88_120_loadJsonData)
-HXDLIN( 120)		if (::backend::Paths_obj::fileExists(HX_("images/gfDanceTitle.json",1b,dc,af,fc),HX_("TEXT",ad,94,ba,37),null(),null())) {
-HXLINE( 122)			::String path = ::backend::Paths_obj::getPath(HX_("images/gfDanceTitle.json",1b,dc,af,fc),HX_("TEXT",ad,94,ba,37),null(),true);
-HXDLIN( 122)			::String titleRaw;
-HXDLIN( 122)			if (::sys::FileSystem_obj::exists(path)) {
-HXLINE( 122)				titleRaw = ::sys::io::File_obj::getContent(path);
+            	HX_STACKFRAME(&_hx_pos_ad2dc547d242da88_124_loadJsonData)
+HXDLIN( 124)		if (::backend::Paths_obj::fileExists(HX_("images/gfDanceTitle.json",1b,dc,af,fc),HX_("TEXT",ad,94,ba,37),null(),null())) {
+HXLINE( 126)			::String path = ::backend::Paths_obj::getPath(HX_("images/gfDanceTitle.json",1b,dc,af,fc),HX_("TEXT",ad,94,ba,37),null(),true);
+HXDLIN( 126)			::String titleRaw;
+HXDLIN( 126)			if (::sys::FileSystem_obj::exists(path)) {
+HXLINE( 126)				titleRaw = ::sys::io::File_obj::getContent(path);
             			}
             			else {
-HXLINE( 122)				titleRaw = null();
+HXLINE( 126)				titleRaw = null();
             			}
-HXLINE( 123)			bool _hx_tmp;
-HXDLIN( 123)			if (::hx::IsNotNull( titleRaw )) {
-HXLINE( 123)				_hx_tmp = (titleRaw.length > 0);
+HXLINE( 127)			bool _hx_tmp;
+HXDLIN( 127)			if (::hx::IsNotNull( titleRaw )) {
+HXLINE( 127)				_hx_tmp = (titleRaw.length > 0);
             			}
             			else {
-HXLINE( 123)				_hx_tmp = false;
+HXLINE( 127)				_hx_tmp = false;
             			}
-HXDLIN( 123)			if (_hx_tmp) {
-HXLINE( 125)				try {
+HXDLIN( 127)			if (_hx_tmp) {
+HXLINE( 129)				try {
             					HX_STACK_CATCHABLE( ::Dynamic, 0);
-HXLINE( 127)					 ::Dynamic titleJSON = ::tjson::TJSON_obj::parse(titleRaw,null(),null());
-HXLINE( 128)					this->musicBPM = ( (Float)(titleJSON->__Field(HX_("bpm",df,be,4a,00),::hx::paccDynamic)) );
+HXLINE( 131)					 ::Dynamic titleJSON = ::tjson::TJSON_obj::parse(titleRaw,null(),null());
+HXLINE( 132)					this->musicBPM = ( (Float)(titleJSON->__Field(HX_("bpm",df,be,4a,00),::hx::paccDynamic)) );
             				} catch( ::Dynamic _hx_e) {
             					if (_hx_e.IsClass<  ::Dynamic >() ){
             						HX_STACK_BEGIN_CATCH
             						 ::Dynamic _g = _hx_e;
-HXLINE( 130)						 ::haxe::Exception e = ::haxe::Exception_obj::caught(_g);
-HXLINE( 132)						{
-HXLINE( 132)							 ::Dynamic _hx_tmp1 = ::haxe::Log_obj::trace;
-HXDLIN( 132)							::String _hx_tmp2 = (HX_("[WARN] Title JSON might broken, ignoring issue...\n",e2,0f,b3,6c) + e->details());
-HXDLIN( 132)							_hx_tmp1(_hx_tmp2,::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),132,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("loadJsonData",b8,e4,5d,fb)));
+HXLINE( 134)						 ::haxe::Exception e = ::haxe::Exception_obj::caught(_g);
+HXLINE( 136)						{
+HXLINE( 136)							 ::Dynamic _hx_tmp1 = ::haxe::Log_obj::trace;
+HXDLIN( 136)							::String _hx_tmp2 = (HX_("[WARN] Title JSON might broken, ignoring issue...\n",e2,0f,b3,6c) + e->details());
+HXDLIN( 136)							_hx_tmp1(_hx_tmp2,::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),136,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("loadJsonData",b8,e4,5d,fb)));
             						}
             					}
             					else {
@@ -337,7 +356,7 @@ HXDLIN( 132)							_hx_tmp1(_hx_tmp2,::hx::SourceInfo(HX_("source/states/Compute
             				}
             			}
             			else {
-HXLINE( 135)				::haxe::Log_obj::trace(HX_("[WARN] No Title JSON detected, using default values.",a6,15,ba,39),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),135,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("loadJsonData",b8,e4,5d,fb)));
+HXLINE( 139)				::haxe::Log_obj::trace(HX_("[WARN] No Title JSON detected, using default values.",a6,15,ba,39),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),139,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("loadJsonData",b8,e4,5d,fb)));
             			}
             		}
             	}
@@ -346,16 +365,16 @@ HXLINE( 135)				::haxe::Log_obj::trace(HX_("[WARN] No Title JSON detected, using
 HX_DEFINE_DYNAMIC_FUNC0(ComputerMainMenuState_obj,loadJsonData,(void))
 
 void ComputerMainMenuState_obj::ButtonThingy(){
-            	HX_GC_STACKFRAME(&_hx_pos_ad2dc547d242da88_142_ButtonThingy)
-HXDLIN( 142)		 ::Dynamic filter = null();
-HXDLIN( 142)		 ::flixel::group::FlxTypedGroupIterator menuitem =  ::flixel::group::FlxTypedGroupIterator_obj::__alloc( HX_CTX ,this->menuImages->members,filter);
-HXDLIN( 142)		while(menuitem->hasNext()){
-HXDLIN( 142)			 ::flixel::FlxSprite menuitem1 = menuitem->next().StaticCast<  ::flixel::FlxSprite >();
-HXLINE( 144)			if ((menuitem1->ID == ::states::ComputerMainMenuState_obj::curSelected)) {
-HXLINE( 146)				menuitem1->set_color((int)-1431655766);
+            	HX_GC_STACKFRAME(&_hx_pos_ad2dc547d242da88_146_ButtonThingy)
+HXDLIN( 146)		 ::Dynamic filter = null();
+HXDLIN( 146)		 ::flixel::group::FlxTypedGroupIterator menuitem =  ::flixel::group::FlxTypedGroupIterator_obj::__alloc( HX_CTX ,this->menuImages->members,filter);
+HXDLIN( 146)		while(menuitem->hasNext()){
+HXDLIN( 146)			 ::flixel::FlxSprite menuitem1 = menuitem->next().StaticCast<  ::flixel::FlxSprite >();
+HXLINE( 148)			if ((menuitem1->ID == ::states::ComputerMainMenuState_obj::curSelected)) {
+HXLINE( 150)				menuitem1->set_color((int)-1431655766);
             			}
             			else {
-HXLINE( 150)				menuitem1->set_color(-1);
+HXLINE( 154)				menuitem1->set_color(-1);
             			}
             		}
             	}
@@ -364,117 +383,128 @@ HXLINE( 150)				menuitem1->set_color(-1);
 HX_DEFINE_DYNAMIC_FUNC0(ComputerMainMenuState_obj,ButtonThingy,(void))
 
 void ComputerMainMenuState_obj::update(Float elapsed){
-            	HX_GC_STACKFRAME(&_hx_pos_ad2dc547d242da88_160_update)
-HXLINE( 161)		if (!(this->selectedSomethin)) {
-HXLINE( 163)			if (this->get_controls()->get_UI_DOWN_P()) {
-HXLINE( 165)				 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
-HXDLIN( 165)				_hx_tmp->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
-HXLINE( 166)				::states::ComputerMainMenuState_obj::curSelected++;
-HXLINE( 167)				::states::ComputerMainMenuState_obj::curSelected++;
-HXLINE( 168)				if ((::states::ComputerMainMenuState_obj::curSelected > 3)) {
-HXLINE( 169)					::haxe::Log_obj::trace(HX_("more than 3",df,ba,97,75),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),169,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
-HXLINE( 170)					::states::ComputerMainMenuState_obj::curSelected--;
-HXLINE( 171)					::states::ComputerMainMenuState_obj::curSelected--;
+            	HX_GC_STACKFRAME(&_hx_pos_ad2dc547d242da88_164_update)
+HXLINE( 165)		if (!(this->selectedSomethin)) {
+HXLINE( 167)			if (this->get_controls()->get_UI_DOWN_P()) {
+HXLINE( 169)				 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp = ::flixel::FlxG_obj::sound;
+HXDLIN( 169)				_hx_tmp->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
+HXLINE( 170)				::states::ComputerMainMenuState_obj::curSelected++;
+HXLINE( 171)				::states::ComputerMainMenuState_obj::curSelected++;
+HXLINE( 172)				if ((::states::ComputerMainMenuState_obj::curSelected > 3)) {
+HXLINE( 173)					::haxe::Log_obj::trace(HX_("more than 3",df,ba,97,75),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),173,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
+HXLINE( 174)					::states::ComputerMainMenuState_obj::curSelected--;
+HXLINE( 175)					::states::ComputerMainMenuState_obj::curSelected--;
             				}
-HXLINE( 173)				::haxe::Log_obj::trace(::states::ComputerMainMenuState_obj::curSelected,::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),173,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
-HXLINE( 174)				this->ButtonThingy();
+HXLINE( 177)				::haxe::Log_obj::trace(::states::ComputerMainMenuState_obj::curSelected,::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),177,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
+HXLINE( 178)				this->ButtonThingy();
             			}
-HXLINE( 175)			if (this->get_controls()->get_UI_UP_P()) {
-HXLINE( 177)				 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp1 = ::flixel::FlxG_obj::sound;
-HXDLIN( 177)				_hx_tmp1->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
-HXLINE( 178)				::states::ComputerMainMenuState_obj::curSelected--;
-HXLINE( 179)				::states::ComputerMainMenuState_obj::curSelected--;
-HXLINE( 180)				if ((::states::ComputerMainMenuState_obj::curSelected < 0)) {
-HXLINE( 181)					::haxe::Log_obj::trace(HX_("less than 0",98,47,84,65),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),181,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
-HXLINE( 182)					::states::ComputerMainMenuState_obj::curSelected++;
-HXLINE( 183)					::states::ComputerMainMenuState_obj::curSelected++;
+HXLINE( 179)			if (this->get_controls()->get_UI_UP_P()) {
+HXLINE( 181)				 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp1 = ::flixel::FlxG_obj::sound;
+HXDLIN( 181)				_hx_tmp1->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
+HXLINE( 182)				::states::ComputerMainMenuState_obj::curSelected--;
+HXLINE( 183)				::states::ComputerMainMenuState_obj::curSelected--;
+HXLINE( 184)				if ((::states::ComputerMainMenuState_obj::curSelected < 0)) {
+HXLINE( 185)					::haxe::Log_obj::trace(HX_("less than 0",98,47,84,65),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),185,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
+HXLINE( 186)					::states::ComputerMainMenuState_obj::curSelected++;
+HXLINE( 187)					::states::ComputerMainMenuState_obj::curSelected++;
             				}
-HXLINE( 185)				::haxe::Log_obj::trace(::states::ComputerMainMenuState_obj::curSelected,::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),185,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
-HXLINE( 186)				this->ButtonThingy();
+HXLINE( 189)				::haxe::Log_obj::trace(::states::ComputerMainMenuState_obj::curSelected,::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),189,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
+HXLINE( 190)				this->ButtonThingy();
             			}
-HXLINE( 188)			if (this->get_controls()->get_UI_LEFT_P()) {
-HXLINE( 189)				 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp2 = ::flixel::FlxG_obj::sound;
-HXDLIN( 189)				_hx_tmp2->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
-HXLINE( 190)				::states::ComputerMainMenuState_obj::curSelected--;
-HXLINE( 191)				if ((::states::ComputerMainMenuState_obj::curSelected == -1)) {
-HXLINE( 192)					::haxe::Log_obj::trace(HX_("less than 0",98,47,84,65),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),192,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
-HXLINE( 193)					::states::ComputerMainMenuState_obj::curSelected++;
+HXLINE( 192)			if (this->get_controls()->get_UI_LEFT_P()) {
+HXLINE( 193)				 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp2 = ::flixel::FlxG_obj::sound;
+HXDLIN( 193)				_hx_tmp2->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
+HXLINE( 194)				::states::ComputerMainMenuState_obj::curSelected--;
+HXLINE( 195)				if ((::states::ComputerMainMenuState_obj::curSelected == -1)) {
+HXLINE( 196)					::haxe::Log_obj::trace(HX_("less than 0",98,47,84,65),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),196,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
+HXLINE( 197)					::states::ComputerMainMenuState_obj::curSelected++;
             				}
             				else {
-HXLINE( 195)					if ((::states::ComputerMainMenuState_obj::curSelected == 1)) {
-HXLINE( 196)						::haxe::Log_obj::trace(HX_("less than 2",9a,47,84,65),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),196,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
-HXLINE( 197)						::states::ComputerMainMenuState_obj::curSelected++;
+HXLINE( 199)					if ((::states::ComputerMainMenuState_obj::curSelected == 1)) {
+HXLINE( 200)						::haxe::Log_obj::trace(HX_("less than 2",9a,47,84,65),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),200,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
+HXLINE( 201)						::states::ComputerMainMenuState_obj::curSelected++;
             					}
             				}
-HXLINE( 199)				::haxe::Log_obj::trace(::states::ComputerMainMenuState_obj::curSelected,::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),199,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
-HXLINE( 200)				this->ButtonThingy();
+HXLINE( 203)				::haxe::Log_obj::trace(::states::ComputerMainMenuState_obj::curSelected,::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),203,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
+HXLINE( 204)				this->ButtonThingy();
             			}
-HXLINE( 202)			if (this->get_controls()->get_UI_RIGHT_P()) {
-HXLINE( 203)				 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp3 = ::flixel::FlxG_obj::sound;
-HXDLIN( 203)				_hx_tmp3->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
-HXLINE( 204)				::states::ComputerMainMenuState_obj::curSelected++;
-HXLINE( 205)				if ((::states::ComputerMainMenuState_obj::curSelected == 2)) {
-HXLINE( 206)					::haxe::Log_obj::trace(HX_("more than 1",dd,ba,97,75),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),206,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
-HXLINE( 207)					::states::ComputerMainMenuState_obj::curSelected--;
+HXLINE( 206)			if (this->get_controls()->get_UI_RIGHT_P()) {
+HXLINE( 207)				 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp3 = ::flixel::FlxG_obj::sound;
+HXDLIN( 207)				_hx_tmp3->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("scrollMenu",4c,d4,18,06)),null(),true,null()),null(),null(),null(),null(),null());
+HXLINE( 208)				::states::ComputerMainMenuState_obj::curSelected++;
+HXLINE( 209)				if ((::states::ComputerMainMenuState_obj::curSelected == 2)) {
+HXLINE( 210)					::haxe::Log_obj::trace(HX_("more than 1",dd,ba,97,75),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),210,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
+HXLINE( 211)					::states::ComputerMainMenuState_obj::curSelected--;
             				}
             				else {
-HXLINE( 209)					if ((::states::ComputerMainMenuState_obj::curSelected == 4)) {
-HXLINE( 210)						::haxe::Log_obj::trace(HX_("more than 3",df,ba,97,75),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),210,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
-HXLINE( 211)						::states::ComputerMainMenuState_obj::curSelected--;
+HXLINE( 213)					if ((::states::ComputerMainMenuState_obj::curSelected == 4)) {
+HXLINE( 214)						::haxe::Log_obj::trace(HX_("more than 3",df,ba,97,75),::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),214,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
+HXLINE( 215)						::states::ComputerMainMenuState_obj::curSelected--;
             					}
             				}
-HXLINE( 213)				::haxe::Log_obj::trace(::states::ComputerMainMenuState_obj::curSelected,::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),213,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
-HXLINE( 214)				this->ButtonThingy();
+HXLINE( 217)				::haxe::Log_obj::trace(::states::ComputerMainMenuState_obj::curSelected,::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),217,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
+HXLINE( 218)				this->ButtonThingy();
             			}
-HXLINE( 216)			if (this->get_controls()->get_ACCEPT()) {
-HXLINE( 218)				this->selectedSomethin = true;
-HXLINE( 219)				switch((int)(::states::ComputerMainMenuState_obj::curSelected)){
+HXLINE( 220)			if (this->get_controls()->get_ACCEPT()) {
+HXLINE( 222)				this->selectedSomethin = true;
+HXLINE( 223)				switch((int)(::states::ComputerMainMenuState_obj::curSelected)){
             					case (int)0: {
-HXLINE( 223)						 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp4 = ::flixel::FlxG_obj::sound;
-HXDLIN( 223)						_hx_tmp4->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("confirmMenu",bf,8e,fe,3c)),null(),true,null()),null(),null(),null(),null(),null());
-HXLINE( 224)						::backend::MusicBeatState_obj::switchState( ::states::StoryMenuState_obj::__alloc( HX_CTX ));
+HXLINE( 227)						 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp4 = ::flixel::FlxG_obj::sound;
+HXDLIN( 227)						_hx_tmp4->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("confirmMenu",bf,8e,fe,3c)),null(),true,null()),null(),null(),null(),null(),null());
+HXLINE( 228)						::backend::MusicBeatState_obj::switchState( ::states::StoryMenuState_obj::__alloc( HX_CTX ));
             					}
             					break;
             					case (int)1: {
-HXLINE( 228)						bool _hx_tmp5;
-HXDLIN( 228)						if (::states::StoryMenuState_obj::weekCompleted->exists(HX_("k1-KINITOPET",44,c5,7d,7c))) {
-HXLINE( 228)							_hx_tmp5 = ::states::StoryMenuState_obj::weekCompleted->get_bool(HX_("k1-KINITOPET",44,c5,7d,7c));
+HXLINE( 232)						 ::Dynamic _hx_tmp5 = ::haxe::Log_obj::trace;
+HXDLIN( 232)						bool _hx_tmp6;
+HXDLIN( 232)						if (!(::states::StoryMenuState_obj::weekCompleted->exists(HX_("k1-KINITOPET",44,c5,7d,7c)))) {
+HXLINE( 232)							_hx_tmp6 = !(::states::StoryMenuState_obj::weekCompleted->get_bool(HX_("k1-KINITOPET",44,c5,7d,7c)));
             						}
             						else {
-HXLINE( 228)							_hx_tmp5 = false;
+HXLINE( 232)							_hx_tmp6 = false;
             						}
-HXDLIN( 228)						if (_hx_tmp5) {
-HXLINE( 230)							 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp6 = ::flixel::FlxG_obj::sound;
-HXDLIN( 230)							_hx_tmp6->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("confirmMenu",bf,8e,fe,3c)),null(),true,null()),null(),null(),null(),null(),null());
-HXLINE( 231)							::backend::MusicBeatState_obj::switchState( ::states::FreeplayState_obj::__alloc( HX_CTX ));
+HXDLIN( 232)						_hx_tmp5(_hx_tmp6,::hx::SourceInfo(HX_("source/states/ComputerMainMenuState.hx",79,f6,20,dd),232,HX_("states.ComputerMainMenuState",12,5a,6e,45),HX_("update",09,86,05,87)));
+HXLINE( 233)						bool _hx_tmp7;
+HXDLIN( 233)						if (!(::states::StoryMenuState_obj::weekCompleted->exists(HX_("k1-KINITOPET",44,c5,7d,7c)))) {
+HXLINE( 233)							_hx_tmp7 = !(::states::StoryMenuState_obj::weekCompleted->get_bool(HX_("k1-KINITOPET",44,c5,7d,7c)));
             						}
             						else {
-HXLINE( 235)							::flixel::FlxG_obj::camera->shake(((Float)0.025),((Float)0.5),null(),true,null());
-HXLINE( 236)							this->selectedSomethin = false;
+HXLINE( 233)							_hx_tmp7 = false;
+            						}
+HXDLIN( 233)						if (_hx_tmp7) {
+HXLINE( 235)							 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp8 = ::flixel::FlxG_obj::sound;
+HXDLIN( 235)							_hx_tmp8->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("confirmMenu",bf,8e,fe,3c)),null(),true,null()),null(),null(),null(),null(),null());
+HXLINE( 236)							::backend::MusicBeatState_obj::switchState( ::states::FreeplayState_obj::__alloc( HX_CTX ));
+            						}
+            						else {
+HXLINE( 240)							::openfl::Lib_obj::get_application()->_hx___window->set_title(HX_("PLAY MY GAME",fa,6e,a8,d0));
+HXLINE( 241)							::flixel::FlxG_obj::camera->shake(((Float)0.025),((Float)0.5),null(),true,null());
+HXLINE( 242)							this->selectedSomethin = false;
+HXLINE( 243)							::openfl::Lib_obj::get_application()->_hx___window->set_title(HX_("explorer.exe",a3,11,12,ed));
             						}
             					}
             					break;
             					case (int)2: {
-HXLINE( 242)						 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp7 = ::flixel::FlxG_obj::sound;
-HXDLIN( 242)						_hx_tmp7->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("confirmMenu",bf,8e,fe,3c)),null(),true,null()),null(),null(),null(),null(),null());
-HXLINE( 243)						::backend::MusicBeatState_obj::switchState( ::states::CreditsState_obj::__alloc( HX_CTX ));
+HXLINE( 249)						 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp9 = ::flixel::FlxG_obj::sound;
+HXDLIN( 249)						_hx_tmp9->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("confirmMenu",bf,8e,fe,3c)),null(),true,null()),null(),null(),null(),null(),null());
+HXLINE( 250)						::backend::MusicBeatState_obj::switchState( ::states::CreditsState_obj::__alloc( HX_CTX ));
             					}
             					break;
             					case (int)3: {
-HXLINE( 247)						 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp8 = ::flixel::FlxG_obj::sound;
-HXDLIN( 247)						_hx_tmp8->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("confirmMenu",bf,8e,fe,3c)),null(),true,null()),null(),null(),null(),null(),null());
-HXLINE( 248)						::backend::MusicBeatState_obj::switchState( ::options::OptionsState_obj::__alloc( HX_CTX ));
+HXLINE( 254)						 ::flixel::_hx_system::frontEnds::SoundFrontEnd _hx_tmp10 = ::flixel::FlxG_obj::sound;
+HXDLIN( 254)						_hx_tmp10->play(::backend::Paths_obj::returnSound((HX_("sounds/",eb,02,a5,b6) + HX_("confirmMenu",bf,8e,fe,3c)),null(),true,null()),null(),null(),null(),null(),null());
+HXLINE( 255)						::backend::MusicBeatState_obj::switchState( ::options::OptionsState_obj::__alloc( HX_CTX ));
             					}
             					break;
             				}
             			}
-HXLINE( 252)			if (this->get_controls()->justPressed(HX_("debug_1",05,20,57,5b))) {
-HXLINE( 254)				this->selectedSomethin = true;
-HXLINE( 255)				::flixel::FlxG_obj::mouse->set_visible(false);
-HXLINE( 256)				::backend::MusicBeatState_obj::switchState( ::states::editors::MasterEditorMenu_obj::__alloc( HX_CTX ));
+HXLINE( 259)			if (this->get_controls()->justPressed(HX_("debug_1",05,20,57,5b))) {
+HXLINE( 261)				this->selectedSomethin = true;
+HXLINE( 262)				::flixel::FlxG_obj::mouse->set_visible(false);
+HXLINE( 263)				::backend::MusicBeatState_obj::switchState( ::states::editors::MasterEditorMenu_obj::__alloc( HX_CTX ));
             			}
             		}
-HXLINE( 259)		this->super::update(elapsed);
+HXLINE( 266)		this->super::update(elapsed);
             	}
 
 

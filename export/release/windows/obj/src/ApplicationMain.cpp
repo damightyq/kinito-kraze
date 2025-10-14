@@ -166,10 +166,10 @@ HXLINE( 121)			::ApplicationMain_obj::start(stage);
             	HX_GC_STACKFRAME(&_hx_pos_6fcf922b66429816_31_create)
 HXLINE(  32)		 ::openfl::display::Application app =  ::openfl::display::Application_obj::__alloc( HX_CTX );
 HXLINE(  35)		::ManifestResources_obj::init(config);
-HXLINE(  38)		app->meta->set(HX_("build",2e,db,ea,ba),HX_("5",35,00,00,00));
+HXLINE(  38)		app->meta->set(HX_("build",2e,db,ea,ba),HX_("6",36,00,00,00));
 HXLINE(  39)		app->meta->set(HX_("company",3d,15,69,83),HX_("ShadowMario",e4,7d,20,5e));
 HXLINE(  40)		app->meta->set(HX_("file",7c,ce,bb,43),HX_("PsychEngine",3d,1b,63,8f));
-HXLINE(  41)		app->meta->set(HX_("name",4b,72,ff,48),HX_("Friday Night Funkin': Psych Engine",1a,50,f6,97));
+HXLINE(  41)		app->meta->set(HX_("name",4b,72,ff,48),HX_("Kinito Kraze",f9,47,1a,7c));
 HXLINE(  42)		app->meta->set(HX_("packageName",f1,04,ad,04),HX_("com.shadowmario.psychengine",c6,9e,3e,fb));
 HXLINE(  43)		app->meta->set(HX_("version",18,e7,f1,7c),HX_("0.2.8",be,c1,c9,c1));
 HXLINE(  49)		 ::Dynamic attributes =  ::Dynamic(::hx::Anon_obj::Create(16)
@@ -182,7 +182,7 @@ HXLINE(  49)		 ::Dynamic attributes =  ::Dynamic(::hx::Anon_obj::Create(16)
             			->setFixed(6,HX_("y",79,00,00,00),null())
             			->setFixed(7,HX_("height",e7,07,4c,02),720)
             			->setFixed(8,HX_("element",bc,ae,54,06),null())
-            			->setFixed(9,HX_("title",98,15,3b,10),HX_("Friday Night Funkin': Psych Engine",1a,50,f6,97))
+            			->setFixed(9,HX_("title",98,15,3b,10),HX_("Kinito Kraze",f9,47,1a,7c))
             			->setFixed(10,HX_("alwaysOnTop",67,4d,53,16),false)
             			->setFixed(11,HX_("borderless",45,46,71,17),false)
             			->setFixed(12,HX_("minimized",86,fb,9d,28),false)

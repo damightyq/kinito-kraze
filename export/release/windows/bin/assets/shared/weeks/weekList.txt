@@ -1,9 +1,6 @@
-tutorial
-week1
-week2
-week3
-week4
-week5
-week6
-week7
-weekend1
+k0-TEST
+k1-KINITOPET
+k2-MARK
+k3-MYWORLD
+k4-DOX
+k5-KITO

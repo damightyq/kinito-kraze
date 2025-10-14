@@ -35,10 +35,10 @@ class ApplicationMain
 		ManifestResources.init(config);
 		#end
 
-		app.meta["build"] = "5";
+		app.meta["build"] = "6";
 		app.meta["company"] = "ShadowMario";
 		app.meta["file"] = "PsychEngine";
-		app.meta["name"] = "Friday Night Funkin': Psych Engine";
+		app.meta["name"] = "Kinito Kraze";
 		app.meta["packageName"] = "com.shadowmario.psychengine";
 		app.meta["version"] = "0.2.8";
 
@@ -60,7 +60,7 @@ class ApplicationMain
 			minimized: false,
 			parameters: {},
 			resizable: true,
-			title: "Friday Night Funkin': Psych Engine",
+			title: "Kinito Kraze",
 			width: 1280,
 			x: null,
 			y: null,
@@ -102,7 +102,7 @@ class ApplicationMain
 		app.createWindow(attributes);
 		
 		#elseif air
-		app.window.title = "Friday Night Funkin': Psych Engine";
+		app.window.title = "Kinito Kraze";
 		#else
 		app.window.context.attributes.background = 0;
 		app.window.frameRate = 60;

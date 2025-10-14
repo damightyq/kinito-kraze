@@ -64,8 +64,12 @@ class ComputerMainMenuState extends MusicBeatState {
     override function create() {
         super.create();
 
-        DiscordClient.changePresence("In the Menus", null);
+        #if DISCORD_ALLOWED
+		// Updating Discord Rich Presence
+        DiscordClient.changePresence("explorer.exe", null);
+        #end
 
+        openfl.Lib.application.window.title = "explorer.exe";
         WindowColorMode.setWindowBorderColor([255, 105, 180], true, true);
 
         bg = new FlxSprite(0,0).loadGraphic(Paths.image('computermenu/bg'));
@@ -225,15 +229,18 @@ class ComputerMainMenuState extends MusicBeatState {
 
                 	case 1:
 
-                    	if (StoryMenuState.weekCompleted.exists("k1-KINITOPET") && StoryMenuState.weekCompleted.get("k1-KINITOPET")) {
+                    	trace(!StoryMenuState.weekCompleted.exists("k1-KINITOPET") && !StoryMenuState.weekCompleted.get("k1-KINITOPET"));
+                        if (!StoryMenuState.weekCompleted.exists("k1-KINITOPET") && !StoryMenuState.weekCompleted.get("k1-KINITOPET")) {
 
                             FlxG.sound.play(Paths.sound('confirmMenu'));
                             MusicBeatState.switchState(new states.FreeplayState());
 
                         } else {
                             
+                            openfl.Lib.application.window.title = "PLAY MY GAME";
                             FlxG.camera.shake(0.025, 0.5, null, true);
                             selectedSomethin = false;
+                            openfl.Lib.application.window.title = "explorer.exe";
 
                         }
 

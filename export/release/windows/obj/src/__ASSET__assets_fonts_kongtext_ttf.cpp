@@ -11,13 +11,13 @@
 #include <lime/text/Font.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_43be04978f0827ac_682_new,"__ASSET__assets_fonts_kongtext_ttf","new",0x83689e2a,"__ASSET__assets_fonts_kongtext_ttf.new","ManifestResources.hx",682,0xf77aa668)
+HX_DEFINE_STACK_FRAME(_hx_pos_43be04978f0827ac_687_new,"__ASSET__assets_fonts_kongtext_ttf","new",0x83689e2a,"__ASSET__assets_fonts_kongtext_ttf.new","ManifestResources.hx",687,0xf77aa668)
 
 void __ASSET__assets_fonts_kongtext_ttf_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_43be04978f0827ac_682_new)
-HXDLIN( 682)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/kongtext.ttf",39,ec,f9,4a));
-HXDLIN( 682)		this->name = HX_("Kongtext Regular",46,22,14,7c);
-HXDLIN( 682)		super::__construct(null());
+            	HX_STACKFRAME(&_hx_pos_43be04978f0827ac_687_new)
+HXDLIN( 687)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/kongtext.ttf",39,ec,f9,4a));
+HXDLIN( 687)		this->name = HX_("Kongtext Regular",46,22,14,7c);
+HXDLIN( 687)		super::__construct(null());
             	}
 
 Dynamic __ASSET__assets_fonts_kongtext_ttf_obj::__CreateEmpty() { return new __ASSET__assets_fonts_kongtext_ttf_obj; }
