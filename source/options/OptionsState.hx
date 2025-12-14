@@ -1,6 +1,6 @@
 package options;
 
-import states.MainMenuState;
+import states.ComputerMainMenuState;
 import backend.StageData;
 
 class OptionsState extends MusicBeatState
@@ -48,7 +48,7 @@ class OptionsState extends MusicBeatState
 		Language.reloadPhrases();
 
 		#if DISCORD_ALLOWED
-		DiscordClient.changePresence("Options Menu", null);
+		DiscordClient.changePresence("settings.exe", null);
 		#end
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
@@ -107,7 +107,7 @@ class OptionsState extends MusicBeatState
 				LoadingState.loadAndSwitchState(new PlayState());
 				FlxG.sound.music.volume = 0;
 			}
-			else MusicBeatState.switchState(new MainMenuState());
+			else MusicBeatState.switchState(new ComputerMainMenuState());
 		}
 		else if (controls.ACCEPT) openSelectedSubstate(options[curSelected]);
 	}

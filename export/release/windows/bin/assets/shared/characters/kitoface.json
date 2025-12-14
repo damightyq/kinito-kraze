@@ -1,0 +1,55 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [0, 0],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Kitoface I",
+			"indices": []
+		},
+		{
+			"offsets": [240, -11],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Kitoface L0"
+		},
+		{
+			"offsets": [-2, -5],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Kitoface D"
+		},
+		{
+			"offsets": [-3, 1],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Kitoface R"
+		},
+		{
+			"loop": false,
+			"offsets": [-17, -3],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Kitoface U",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/Kitoface",
+	"position": [-670, -480],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [161, 161, 161],
+	"camera_position": [-410, -60],
+	"sing_duration": 9.49999999999998,
+	"scale": 1.4,
+	"_editor_isPlayer": false
+}

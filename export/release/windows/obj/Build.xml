@@ -4089,8 +4089,8 @@
    <depend name="include/options/NotesColorSubState.h"/>
    <depend name="include/options/OptionsState.h"/>
    <depend name="include/options/VisualsSettingsSubState.h"/>
+   <depend name="include/states/ComputerMainMenuState.h"/>
    <depend name="include/states/LoadingState.h"/>
-   <depend name="include/states/MainMenuState.h"/>
    <depend name="include/states/PlayState.h"/>
   </file>
   <file name="src/options/Option.cpp" >

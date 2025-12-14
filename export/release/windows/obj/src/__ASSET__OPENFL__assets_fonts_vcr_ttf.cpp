@@ -14,13 +14,13 @@
 #include <openfl/text/Font.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_57a6f60f6ddd8c51_715_new,"__ASSET__OPENFL__assets_fonts_vcr_ttf","new",0x6b4c3447,"__ASSET__OPENFL__assets_fonts_vcr_ttf.new","ManifestResources.hx",715,0xf77aa668)
+HX_DEFINE_STACK_FRAME(_hx_pos_57a6f60f6ddd8c51_731_new,"__ASSET__OPENFL__assets_fonts_vcr_ttf","new",0x6b4c3447,"__ASSET__OPENFL__assets_fonts_vcr_ttf.new","ManifestResources.hx",731,0xf77aa668)
 
 void __ASSET__OPENFL__assets_fonts_vcr_ttf_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_57a6f60f6ddd8c51_715_new)
-HXDLIN( 715)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/vcr.ttf",46,38,26,7e));
-HXDLIN( 715)		this->name = HX_("VCR OSD Mono",be,44,e4,b8);
-HXDLIN( 715)		super::__construct(null());
+            	HX_STACKFRAME(&_hx_pos_57a6f60f6ddd8c51_731_new)
+HXDLIN( 731)		this->_hx___fontPath = (::ManifestResources_obj::rootPath + HX_("assets/fonts/vcr.ttf",46,38,26,7e));
+HXDLIN( 731)		this->name = HX_("VCR OSD Mono",be,44,e4,b8);
+HXDLIN( 731)		super::__construct(null());
             	}
 
 Dynamic __ASSET__OPENFL__assets_fonts_vcr_ttf_obj::__CreateEmpty() { return new __ASSET__OPENFL__assets_fonts_vcr_ttf_obj; }

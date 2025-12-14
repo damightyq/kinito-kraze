@@ -103,6 +103,9 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_brad_dead_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_brad_flip_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_brad_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_bradkito_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_bradkitodark_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_bradkitoface_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_brad_new_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_brad_ww_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_dad_json extends null { }
@@ -127,6 +130,8 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_kinitopond_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_kinito_new_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_kito_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_kitodark_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_kitoface_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_kitotrans_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_mark_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_monsterkito_json extends null { }
@@ -211,6 +216,12 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_brad_dead_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_brad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_brad_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_bradface_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_bradface_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_bradk_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_bradk_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_bradkdark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_bradkdark_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_brad_new_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_brad_new_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_brad_ww_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -252,6 +263,10 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_kinito_new_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_kito_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_kito_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_kitodark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_kitodark_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_kitoface_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_kitoface_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_kitotrans_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_kitotrans_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_mark_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -494,6 +509,7 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_sick_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_speech_bubble_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_speech_bubble_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_stages_finale_bedcuznooneaddedit_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_stages_finale_bedroom_2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_stages_finale_bedroom_red_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_stages_finale_hallway_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }

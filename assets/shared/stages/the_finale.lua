@@ -15,7 +15,7 @@ function onCreatePost()
     setProperty('blackscreen.alpha', 0)
     setObjectCamera('blackscreen', 'hud')
 
-    for i, finale in pairs({'your_world1', 'your_world2', 'bedroom_2', 'bedroom_red', 'hallway', 'the_monitor'}) do precacheImage('stages/finale/' .. finale) end
+    for i, finale in pairs({'your_world1', 'your_world2', 'bedroom_2', 'bedroom_red','bedcuznooneaddedit', 'hallway', 'the_monitor'}) do precacheImage('stages/finale/' .. finale) end
 
     makeLuaSprite('check1', 'stages/finale/your_world1', -1139, -550)
     setProperty('check1.alpha', 1)
@@ -40,6 +40,9 @@ function onCreatePost()
     makeLuaSprite('tv', 'stages/finale/the_monitor', -1155, -560)
     setProperty('tv.alpha', 0)
 
+    makeLuaSprite('bedred', 'stages/finale/bedcuznooneaddedit', -1155, -560)
+    setProperty('bedred.alpha', 0)
+
     addLuaSprite('check1', false)
     addLuaSprite('check2', false)
     addLuaSprite('quarto', false)
@@ -47,6 +50,7 @@ function onCreatePost()
     addLuaSprite('corridor', false)
     addLuaSprite('tv', false)
     addLuaSprite('blackscreen', true)
+    addLuaSprite('bedred', false)
 
     setObjectOrder('check1', getObjectOrder('noteGroup')+1)
     setObjectOrder('dad', getObjectOrder('check1')+1)
@@ -155,18 +159,15 @@ function onStepHit()
         end
     end
 
-
-    if curStep == 640 then
-        doTweenAlpha("theSWITCH", "blackscreen", beci(140, 16), 1, "quartInOut")
-    end
-
     if curStep == 736 then 
         changePhase('bed')
     elseif curStep == 1408 then
         setProperty('quarto.alpha', 0)
         setProperty('quartodoMAL.alpha', 1)
+	setProperty('bedred.alpha', 1)
     elseif curStep == 2256 then
         setProperty('quartodoMAL.alpha', 0)
+	setProperty('bedred.alpha', 0)
         setProperty('corridor.alpha', 1)
     elseif curStep == 2864 then
         setProperty('corridor.alpha', 0)

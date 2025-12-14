@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "invisble_brad",
+		"player1": "invisble",
 		"gfVersion": "invisible",
 		"notes": [
 			{
@@ -8613,7 +8613,7 @@
 		"player2": "finale_1_kinito",
 		"disableNoteRGB": true,
 		"splashSkin": "KinitoSplash",
-		"song": "finale",
+		"song": "blue-screen",
 		"stage": "the_finale",
 		"needsVoices": true,
 		"arrowSkin": "KinitoNotes",

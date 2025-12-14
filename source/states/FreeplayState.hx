@@ -455,7 +455,7 @@ class FreeplayState extends MusicBeatState
 		outlinePlay.setPosition(play.x - (outlinePlay.width - play.width) / 2, 
         play.y - (outlinePlay.height - play.height) / 2);
 
-		// trace("CDs criados: " + cds.length);
+		// trace("cd amount: " + cds.length);
 
 		shiftRight();
 
@@ -541,66 +541,9 @@ class FreeplayState extends MusicBeatState
 
 		ref.visible = FlxG.keys.pressed.HOME;
 
-
-
-			scoreText.text = '' + lerpScore + '\n(' + ratingSplit.join('.') + '%)';
-			scoreTextShadow.text  = '' + lerpScore + '\n(' + ratingSplit.join('.') + '%)';
-			// positionHighscore();
+		scoreText.text = '' + lerpScore + '\n(' + ratingSplit.join('.') + '%)';
+		scoreTextShadow.text  = '' + lerpScore + '\n(' + ratingSplit.join('.') + '%)';
 			
-			// if(songs.length > 1)
-			// {
-			// 	if(FlxG.keys.justPressed.HOME)
-			// 	{
-			// 		curSelected = 0;
-			// 		changeSelection();
-			// 		holdTime = 0;	
-			// 	}
-			// 	else if(FlxG.keys.justPressed.END)
-			// 	{
-			// 		curSelected = songs.length - 1;
-			// 		changeSelection();
-			// 		holdTime = 0;	
-			// 	}
-			// 	if (controls.UI_UP_P)
-			// 	{
-			// 		changeSelection(-shiftMult);
-			// 		holdTime = 0;
-			// 	}
-			// 	if (controls.UI_DOWN_P)
-			// 	{
-			// 		changeSelection(shiftMult);
-			// 		holdTime = 0;
-			// 	}
-
-			// 	if(controls.UI_DOWN || controls.UI_UP)
-			// 	{
-			// 		var checkLastHold:Int = Math.floor((holdTime - 0.5) * 10);
-			// 		holdTime += elapsed;
-			// 		var checkNewHold:Int = Math.floor((holdTime - 0.5) * 10);
-
-			// 		if(holdTime > 0.5 && checkNewHold - checkLastHold > 0)
-			// 			changeSelection((checkNewHold - checkLastHold) * (controls.UI_UP ? -shiftMult : shiftMult));
-			// 	}
-
-			// 	if(FlxG.mouse.wheel != 0)
-			// 	{
-			// 		FlxG.sound.play(Paths.sound('scrollMenu'), 0.2);
-			// 		changeSelection(-shiftMult * FlxG.mouse.wheel, false);
-			// 	}
-			// }
-
-			//if (controls.UI_LEFT_P) {
-
-			//	changeDiff(-1);
-			//	_updateSongLastDifficulty();
-
-			//} else if (controls.UI_RIGHT_P) {
-				
-			//	changeDiff(1);
-			//	_updateSongLastDifficulty();
-
-			//}
-
 		checkHover(left, outlineLeft, "freeplay/arrowLeft");
 		checkHover(right, outlineRight, "freeplay/arrowRight");
 		checkHover(play, outlinePlay, "freeplay/playButton");
@@ -717,38 +660,7 @@ class FreeplayState extends MusicBeatState
 			var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 			var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
 			trace(poop);
-			//try
-			//{
-			//	PlayState.SONG = Song.loadFromJson(poop, songLowercase);
-			//	PlayState.isStoryMode = false;
-			//	PlayState.storyDifficulty = curDifficulty;
 
-			//	trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
-			//	if(colorTween != null) {
-			//		colorTween.cancel();
-			//	}
-			//}
-			//catch(e:Dynamic)
-			//{
-			//	trace('ERROR! $e');
-
-			//	var errorStr:String = e.toString();
-			//	if(errorStr.startsWith('[file_contents,assets/data/')) errorStr = 'Missing file: ' + errorStr.substring(34, errorStr.length-1); //Missing chart
-			//	missingText.text = 'ERROR WHILE LOADING CHART:\n$errorStr';
-			//	missingText.screenCenter(Y);
-			//	missingText.visible = true;
-			//	missingTextBG.visible = true;
-			//	FlxG.sound.play(Paths.sound('cancelMenu'));
-
-			//	updateTexts(elapsed);
-			//	super.update(elapsed);
-			//	return;
-			//}
-			//LoadingState.loadAndSwitchState(new PlayState());
-
-			//FlxG.sound.music.volume = 0;
-					
-			//destroyFreeplayVocals();
 			getName();
 			shiftDown();
 			#if (MODS_ALLOWED && DISCORD_ALLOWED)
@@ -1012,7 +924,7 @@ class FreeplayState extends MusicBeatState
 			var leSongName = cd.getName();
 			var bpm = musicBPM.exists(leSongName) ? musicBPM[leSongName] : musicBPM["default"];
 	
-			if (cd.x == positions[2]) { // Se estiver na posição central
+			if (cd.x == positions[2]) { //if it's centered
 				cd.spinCD(BeCI.bpm(8, bpm));
 				songNameText.text = ""+ leSongName;
 				songNameShadow.text = ""+ leSongName;
@@ -1021,19 +933,13 @@ class FreeplayState extends MusicBeatState
 				cd.stopSpinCD();
 				// trace(":sad_face:");
 			}
-
-			// if (cd.x != positions[1] && cd.x != positions[2] && cd.x != positions[3]) {
-			// 	cd.visible = false;
-			// } else {
-			// 	cd.visible = true;
-			// }
 		}
 	}
 	
 
 	function checkHover(sprite:FlxSprite, outline:FlxSprite, normal:String) {
 		if (sprite.overlapsPoint(FlxG.mouse.getScreenPosition())) {
-			outline.visible = true; // Mostra a outline
+			outline.visible = true; // show outline
 	
 			if (FlxG.mouse.justPressed) {
 				sprite.loadGraphic(Paths.image(normal + "Press"));
@@ -1056,7 +962,7 @@ class FreeplayState extends MusicBeatState
 				outline.loadGraphic(Paths.image(normal + "Outline" ));
 			}
 		} else {
-			outline.visible = false; // Esconde a outline se o mouse sair
+			outline.visible = false; // hide outline if mouse leaves
 			sprite.loadGraphic(Paths.image(normal));
 		}
 	}
@@ -1093,7 +999,6 @@ class FreeplayState extends MusicBeatState
 		else
 			diffText.text = lastDifficultyName.toUpperCase();
 
-		positionHighscore();
 		missingText.visible = false;
 		missingTextBG.visible = false;
 	}

@@ -121,11 +121,11 @@
 #ifndef INCLUDED_options_VisualsSettingsSubState
 #include <options/VisualsSettingsSubState.h>
 #endif
+#ifndef INCLUDED_states_ComputerMainMenuState
+#include <states/ComputerMainMenuState.h>
+#endif
 #ifndef INCLUDED_states_LoadingState
 #include <states/LoadingState.h>
-#endif
-#ifndef INCLUDED_states_MainMenuState
-#include <states/MainMenuState.h>
 #endif
 #ifndef INCLUDED_states_PlayState
 #include <states/PlayState.h>
@@ -218,7 +218,7 @@ HX_DEFINE_DYNAMIC_FUNC1(OptionsState_obj,openSelectedSubstate,(void))
 void OptionsState_obj::create(){
             	HX_GC_STACKFRAME(&_hx_pos_bddb8806f8971119_46_create)
 HXLINE(  48)		::backend::Language_obj::reloadPhrases();
-HXLINE(  51)		::backend::DiscordClient_obj::changePresence(HX_("Options Menu",e1,25,4c,98),null(),null(),null(),null(),null());
+HXLINE(  51)		::backend::DiscordClient_obj::changePresence(HX_("settings.exe",87,07,56,f0),null(),null(),null(),null(),null());
 HXLINE(  54)		 ::flixel::FlxSprite bg =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,null(),null(),null());
 HXDLIN(  54)		 ::flixel::FlxSprite bg1 = bg->loadGraphic(::backend::Paths_obj::image(HX_("menuDesat",26,91,04,72),null(),null()),null(),null(),null(),null(),null());
 HXLINE(  55)		bg1->set_antialiasing(::backend::ClientPrefs_obj::data->antialiasing);
@@ -352,7 +352,7 @@ HXLINE( 107)				::backend::MusicBeatState_obj::switchState(::states::LoadingStat
 HXLINE( 108)				::flixel::FlxG_obj::sound->music->set_volume(( (Float)(0) ));
             			}
             			else {
-HXLINE( 110)				::backend::MusicBeatState_obj::switchState( ::states::MainMenuState_obj::__alloc( HX_CTX ));
+HXLINE( 110)				::backend::MusicBeatState_obj::switchState( ::states::ComputerMainMenuState_obj::__alloc( HX_CTX ));
             			}
             		}
             		else {

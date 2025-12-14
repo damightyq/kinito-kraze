@@ -1,79 +1,54 @@
 {
 	"animations": [
 		{
+			"offsets": [0, 0],
 			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "idle",
 			"fps": 10,
-			"name": "idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
 		},
 		{
+			"offsets": [0, 7],
 			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
+			"fps": 15,
 			"anim": "singDOWN",
-			"fps": 15,
-			"name": "down",
-			"indices": []
+			"indices": [],
+			"name": "down"
 		},
 		{
+			"offsets": [0, 9],
 			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
+			"fps": 15,
 			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [-9, 9],
+			"anim": "singRIGHT",
 			"fps": 15,
-			"name": "up",
+			"name": "left",
 			"indices": []
 		},
 		{
-			"offsets": [
-				-29,
-				9
-			],
 			"loop": false,
-			"fps": 15,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "left"
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"loop": false,
-			"fps": 15,
+			"offsets": [-5, 0],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "right"
+			"fps": 15,
+			"name": "right",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/Jade",
-	"position": [
-		1860,
-		170
-	],
+	"position": [1860, 170],
 	"healthicon": "jade",
 	"flip_x": true,
-	"healthbar_colors": [
-		145,
-		236,
-		170
-	],
-	"camera_position": [
-		-110,
-		180
-	],
+	"healthbar_colors": [145, 236, 170],
+	"camera_position": [-110, 180],
 	"sing_duration": 4,
 	"scale": 0.7,
 	"_editor_isPlayer": false
