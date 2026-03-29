@@ -1,8 +1,0 @@
-Let's you control video playback and settings.
-
-Value 1: Action to perform
-[Play / Stop / Resume / SetCamera / SetLayer]
-
-Value 2: Only for SetCamera/SetLayer
-(Example SetCamera: camHUD)
-(Example SetLayer: 0)
