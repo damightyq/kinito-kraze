@@ -1,0 +1,87 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [-5, 0],
+			"anim": "idle",
+			"fps": 15,
+			"name": "idle",
+			"indices": []
+		},
+		{
+			"offsets": [-4, 0],
+			"loop": false,
+			"fps": 15,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [-4, 0],
+			"loop": false,
+			"fps": 15,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [-3, 0],
+			"loop": false,
+			"fps": 15,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [-4, 0],
+			"loop": false,
+			"fps": 15,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"loop": false,
+			"offsets": [9, -29],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "ALTdown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-3, -32],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "ALTleft",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-1, -28],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "ALTright",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-1, -29],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "ALTup",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bookworm_kinito",
+	"position": [-810, -130],
+	"healthicon": "kinito",
+	"flip_x": false,
+	"healthbar_colors": [255, 166, 250],
+	"camera_position": [300, 120],
+	"sing_duration": 7,
+	"scale": 0.8,
+	"_editor_isPlayer": false
+}

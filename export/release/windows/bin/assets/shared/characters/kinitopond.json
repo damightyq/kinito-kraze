@@ -1,79 +1,54 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				679,
-				120
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [679, 120],
 			"anim": "idle",
-			"indices": [],
-			"name": "kinitopond I"
+			"fps": 24,
+			"name": "kinitopond I",
+			"indices": []
 		},
 		{
-			"offsets": [
-				679,
-				123
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [679, 123],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "kinitopond L"
+			"fps": 24,
+			"name": "kinitopond L",
+			"indices": []
 		},
 		{
-			"offsets": [
-				679,
-				120
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [679, 122],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "kinitopond D"
+			"fps": 24,
+			"name": "kinitopond D",
+			"indices": []
 		},
 		{
-			"offsets": [
-				679,
-				120
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [679, 122],
 			"anim": "singUP",
-			"indices": [],
-			"name": "kinitopond U"
+			"fps": 24,
+			"name": "kinitopond U",
+			"indices": []
 		},
 		{
-			"offsets": [
-				679,
-				120
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [679, 123],
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "kinitopond R"
+			"fps": 24,
+			"name": "kinitopond R",
+			"indices": []
 		}
 	],
 	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/kinitopond",
-	"position": [
-		-140,
-		0
-	],
+	"position": [-140, 0],
 	"healthicon": "pond_kinito",
 	"flip_x": false,
-	"healthbar_colors": [
-		166,
-		166,
-		166
-	],
-	"camera_position": [
-		-400,
-		0
-	],
+	"healthbar_colors": [166, 166, 166],
+	"camera_position": [-400, 0],
 	"sing_duration": 4,
 	"scale": 0.7,
 	"_editor_isPlayer": false

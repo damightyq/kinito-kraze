@@ -2,7 +2,7 @@ playVideo = true;
 playDialogue = false;
 
 function onStartCountdown()
-	if isStoryMode and not seenCutscene then
+	if isStoryMode then
 		if playVideo then --Video cutscene plays first
 			startVideo('KinitoCutscene1'); --Play video file from "videos/" folder
 			playVideo = false;

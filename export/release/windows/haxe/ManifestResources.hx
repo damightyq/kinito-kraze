@@ -100,6 +100,7 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_fonts_vcr_ttf extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_bf_dead_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_bf_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_bookworm_kinito_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_brad_dead_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_brad_flip_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_brad_json extends null { }
@@ -138,14 +139,16 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_pond_brad_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_readme_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_characters_sam_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_blue_screen_blue_screen_normal_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_blue_screen_blue_screen_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_blue_screen_events_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_blue_screen_tvcrt_lua extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_bpmdata_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_characterlist_txt extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_finale_events_json extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_finale_finale_normal_json extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_finale_finale_json extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_finale_tvcrt_lua extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_introtext_txt extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_kito_events_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_kito_kito_json extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_kito_kitoold_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_main_view_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_my_world_boyfriend_shadow_lua extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_my_world_dad_shadow_lua extends null { }
@@ -161,7 +164,6 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_readme_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_specialthanks_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_stagelist_txt extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_test_test_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_uh_oh_events_dox_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_uh_oh_events_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_data_uh_oh_playcutscene_lua extends null { }
@@ -208,6 +210,8 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_bad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_campaign_menu_ui_assets_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_campaign_menu_ui_assets_xml extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_bookworm_kinito_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_bookworm_kinito_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_boyfriend_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_boyfriend_xml extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_images_characters_boyfriend_dead_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -600,8 +604,6 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_sam_bg_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_sam_bg_lua extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_stage_json extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_the_finale_json extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_the_finale_lua extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_the_monitor_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_the_monitor_lua extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_shared_stages_windowsbg_glitch_json extends null { }
@@ -624,8 +626,8 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_embed_images_psych_ui_radio_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_embed_images_psych_ui_stepper_minus_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_embed_images_psych_ui_stepper_plus_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_finale_inst_ogg extends null { }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_finale_voices_ogg extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_blue_screen_inst_ogg extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_blue_screen_voices_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_kito_inst_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_kito_voices_opponent_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__assets_songs_kito_voices_player_ogg extends null { }

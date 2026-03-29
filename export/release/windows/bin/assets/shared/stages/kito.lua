@@ -59,8 +59,8 @@ function onCreatePost()
     setProperty('red_hill1.alpha', 0)
     setScrollFactor("red_hill1", 0.9, 1)
     
-    makeLuaSprite('red_floor', 'stages/kito/floor', 40, -200)
-    setProperty('red_floor.alpha', 1)
+    makeLuaSprite('red_floor', 'stages/kito/red_floor', 40, -200)
+    setProperty('red_floor.alpha', 0)
     scaleLuaSprite("red_floor", 1.2, 1.2)
 
     addLuaSprite("sky", false)

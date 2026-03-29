@@ -1062,7 +1062,7 @@ HXDLIN( 455)		Float _hx_tmp51 = (_hx_tmp49 - ((_hx_tmp50 - this->play->get_width
 HXLINE( 456)		Float _hx_tmp52 = this->play->y;
 HXDLIN( 456)		Float _hx_tmp53 = this->outlinePlay->get_height();
 HXLINE( 455)		_hx_tmp48->setPosition(_hx_tmp51,(_hx_tmp52 - ((_hx_tmp53 - this->play->get_height()) / ( (Float)(2) ))));
-HXLINE( 460)		this->shiftRight();
+HXLINE( 460)		this->shiftLeft();
 HXLINE( 463)		{
 HXLINE( 463)			int _g14 = 0;
 HXDLIN( 463)			::Array< ::Dynamic> _g15 = this->cds;

@@ -1,44 +1,44 @@
 {
 	"animations": [
 		{
-			"loop": true,
 			"offsets": [0, 0],
+			"loop": true,
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "Kitoface I",
-			"indices": []
+			"indices": [],
+			"name": "Kitoface I"
 		},
 		{
-			"offsets": [240, -11],
 			"loop": false,
-			"fps": 24,
+			"offsets": [-90, 29],
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Kitoface L0"
-		},
-		{
-			"offsets": [-2, -5],
-			"loop": false,
 			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "Kitoface D"
-		},
-		{
-			"offsets": [-3, 1],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Kitoface R"
-		},
-		{
-			"loop": false,
-			"offsets": [-17, -3],
-			"anim": "singUP",
-			"fps": 24,
-			"name": "Kitoface U",
+			"name": "Kitoface L0",
 			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-2, -5],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Kitoface D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [-3, 1],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Kitoface R",
+			"indices": []
+		},
+		{
+			"offsets": [-17, -3],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Kitoface U"
 		}
 	],
 	"vocals_file": "",

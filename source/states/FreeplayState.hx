@@ -457,7 +457,7 @@ class FreeplayState extends MusicBeatState
 
 		// trace("cd amount: " + cds.length);
 
-		shiftRight();
+		shiftLeft();
 
 
 		for (cd in cds) {
