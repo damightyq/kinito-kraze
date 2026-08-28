@@ -1,0 +1,266 @@
+{
+	"song": {
+		"events": [
+			[
+				15272.7272727273,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6, 1, expoOut"
+					]
+				]
+			],
+			[
+				16363.6363636364,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7, 1, expoOut"
+					]
+				]
+			],
+			[
+				17090.9090909091,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8, 1, expoOut"
+					]
+				]
+			],
+			[
+				17272.7272727273,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.5, 1, expoOut"
+					]
+				]
+			],
+			[
+				60363.6363636364,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				60727.2727272728,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				97181.8181818182,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG-glitch",
+						"0"
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8, 0.5, expoOut"
+					]
+				]
+			],
+			[
+				98181.8181818182,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG",
+						""
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.5, 0.5, expoOut"
+					]
+				]
+			],
+			[
+				99272.7272727273,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG-glitch",
+						"0"
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8, 0.5, expoOut"
+					]
+				]
+			],
+			[
+				99636.3636363637,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG",
+						""
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.5, 0.5, expoOut"
+					]
+				]
+			],
+			[
+				102909.090909091,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG-glitch",
+						"0"
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8, 0.5, expoOut"
+					]
+				]
+			],
+			[
+				103272.727272727,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG",
+						""
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.5, 0.5, expoOut"
+					]
+				]
+			],
+			[
+				104727.272727273,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG-glitch",
+						"0"
+					]
+				]
+			],
+			[
+				105000,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG",
+						""
+					]
+				]
+			],
+			[
+				114545.454545455,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG-glitch",
+						"0"
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8, 0.5, expoOut"
+					]
+				]
+			],
+			[
+				115636.363636364,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG",
+						""
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.5, 0.5, expoOut"
+					]
+				]
+			],
+			[
+				116727.272727273,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG-glitch",
+						"0"
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8, 0.5, expoOut"
+					]
+				]
+			],
+			[
+				117090.909090909,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG",
+						""
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.5, 0.5, expoOut"
+					]
+				]
+			],
+			[
+				120363.636363636,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG-glitch",
+						"0"
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8, 0.5, expoOut"
+					]
+				]
+			],
+			[
+				120727.272727273,
+				[
+					[
+						"Change The Stage",
+						"WindowsBG",
+						""
+					],
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.5, 0.5, expoOut"
+					]
+				]
+			]
+		]
+	}
+}

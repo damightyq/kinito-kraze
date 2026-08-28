@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="kinito2" icon="kinito1" color="#ffa6fa" x="-760" y="-40" camx="510" camy="280" holdTime="4.5" scale="0.5">
+	<anim name="singLEFT" anim="left" x="216" y="18"/>
+	<anim name="singRIGHT" anim="right" x="-8" y="2"/>
+	<anim name="singDOWN" anim="down"/>
+	<anim name="singDOWN-alt" anim="glitch3" x="-4" y="4"/>
+	<anim name="singLEFT-alt" anim="glitch4" x="216" y="18"/>
+	<anim name="singRIGHT-alt" anim="glitch1" x="-8" y="2"/>
+	<anim name="singUP-alt" anim="glitch2" x="0" y="10"/>
+	<anim name="singUP" anim="up" x="0" y="6"/>
+	<anim name="idle" anim="idle" loop="true"/>
+</character>

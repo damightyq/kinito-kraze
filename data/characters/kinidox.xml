@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="Kinito_Dox_Assets_" icon="kinito1" color="#ffa6fa" x="-80" y="250" antialiasing="false" camx="-30" camy="50" holdTime="5.99999999999999" scale="2">
+	<anim name="singLEFT-alt" anim="0left" x="45" y="-57.5" fps="40"/>
+	<anim name="singRIGHT-alt" anim="1right" x="46.5" y="-30.5" fps="40"/>
+	<anim name="singUP-alt" anim="3up" x="55" y="-23.5" fps="40"/>
+	<anim name="singDOWN-alt" anim="2down" x="47.5" y="-32.5" fps="40"/>
+	<anim name="danceRight" anim="kinito_IL0" x="-87" y="-48.5"/>
+	<anim name="danceLeft" anim="kinito_I0" x="-104" y="-47.5"/>
+	<anim name="singLEFT" anim="kinito left0" x="55" y="-44"/>
+	<anim name="singDOWN" anim="kinito down0" x="-76" y="-81.5"/>
+	<anim name="singUP" anim="kinito up0" x="6.5" y="-10.5"/>
+	<anim name="singRIGHT" anim="kinito right0" x="-91.5" y="-59"/>
+</character>

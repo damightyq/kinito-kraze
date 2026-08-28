@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="finale 4 kinito" icon="kinito1" color="#ffa6fa" x="-1330" y="-490" camx="-160" camy="70">
+	<anim name="singLEFT" anim="left" x="5" y="0"/>
+	<anim name="singDOWN" anim="down" x="5" y="0"/>
+	<anim name="singUP" anim="up" x="5" y="0"/>
+	<anim name="singRIGHT" anim="right" x="5" y="0"/>
+	<anim name="idle" anim="idle" x="5" y="0" loop="true"/>
+</character>

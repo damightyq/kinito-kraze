@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="kito" icon="face" color="#a1a1a1" x="-470" y="-590" camx="380" camy="540" holdTime="6.99999999999999" scale="0.5">
+	<anim name="idle" anim="kito idle" loop="true"/>
+	<anim name="singLEFT" anim="kito left" x="468" y="4"/>
+	<anim name="singDOWN" anim="kito down" x="294" y="-4"/>
+	<anim name="singUP" anim="kito up" x="-34" y="-6"/>
+	<anim name="singRIGHT" anim="kito right" x="-298" y="0"/>
+</character>

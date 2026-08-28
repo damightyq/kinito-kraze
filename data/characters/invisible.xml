@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="invisble" icon="face" color="#a1a1a1" camx="-620" camy="-530">
+	<anim name="invisble" anim="invisible"/>
+</character>

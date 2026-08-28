@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="finale_1_kinito" icon="kinito1" color="#ffa6fa" x="-800" y="340" flipX="true" antialiasing="false" camx="240" camy="-190" scale="0.9">
+	<anim name="idle" anim="idle" x="-366.6666666666667" y="344.44444444444446"/>
+	<anim name="singDOWN" anim="down sing" x="-366.6666666666667" y="344.44444444444446"/>
+	<anim name="singUP" anim="up sing" x="-366.6666666666667" y="344.44444444444446"/>
+	<anim name="singLEFT" anim="right sing" x="-366.6666666666667" y="344.44444444444446"/>
+	<anim name="singRIGHT" anim="left sing" x="-366.6666666666667" y="344.44444444444446"/>
+	<anim name="singUP-alt" anim="G up sing" x="-367.77777777777777" y="344.44444444444446"/>
+	<anim name="singLEFT-alt" anim="G right sing" x="-365.55555555555554" y="344.44444444444446"/>
+	<anim name="singRIGHT-alt" anim="G left sing" x="-366.6666666666667" y="344.44444444444446"/>
+	<anim name="singDOWN-alt" anim="G down sing" x="-366.6666666666667" y="344.44444444444446"/>
+</character>

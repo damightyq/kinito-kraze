@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="Jade" icon="jade" color="#91ecaa" x="-750" y="-90" camx="300" camy="170" scale="0.7">
+	<anim name="idle" anim="idle" fps="10"/>
+	<anim name="singDOWN" anim="down" x="2.857142857142857" y="11.428571428571429" fps="15"/>
+	<anim name="singUP" anim="up" x="14.285714285714286" y="14.285714285714286" fps="15"/>
+	<anim name="singLEFT" anim="left" x="-14.285714285714286" y="0" fps="15"/>
+	<anim name="singRIGHT" anim="right" x="11.428571428571429" y="-4.285714285714286" fps="15"/>
+</character>

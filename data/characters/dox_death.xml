@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="dox_death" icon="" color="#a1a1a1" flipX="true" antialiasing="false" scale="0.9">
+	<anim name="firstDeath" anim="firstDeath" x="122.22222222222221" y="100" fps="16"/>
+	<anim name="deathLoop" anim="deathLoop" x="122.22222222222221" y="100" fps="16" loop="true"/>
+	<anim name="deathConfirm" anim="deathConfirm" x="122.22222222222221" y="100" fps="16"/>
+</character>

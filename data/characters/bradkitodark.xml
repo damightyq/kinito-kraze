@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="BradkDark" icon="face" color="#a1a1a1" x="-50" y="-270" camx="10" camy="350" holdTime="6.99999999999999" scale="0.6">
+	<anim name="idle" anim="BradK I" loop="true"/>
+	<anim name="singLEFT" anim="BradK L" x="3.3333333333333335" y="3.3333333333333335"/>
+	<anim name="singDOWN" anim="BradK D" x="6.666666666666667" y="-3.3333333333333335"/>
+	<anim name="singUP" anim="BradK U" x="15" y="-3.3333333333333335"/>
+	<anim name="singRIGHT" anim="BradK R" x="-1.6666666666666667" y="-5"/>
+	<anim name="singUPmiss" anim="BradK MU"/>
+	<anim name="singDOWNmiss" anim="BradK MD"/>
+	<anim name="singLEFTmiss" anim="BradK ML" x="3.3333333333333335" y="0"/>
+	<anim name="singRIGHTmiss" anim="BradK MR"/>
+</character>

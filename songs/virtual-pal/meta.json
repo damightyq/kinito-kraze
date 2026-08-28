@@ -1,0 +1,18 @@
+{
+	"color": "#BC89FF",
+	"customValues": {},
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"hard"
+	],
+	"icon": "kinito",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Virtual Pal",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"variants": [
+		"doxx"
+	],
+	"bpm": 165
+}

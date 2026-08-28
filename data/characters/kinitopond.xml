@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="kinitopond" icon="pond_kinito" color="#a6a6a6" x="-140" camx="-400" scale="0.7">
+	<anim name="idle" anim="kinitopond I" x="970.0000000000001" y="171.42857142857144"/>
+	<anim name="singLEFT" anim="kinitopond L" x="970.0000000000001" y="175.71428571428572"/>
+	<anim name="singDOWN" anim="kinitopond D" x="970.0000000000001" y="174.2857142857143"/>
+	<anim name="singUP" anim="kinitopond U" x="970.0000000000001" y="174.2857142857143"/>
+	<anim name="singRIGHT" anim="kinitopond R" x="970.0000000000001" y="175.71428571428572"/>
+</character>

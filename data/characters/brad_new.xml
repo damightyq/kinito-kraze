@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character x="-750" y="-150" scale="0.8" flipX="true" camx="-100" isPlayer="true" icon="bf" color="#31B0D1" holdTime="7">
+	<anim name="idle" anim="nbrad idle" x="-6.25" y="-5"/>
+	<anim name="singLEFT" anim="nbrad left" x="83.75"/>
+	<anim name="singDOWN" anim="nbrad down" x="-8.75" y="-1.25"/>
+	<anim name="singUP" anim="nbrad up" x="8.75" y="-36.25"/>
+	<anim name="singRIGHT" anim="nbrad right" x="-11.25" y="3.75"/>
+	<anim name="singLEFTmiss" anim="nbrad ml" x="78.75" indices="0..13,13,13,13,13,13,13,13,13,13,13"/>
+	<anim name="singDOWNmiss" anim="nbrad md" x="-6.25" indices="0..13,13,13,13,13,13,13,13,13,13,13"/>
+	<anim name="singUPmiss" anim="nbrad mu" x="7.5" y="-35" indices="0..13,13,13,13,13,13,13,13,13,13,13"/>
+	<anim name="singRIGHTmiss" anim="nbrad mr" x="-12.5" y="3.75" indices="0..13,13,13,13,13,13,13,13,13,13,13"/>
+</character>

@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="kinito_new" icon="bf" color="#31b0d1" x="-810" y="-130" camx="300" camy="120" holdTime="7" scale="0.8">
+	<anim name="idle" anim="kinito idlle" x="-6.25" y="0"/>
+	<anim name="singLEFT" anim="kinito left" x="65" y="-2.5"/>
+	<anim name="singUP" anim="kinito up" x="-6.25" y="6.25"/>
+	<anim name="singRIGHT" anim="kinito right" x="-11.25" y="-1.25"/>
+	<anim name="singDOWN" anim="kinito down" x="-3.75" y="0"/>
+	<anim name="singLEFT-alt" anim="kinito hl" x="57.5" y="-12.5"/>
+	<anim name="singDOWN-alt" anim="kinito hd" x="-13.75" y="-11.25"/>
+	<anim name="singUP-alt" anim="kinito hu" x="-13.75" y="0"/>
+	<anim name="singRIGHT-alt" anim="kinito hr" x="-16.25" y="-10"/>
+</character>

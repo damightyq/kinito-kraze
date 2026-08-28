@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="brad_ww" icon="brad" color="#e9f23d" x="50" y="20" camx="5" camy="200" scale="0.5">
+	<anim name="idle" anim="idle" x="1540" y="120"/>
+	<anim name="singLEFT" anim="singLEFT" x="1540" y="120"/>
+	<anim name="singDOWN" anim="singDOWN" x="1540" y="120"/>
+	<anim name="singUP" anim="singUP" x="1540" y="120"/>
+	<anim name="singRIGHT" anim="singRIGHT" x="1540" y="120"/>
+</character>

@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="kitotrans" icon="face" color="#a1a1a1" x="-570" y="-580" camx="-410" camy="250" holdTime="6.99999999999999" scale="1.1">
+	<anim name="idle" anim="kitotrans I0"/>
+	<anim name="1" anim="kitotrans 10"/>
+	<anim name="2" anim="kitotrans 20"/>
+	<anim name="3" anim="kitotrans 30"/>
+	<anim name="4" anim="kitotrans 40"/>
+	<anim name="5" anim="kitotrans 50"/>
+	<anim name="6" anim="kitotrans 60"/>
+</character>

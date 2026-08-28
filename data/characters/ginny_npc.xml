@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="ginny_npc" icon="gf" color="#a5004d" x="-260" y="-270" antialiasing="false" camx="-200" camy="90" scale="0.7">
+	<anim name="danceLeft" anim="danceLeft" x="27.142857142857146" y="-42.85714285714286" fps="10"/>
+	<anim name="danceRight" anim="danceRight" x="27.142857142857146" y="-42.85714285714286" fps="10"/>
+</character>

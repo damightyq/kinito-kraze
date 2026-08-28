@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="sam" icon="sam" color="#ee8f13" x="-430" y="90" camx="190" camy="30" scale="0.9">
+	<anim name="idle" anim="idle" fps="13"/>
+	<anim name="singLEFT" anim="left" fps="18"/>
+	<anim name="singDOWN" anim="down" fps="18"/>
+	<anim name="singUP" anim="up" fps="18"/>
+	<anim name="singRIGHT" anim="right" fps="18"/>
+</character>

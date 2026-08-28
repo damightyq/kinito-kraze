@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="monsterkito" icon="face" color="#a1a1a1" x="-770" y="-470" camx="-100" camy="10" holdTime="9.49999999999998" scale="1.2">
+	<anim name="idle" anim="monsterkito idle" x="-2.5" y="1.6666666666666667" loop="true"/>
+	<anim name="singLEFT" anim="monsterkito left" x="0" y="-9.166666666666668"/>
+	<anim name="singDOWN" anim="monsterkito down" x="-1.6666666666666667" y="-4.166666666666667"/>
+	<anim name="singUP" anim="monsterkito up" x="-14.166666666666668" y="-2.5"/>
+	<anim name="singRIGHT" anim="monsterkito right" x="-2.5" y="2.5"/>
+</character>

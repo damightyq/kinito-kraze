@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-stage>
+<stage startCamPosX="1000" startCamPosY="300" folder="stages/hill/" zoom="0.5" name="WindowsBG">
+	<sprite x="-800" sprite="sky" y="-300" scale="1.5" scroll="0.25" name="sky"/>
+	<sprite x="-500" sprite="mountains" scale="1.25" scrollx="0.5" scrolly="0.9" name="mountains"/>
+	<sprite x="-500" flipX="true" sprite="mountains" scale="1.25" scrollx="0.6" scrolly="1" name="mountains2"/>
+	<sprite x="-350" sprite="hill" scale="1.25" scrollx="0.75" scrolly="1" name="hill"/>
+	<sprite x="600" flipX="true" sprite="hill" y="300" scrollx="0.75" scrolly="1" name="hill2"/>
+	<sprite x="-200" sprite="stage" y="-500" scale="1.5" name="stage"/>
+	
+	<girlfriend x="700" y="0"/>
+	<dad x="200" y="0"/>
+	<boyfriend x="1550" y="0"/>
+</stage>

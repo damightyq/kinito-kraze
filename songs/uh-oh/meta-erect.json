@@ -1,0 +1,17 @@
+{
+	"color": "#BC89FF",
+	"customValues": {},
+	"instSuffix": "-doxx",
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"doxx"
+	],
+	"icon": "kinito",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Uh Oh Doxx",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"vocalsSuffix": "-doxx",
+	"bpm": 155
+}

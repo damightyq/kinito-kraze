@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="windowsbuttons.png" width="3770" height="116">
+	<SubTexture name="credits0001" x="1" y="1" width="416" height="114" frameX="-0" frameY="-0" frameWidth="416" frameHeight="114"/>
+	<SubTexture name="creditsP0001" x="420" y="1" width="416" height="114" frameX="-0" frameY="-0" frameWidth="416" frameHeight="114"/>
+	<SubTexture name="freeplay0001" x="839" y="1" width="416" height="114" frameX="-0" frameY="-0" frameWidth="416" frameHeight="114"/>
+	<SubTexture name="freeplayP0001" x="1258" y="1" width="416" height="114" frameX="-0" frameY="-0" frameWidth="416" frameHeight="114"/>
+	<SubTexture name="freeplayREDACT0001" x="1677" y="1" width="416" height="114" frameX="-0" frameY="-0" frameWidth="416" frameHeight="114"/>
+	<SubTexture name="options0001" x="2096" y="1" width="416" height="114" frameX="-0" frameY="-0" frameWidth="416" frameHeight="114"/>
+	<SubTexture name="optionsP0001" x="2515" y="1" width="416" height="114" frameX="-0" frameY="-0" frameWidth="416" frameHeight="114"/>
+	<SubTexture name="story mode0001" x="2934" y="1" width="416" height="114" frameX="-0" frameY="-0" frameWidth="416" frameHeight="114"/>
+	<SubTexture name="story modeP0001" x="3353" y="1" width="416" height="114" frameX="-0" frameY="-0" frameWidth="416" frameHeight="114"/>
+</TextureAtlas>

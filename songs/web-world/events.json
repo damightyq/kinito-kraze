@@ -1,0 +1,1006 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,0.0001,expoOut"
+					]
+				]
+			],
+			[
+				705.882352941176,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.64,0.0001,expoOut"
+					]
+				]
+			],
+			[
+				1058.82352941176,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.66,0.0001,expoOut"
+					]
+				]
+			],
+			[
+				1411.76470588235,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.67,0.0001,expoOut"
+					]
+				]
+			],
+			[
+				1500,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.68,0.0001,expoOut"
+					]
+				]
+			],
+			[
+				1588.23529411765,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.69,0.0001,expoOut"
+					]
+				]
+			],
+			[
+				1764.70588235294,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.69,0.0001,expoOut"
+					]
+				]
+			],
+			[
+				1941.17647058824,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.0001,expoOut"
+					]
+				]
+			],
+			[
+				2117.64705882353,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,0.0001,expoOut"
+					]
+				]
+			],
+			[
+				7764.70588235294,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.7"
+					]
+				]
+			],
+			[
+				17647.0588235294,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				18000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				18352.9411764706,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				18529.4117647059,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				18617.6470588235,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				18705.8823529412,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				23294.1176470588,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				23647.0588235294,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				24000,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				24176.4705882353,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				24264.7058823529,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				24352.9411764706,
+				[
+					[
+						"Add Camera Zoom",
+						"",
+						""
+					]
+				]
+			],
+			[
+				24705.8823529412,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.56"
+					]
+				]
+			],
+			[
+				30352.9411764706,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.58"
+					]
+				]
+			],
+			[
+				36000,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.7"
+					]
+				]
+			],
+			[
+				40588.2352941176,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.000001,expoOut"
+					],
+					[
+						"Blam_lyrics",
+						"could you help me?",
+						"dad"
+					]
+				]
+			],
+			[
+				41647.0588235294,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.68,1,expoOut"
+					]
+				]
+			],
+			[
+				47294.1176470588,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.1,expoOut"
+					]
+				]
+			],
+			[
+				51882.3529411764,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.000001,expoOut"
+					]
+				]
+			],
+			[
+				52941.1764705882,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,0.1,expoOut"
+					]
+				]
+			],
+			[
+				58588.2352941176,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.8"
+					]
+				]
+			],
+			[
+				65647.0588235293,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.85"
+					]
+				]
+			],
+			[
+				67058.8235294117,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.8"
+					]
+				]
+			],
+			[
+				75529.4117647058,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.85"
+					]
+				]
+			],
+			[
+				78352.9411764705,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.8"
+					]
+				]
+			],
+			[
+				81529.4117647058,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				81617.6470588234,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.95,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				81705.8823529411,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				81794.1176470587,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.95,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				81882.3529411764,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				81970.588235294,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.95,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82014.7058823528,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82058.8235294117,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.95,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82102.9411764705,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82147.0588235293,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.95,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82191.1764705881,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82235.2941176469,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.95,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82279.4117647058,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82323.5294117646,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.95,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82367.6470588234,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82411.7647058822,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.95,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82455.8823529411,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82499.9999999999,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.95,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82544.1176470587,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				82588.2352941175,
+				[
+					[
+						"Change Character",
+						"dad",
+						"invisible"
+					]
+				]
+			],
+			[
+				82588.2352941175,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				83999.9999999999,
+				[
+					[
+						"Blam_lyrics",
+						"thank you for",
+						"dad"
+					]
+				]
+			],
+			[
+				84794.1176470587,
+				[
+					[
+						"Blam_lyrics",
+						"helping out sam!",
+						"dad"
+					]
+				]
+			],
+			[
+				86823.5294117646,
+				[
+					[
+						"Blam_lyrics",
+						"wasn't that so much fun??",
+						"dad"
+					]
+				]
+			],
+			[
+				89336.0294117646,
+				[
+					[
+						"Blam_lyrics",
+						"next i think i should",
+						"dad"
+					]
+				]
+			],
+			[
+				90705.882352941,
+				[
+					[
+						"Blam_lyrics",
+						"introduce you to my",
+						"dad"
+					]
+				]
+			],
+			[
+				91941.1764705881,
+				[
+					[
+						"Blam_lyrics",
+						"other friend...",
+						"dad"
+					]
+				]
+			],
+			[
+				93176.4705882352,
+				[
+					[
+						"Blam_lyrics",
+						"this is my friend, jade!",
+						"dad"
+					]
+				]
+			],
+			[
+				95294.1176470587,
+				[
+					[
+						"Blam_lyrics",
+						"go on...",
+						"dad"
+					]
+				]
+			],
+			[
+				96088.2352941175,
+				[
+					[
+						"Blam_lyrics",
+						"introduce yourself...",
+						"dad"
+					]
+				]
+			],
+			[
+				98117.6470588234,
+				[
+					[
+						"Blam_lyrics",
+						"hello!! :3",
+						"dad"
+					]
+				]
+			],
+			[
+				98823.5294117646,
+				[
+					[
+						"Blam_lyrics",
+						"my name is",
+						"dad"
+					]
+				]
+			],
+			[
+				99441.1764705881,
+				[
+					[
+						"Blam_lyrics",
+						"jade the JELLYFISH! ^o^",
+						"dad"
+					]
+				]
+			],
+			[
+				100941.176470588,
+				[
+					[
+						"Camera Flash",
+						"ffff",
+						"2"
+					],
+					[
+						"Change Character",
+						"dad",
+						"jade_flip"
+					],
+					[
+						"Change Character",
+						"bf",
+						"brad_flip"
+					],
+					[
+						"Change Character",
+						"gf",
+						"invisible"
+					]
+				]
+			],
+			[
+				115058.823529412,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.7"
+					]
+				]
+			],
+			[
+				115323.529411765,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.6"
+					]
+				]
+			],
+			[
+				163058.823529411,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.65,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				163411.764705882,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.69,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				163764.705882353,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.72,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				163852.94117647,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.74,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				163941.176470588,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.76,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				164117.647058823,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.79,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				164294.117647059,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.82,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				164470.588235294,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.62"
+					]
+				]
+			],
+			[
+				185647.058823529,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.75"
+					]
+				]
+			],
+			[
+				186352.94117647,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.77"
+					]
+				]
+			],
+			[
+				187058.823529411,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.8"
+					]
+				]
+			],
+			[
+				187764.705882353,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.85"
+					]
+				]
+			],
+			[
+				188470.588235294,
+				[
+					[
+						"Bitto's zoom event",
+						"regular",
+						"0.89"
+					]
+				]
+			],
+			[
+				189088.235294117,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189176.470588235,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189264.705882353,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189352.94117647,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189397.058823529,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189441.176470588,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189485.294117647,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189529.411764706,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189573.529411764,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189617.647058823,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189661.764705882,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189705.882352941,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189750,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8,0.00001,expoOut"
+					]
+				]
+			],
+			[
+				189794.117647058,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,0.00001,expoOut"
+					]
+				]
+			]
+		]
+	}
+}

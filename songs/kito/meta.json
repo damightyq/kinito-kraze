@@ -1,0 +1,16 @@
+{
+	"color": "#BC89FF",
+	"customValues": {},
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"hard"
+	],
+	"icon": "kito",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Kito",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"variants": [],
+	"bpm": 184
+}

@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="Bradface" icon="face" color="#a1a1a1" x="-540" flipX="true" camx="120" camy="70" holdTime="6.9" scale="0.8">
+	<anim name="idle" anim="Bradface I" x="242.5" y="127.5" loop="true"/>
+	<anim name="singLEFT" anim="Bradface L" x="218.75" y="131.25"/>
+	<anim name="singDOWN" anim="Bradface D" x="242.5" y="136.25"/>
+	<anim name="singUP" anim="Bradface U" x="245" y="100"/>
+	<anim name="singRIGHT" anim="Bradface R" x="267.5" y="123.75"/>
+</character>

@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="pbrad" icon="pond_brad" color="#b5b5b5" x="-680" y="-60" flipX="true" camx="-420" camy="170" holdTime="5" scale="0.6">
+	<anim name="idle" anim="pbrad i"/>
+	<anim name="singRIGHT" anim="pbrad r" fps="16"/>
+	<anim name="singLEFT" anim="pbrad l" fps="16"/>
+	<anim name="singUP" anim="pbrad u" x="0" y="50" fps="16"/>
+	<anim name="singDOWN" anim="pbrad d" fps="16"/>
+</character>
