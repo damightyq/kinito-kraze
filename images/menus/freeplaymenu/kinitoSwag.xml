@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="kinitoSwag.png">
+<SubTexture name="kinitoSwag I0000" x="299" y="0" width="353" height="382" frameX="-44" frameY="-44" frameWidth="500" frameHeight="500" />
+<SubTexture name="kinitoSwag I0001" x="0" y="0" width="299" height="391" frameX="-55" frameY="-55" frameWidth="500" frameHeight="500" />
+<SubTexture name="kinitoSwag I0002" x="652" y="0" width="294" height="378" frameX="-76" frameY="-35" frameWidth="500" frameHeight="500" />
+<SubTexture name="kinitoSwag I0003" x="0" y="0" width="299" height="391" frameX="-55" frameY="-55" frameWidth="500" frameHeight="500" />
+</TextureAtlas>

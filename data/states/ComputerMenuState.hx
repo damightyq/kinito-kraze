@@ -3,6 +3,7 @@ import funkin.menus.credits.CreditsMain;
 import funkin.editors.EditorPicker;
 import funkin.options.OptionsMenu;
 import funkin.backend.utils.DiscordUtil;
+import openfl.Lib;
 
 var curSelected:Int = 0;
 
@@ -20,6 +21,7 @@ override function create()
 {
     CoolUtil.playMenuSong();
 	DiscordUtil.changePresence("explorer.exe", null);
+    Lib.application.window.title = "explorer.exe";
 
     bg = new FlxSprite(0,0).loadGraphic(Paths.image('menus/computermenu/bg'));
     bg.screenCenter();
