@@ -17,6 +17,7 @@ var curDifficulty:String = 1;
 var intendedScore:Int = 0;
 var intendedRating:Float = 0;
 var lerpScore:Int;
+var isBusy:Bool = false;
 
 var left:FlxSprite;
 var right:FlxSprite;
@@ -36,6 +37,8 @@ var penis:Array<Float> = [
 function create()
 {
 	songs = FreeplaySonglist.get().songs;
+    // for (i => songname in songs) trace(songname.name);
+
     Lib.application.window.title = "wmplayer.exe";
     
     FlxG.mouse.visible = true;
@@ -48,36 +51,24 @@ function create()
 
     grpSongs = new FlxTypedGroup<Alphabet>();
 
-    for (i => song in songs)
-    {
-		var text = new Alphabet(90, 320, song.displayName, "bold");
-        text.targetY = i;
-        text.scale.x = Math.min(1, 980 / text.width);
-        // text.snapToPosition();
-        text.ID = i;
-		grpSongs.add(text);
-
-        var icon = new HealthIcon(song.icon);
-        icon.sprTracker = text;
-        
-        text.visible = text.active = text.isMenuItem = true;
-        icon.visible = icon.active = false;
-        icon.ID = i;
-        iconArray.push(icon);
-        add(icon);
+    if (songs.length > penis.length) {
+        var lastPos = penis[penis.length - 1]; // last pos for the array
+        while (penis.length < songs.length) {
+            penis.push(lastPos); // clones the last pos for extras
+        }
     }
-
+    
     for (i => musicWhat in songs)
     {
-        var posIndex:Int = i + 2;
-        if (i == songs.length - 1)
-            posIndex = 1;
+        var posIndex:Int = i;
+        if (i == songs.length - 1) posIndex = 1;
 
 		var cd = new CuteDoofSprite(penis[posIndex], 162, musicWhat.name.replace(" ", "-"));
         cd.ID = i;
         cds.push(cd);
         add(cd);
     }
+    shiftDir(true);
     
     var base = new FlxSprite().loadGraphic(Paths.image('menus/freeplaymenu/base'));
     base.screenCenter();
@@ -165,14 +156,15 @@ function create()
     ref.alpha = 0;
     add (ref);
 
-    shiftDir(true);
+    shiftDir();
 
 
     for (cd in cds) {
         cd.updateCover();
-        if (cd.x == positions[1]) {
-            intendedScore = Highscore.getScore(cd.getTrueName(), curDifficulty);
-            intendedRating = Highscore.getRating(cd.getTrueName(), curDifficulty);
+        if (cd.x == penis[3]) {
+            var save = FunkinSave.getSongHighscore(cd.getTrueName(), curDifficulty.name);
+			intendedScore = save.score;
+            intendedRating = save.accuracy;
         }
     }
 }
@@ -201,13 +193,16 @@ function update(e:Float)
     var fuckingRight = controls.RIGHT_P;
     var fuckingEnter = controls.ACCEPT;
 
-    if ((fuckingLeft || fuckingRight || fuckingEnter) && !isBusy)
-        shiftDir(fuckingLeft, fuckingRight, fuckingEnter);
+    if (!isBusy)
+    {
+        if ((fuckingLeft || fuckingRight || fuckingEnter))
+            shiftDir(fuckingRight, fuckingLeft, fuckingEnter);
 
-	checkHover(left, outlineLeft, "menus/freeplaymenu/arrowLeft");
-	checkHover(right, outlineRight, "menus/freeplaymenu/arrowRight");
-	checkHover(play, outlinePlay, "menus/freeplaymenu/playButton");
-
+        checkHover(left, outlineLeft, "menus/freeplaymenu/arrowLeft");
+        checkHover(right, outlineRight, "menus/freeplaymenu/arrowRight");
+        checkHover(play, outlinePlay, "menus/freeplaymenu/playButton");
+    }
+    
     if (controls.BACK)
         FlxG.switchState(new MainMenuState());
 }
@@ -225,7 +220,6 @@ function changeDifficulty(?fuck:Int)
 	curDifficulty.name = songDiff[curDifficulty.index];
 }
 
-var isBusy:Bool = false;
 function shiftDir(?left:Bool, ?right:Bool, ?play:Bool)
 {
     left ??= true;
@@ -237,19 +231,22 @@ function shiftDir(?left:Bool, ?right:Bool, ?play:Bool)
 	changeDifficulty();
     
     var place = (left ? cds.shift() : cds.pop());
-    var placechange = (left ? cds.push(place) : cds.unshift(place));
+    if (left)
+        cds.push(place);
+    else
+        cds.unshift(place);
+
     for (i => cd in cds)
     {
-        if (cd.x == penis[left ? 3 : 3])
+        // trace((cd.x == penis[left ? 3 : 1]) ? cd.getTrueName() : "false");
+        if (cd.x == penis[left ? 3 : 1])
         {
 			var save = FunkinSave.getSongHighscore(cd.getTrueName(), curDifficulty.name);
 			intendedScore = save.score;
             intendedRating = save.accuracy;
         }
     }
-    updatePositions();
-
-    // ogh i need to do something else, i've been doing this for like 2 hours
+    updatePositions(left);
 
     if (play)
     {
@@ -258,7 +255,7 @@ function shiftDir(?left:Bool, ?right:Bool, ?play:Bool)
 	
 		for (i => cd in cds)
         {
-			if (cd.x == penis[3])
+            if (cd.x == penis[2])
             {
 				activeTweens++;
 				var tweenCompleted = false;
@@ -271,7 +268,6 @@ function shiftDir(?left:Bool, ?right:Bool, ?play:Bool)
                     {
 						tweenCompleted = true;
 						isBusy = true;
-						//loadSong(cd.getTrueName());
                         trace(cd.getTrueName(), curDifficulty.name);
                         PlayState.loadSong(cd.getTrueName(), curDifficulty.name);
                         FlxG.switchState(new PlayState());
@@ -282,7 +278,7 @@ function shiftDir(?left:Bool, ?right:Bool, ?play:Bool)
     }
 }
 
-function updatePositions()
+function updatePositions(?left:Bool)
 {
     if (isBusy) return;
 
@@ -293,13 +289,13 @@ function updatePositions()
 
     updateHeight();
 	updateSize();
-    updateBump();
+    updateBump(left);
 
 	FlxTween.num(0, 1, 0.33, {ease: FlxEase.sineInOut}, () -> {
 		if (!tweenCompleted)
         {
 			tweenCompleted = true;
-			updateCDSpin();
+			updateCDSpin(left);
 		}
     });
 
@@ -368,40 +364,42 @@ function updateSize()
 }
 
 var idleTimer = new FlxTimer();
-function updateBump()
+function updateBump(?left:Bool)
 {
+    var leftAgain = left;
+
     for (i => cd in cds)
     {
         var songName = cd.getName();
         var bpm = songs[cd.ID].bpm;
 
-        if (cd.x == penis[3])
+        if (cd.x == penis[left ? 3 : 1])
         {
             idleTimer.cancel();
 			idleTimer.start(BeCI.bpm(1, bpm), () -> {
                 sam.animation.play("I", true);
 				jade.animation.play("I", true);
-                updateBump();
+                updateBump(leftAgain);
             });
         }
     }
 }
 
-function updateCDSpin() {
+function updateCDSpin(?left:Bool) {
     for (i => cd in cds) {
         var leSongName = cd.getName();
         var bpm = songs[cd.ID].bpm;
 
-        if (cd.x == penis[3]) { //if it's centered
+        if (cd.x == penis[left ? 3 : 1]) { //if it's centered
+            songNameText.text = songNameShadow.text = leSongName.replace("-", " ");
             cd.spinCD(BeCI.bpm(8, bpm));
-            songNameText.text = ""+ leSongName;
-            songNameShadow.text = ""+ leSongName;
-            // trace("dung-geulge");
+            // trace(leSongName);
         } else {
             cd.stopSpinCD();
             // trace(":sad_face:");
         }
     }
+    //songNameText.text = songNameShadow.text = cds[curSelected].getName();
 }
 
 function checkHover(sprite:FlxSprite, outline:FlxSprite, normal:String)
@@ -473,7 +471,7 @@ class CuteDoofSprite extends MusicBeatGroup // yes, this is MY change..
 
     function new(x:Float, y:Float, coverart:String)
     {
-        super(x, y, 0);
+        super(x, y, "");
 
         formatedCoverArt = name = songName = songTrueName = coverart;
 
@@ -548,7 +546,7 @@ class CuteDoofSprite extends MusicBeatGroup // yes, this is MY change..
         {
             spinTween.cancel();
             spinTween = null;
-            tweenScale(true);
+            //tweenScale(true);
         }
         
         FlxTween.num(coverArt.angle, -0, 0.66, {ease: FlxEase.quadInOut}, function(val) {
