@@ -5,11 +5,14 @@
 	"difficulties": [
 		"hard"
 	],
-	"icon": "kito",
+	"icon": "kinito",
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
-	"displayName": "Kito",
+	"displayName": "Web Word",
 	"needsVoices": true,
 	"beatsPerMeasure": 4,
-	"bpm": 184
+	"variants": [
+		"doxx"
+	],
+	"bpm": 170
 }

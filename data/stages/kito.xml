@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-stage>
+<stage startCamPosX="1000" startCamPosY="420" folder="stages/kito/" zoom="0.6" name="kito">
+	<sprite x="-400" scroll="0.25" sprite="sky" y="-200" type="none" name="sky"/>
+	<sprite x="10" sprite="hill2" y="10" type="none" scrollx="0.9" name="hill2"/>
+	<sprite x="-10" sprite="hill1" y="10" type="none" scrollx="0.9" name="hill1"/>
+	<sprite x="40" scroll="1.2" sprite="floor" y="-200" type="none" name="floor"/>
+	<girlfriend x="1000" y="420"/>
+	<dad x="650" y="470"/>
+	<boyfriend x="1550" y="420"/>
+</stage>

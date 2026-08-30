@@ -1,7 +1,6 @@
 {
 	"color": "#BC89FF",
 	"customValues": {},
-	"instSuffix": "-doxx",
 	"opponentModeAllowed": false,
 	"difficulties": [
 		"doxx"
@@ -9,9 +8,9 @@
 	"icon": "kinito",
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
-	"displayName": "Virtual Pal Doxx",
+	"displayName": "Web Word Doxx",
 	"needsVoices": true,
 	"beatsPerMeasure": 4,
-	"vocalsSuffix": "-doxx",
-	"bpm": 165
+	"bpm": 170,
+	"vocalsSuffix": "-doxx"
 }

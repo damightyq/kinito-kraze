@@ -4,6 +4,7 @@ import funkin.editors.EditorPicker;
 import funkin.options.OptionsMenu;
 import funkin.backend.utils.DiscordUtil;
 import openfl.Lib;
+import funkin.backend.utils.NativeAPI;
 
 var curSelected:Int = 0;
 
@@ -22,6 +23,7 @@ override function create()
     CoolUtil.playMenuSong();
 	DiscordUtil.changePresence("explorer.exe", null);
     Lib.application.window.title = "explorer.exe";
+    trace(NativeAPI.setWindowBorderColor("explorer.exe", 0xff69b4));
 
     bg = new FlxSprite(0,0).loadGraphic(Paths.image('menus/computermenu/bg'));
     bg.screenCenter();
@@ -101,12 +103,6 @@ function update(e)
             persistentUpdate = false;
             persistentDraw = true;
             openSubState(new EditorPicker());
-        }
-
-        if(controls.BACK)
-        {
-            selectedSomethin = true;
-            FlxG.switchState(new TitleState());
         }
 
         var upP = controls.UP_P;

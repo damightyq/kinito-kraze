@@ -114,35 +114,41 @@ function create()
     add(jade);
     add(kinito);
     
-    left = new FlxSprite(388.5, 249).loadGraphic(Paths.image('menus/freeplaymenu/arrowLeft'));
+    //388.5, 249
+    left = new FlxSprite((824 / 2), (547 / 2) + 10).loadGraphic(Paths.image('menus/freeplaymenu/arrowLeft'));
     left.scale.set(0.5, 0.5);
+    left.updateHitbox();
 	add(left);
 
     outlineLeft = new FlxSprite(left.x, left.y).loadGraphic(Paths.image('menus/freeplaymenu/arrowLeftOutline'));
 	outlineLeft.color = 0xFFFFFFFF;
 	outlineLeft.scale.set(0.5, 0.5);
-	outlineLeft.alpha = 0.95;
-	add(outlineLeft);
+	outlineLeft.alpha = 0.75;
+	//add(outlineLeft);
 
-	right = new FlxSprite(796.5, 249).loadGraphic(Paths.image('menus/freeplaymenu/arrowRight'));
+	//796.5, 249
+    right = new FlxSprite((1641 / 2), (547 / 2) + 10).loadGraphic(Paths.image('menus/freeplaymenu/arrowRight'));
     right.scale.set(0.5, 0.5);
+    right.updateHitbox();
 	add(right);
 
     outlineRight = new FlxSprite(right.x, right.y).loadGraphic(Paths.image('menus/freeplaymenu/arrowRightOutline'));
 	outlineRight.color = 0xFFFFFFFF;
-	outlineRight.scale.set(0.6, 0.6);
-	outlineRight.alpha = 0.95;
-	add(outlineRight);
+	outlineRight.scale.set(0.5, 0.5);
+	outlineRight.alpha = 0.75;
+	//add(outlineRight);
 
-	play = new FlxSprite(495, 469.5).loadGraphic(Paths.image('menus/freeplaymenu/playButton'));
+	//495, 469.5
+    play = new FlxSprite((1135 / 2), (1065 / 2) + 10).loadGraphic(Paths.image('menus/freeplaymenu/playButton'));
     play.scale.set(0.5, 0.5);
+    play.updateHitbox();
 	add(play);
 
     outlinePlay = new FlxSprite(play.x, play.y).loadGraphic(Paths.image('menus/freeplaymenu/playButtonOutline'));
 	outlinePlay.color = 0xFFFFFFFF;
 	outlinePlay.scale.set(0.5, 0.5);
-	outlinePlay.alpha = 0.95;
-	add(outlinePlay);
+	outlinePlay.alpha = 0.75;
+	//add(outlinePlay);
 
     songNameText = new FlxText(0, 55, FlxG.width, "", 48);
     songNameText.setFormat(Paths.font("kongtext.ttf"), 48, 0x2D2C22, "center");
@@ -158,10 +164,21 @@ function create()
     ref.scale.set(0.5, 0.5);
     ref.alpha = 0;
     add (ref);
+
+    shiftDir(true);
+
+
+    for (cd in cds) {
+        cd.updateCover();
+        if (cd.x == positions[1]) {
+            intendedScore = Highscore.getScore(cd.getTrueName(), curDifficulty);
+            intendedRating = Highscore.getRating(cd.getTrueName(), curDifficulty);
+        }
+    }
 }
 
 var curDifficulty:Dynamic = {
-    name: "normal",
+    name: "hard",
     index: 0
 };
 var curSelected:Int = 0;
@@ -182,9 +199,10 @@ function update(e:Float)
 
     var fuckingLeft = controls.LEFT_P;
     var fuckingRight = controls.RIGHT_P;
+    var fuckingEnter = controls.ACCEPT;
 
-    if (fuckingLeft || fuckingRight)
-        shiftDir(fuckingLeft, fuckingRight);
+    if ((fuckingLeft || fuckingRight || fuckingEnter) && !isBusy)
+        shiftDir(fuckingLeft, fuckingRight, fuckingEnter);
 
 	checkHover(left, outlineLeft, "menus/freeplaymenu/arrowLeft");
 	checkHover(right, outlineRight, "menus/freeplaymenu/arrowRight");
@@ -215,29 +233,32 @@ function shiftDir(?left:Bool, ?right:Bool, ?play:Bool)
 
     if (isBusy) return;
 
-	curSelected = FlxMath.wrap(curSelected + (left ? -1 : 1), 0, songs.length - 1);
+	curSelected = FlxMath.wrap(curSelected + (left ? 1 : -1), 0, songs.length - 1);
 	changeDifficulty();
     
-    var place = (left  ? cds.shift() : cds.pop());
+    var place = (left ? cds.shift() : cds.pop());
+    var placechange = (left ? cds.push(place) : cds.unshift(place));
     for (i => cd in cds)
     {
-        if (cd.x == penis[left ? 3 : 1])
+        if (cd.x == penis[left ? 3 : 3])
         {
 			var save = FunkinSave.getSongHighscore(cd.getTrueName(), curDifficulty.name);
 			intendedScore = save.score;
             intendedRating = save.accuracy;
         }
     }
+    updatePositions();
 
     // ogh i need to do something else, i've been doing this for like 2 hours
 
     if (play)
     {
+        isBusy = true;
         var activeTweens:Int = 0;
 	
 		for (i => cd in cds)
         {
-			if (cd.x == penis[2])
+			if (cd.x == penis[3])
             {
 				activeTweens++;
 				var tweenCompleted = false;
@@ -250,20 +271,20 @@ function shiftDir(?left:Bool, ?right:Bool, ?play:Bool)
                     {
 						tweenCompleted = true;
 						isBusy = true;
-						loadSong(cd.getTrueName());
+						//loadSong(cd.getTrueName());
+                        trace(cd.getTrueName(), curDifficulty.name);
+                        PlayState.loadSong(cd.getTrueName(), curDifficulty.name);
+                        FlxG.switchState(new PlayState());
 					}
 				});
             }
         }
     }
-
-    updatePositions();
 }
 
 function updatePositions()
 {
-    if (isBusy)
-        return;
+    if (isBusy) return;
 
     isBusy = true;
 
@@ -354,7 +375,7 @@ function updateBump()
         var songName = cd.getName();
         var bpm = songs[cd.ID].bpm;
 
-        if (cd.x == penis[2])
+        if (cd.x == penis[3])
         {
             idleTimer.cancel();
 			idleTimer.start(BeCI.bpm(1, bpm), () -> {
@@ -388,21 +409,28 @@ function checkHover(sprite:FlxSprite, outline:FlxSprite, normal:String)
 	if (sprite == null || outline == null)
         return;
     
+    //outline.visible = false;
+    sprite.setColorTransform(1, 1, 1, 1, 0, 0, 0);
     if (FlxG.mouse.overlaps(sprite))
     {
-        outline.visible = true;
-
-        if (FlxG.mouse.justPressed)
+        //outline.visible = true;
+        sprite.setColorTransform(1, 1, 1, 1, 255, 255, 255);
+        
+        if (FlxG.mouse.pressed)
         {
             sprite.loadGraphic(Paths.image(normal + "Press"));
-			outline.loadGraphic(Paths.image(normal + "OutlinePress"));
-            if (sprite == left || sprite == right)
-				shiftDir(boolToInt(sprite == left), boolToInt(sprite == right));
+			//outline.loadGraphic(Paths.image(normal + "OutlinePress"));
         }
         else
         {
-            outline.visible = false;
             sprite.loadGraphic(Paths.image(normal));
+        }
+        if (FlxG.mouse.justPressed)
+        {
+            if (sprite == left || sprite == right)
+				shiftDir(boolToInt(sprite == left), boolToInt(sprite == right));
+            else if (sprite == play)
+                shiftDir(false, false, boolToInt(sprite == play));
         }
     }
 }
@@ -530,7 +558,7 @@ class CuteDoofSprite extends MusicBeatGroup // yes, this is MY change..
 
     public function getName()
     {
-        if (songName.endsWith("-dox"))
+        if (songName.endsWith("-doxx"))
             songName = songName.substr(0, songName.length - 4);
 
         // songName = ~/[-]/g.replace(songName, " "); // useless me thinks, why format it

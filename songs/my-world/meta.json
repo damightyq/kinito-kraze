@@ -5,11 +5,12 @@
 	"difficulties": [
 		"hard"
 	],
-	"icon": "kito",
+	"icon": "kinito",
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
-	"displayName": "Kito",
+	"displayName": "My World",
 	"needsVoices": true,
 	"beatsPerMeasure": 4,
-	"bpm": 184
+	"variants": [],
+	"bpm": 95
 }

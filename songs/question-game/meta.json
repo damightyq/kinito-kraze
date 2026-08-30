@@ -1,17 +1,16 @@
 {
 	"color": "#BC89FF",
 	"customValues": {},
-	"instSuffix": "-doxx",
 	"opponentModeAllowed": false,
 	"difficulties": [
-		"doxx"
+		"hard"
 	],
 	"icon": "kinito",
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
-	"displayName": "Uh Oh Doxx",
+	"displayName": "Question Game",
 	"needsVoices": true,
 	"beatsPerMeasure": 4,
-	"vocalsSuffix": "-doxx",
-	"bpm": 155
+	"variants": [],
+	"bpm": 165
 }
